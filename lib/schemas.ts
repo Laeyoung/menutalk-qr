@@ -165,7 +165,7 @@ export const zLocalizeInputItem = z.object({
 
 export const zPublishBody = z.object({
   storeName: z.string().max(60).nullable().optional(),
-  langs: z.array(zLang).min(1).max(5),
+  langs: z.array(zLang).min(1).max(LANGS.length),
   items: z.array(zMenuItemBase).min(1).max(80),
   locales: z.record(z.string(), z.array(zLocalizedItem)),
 });

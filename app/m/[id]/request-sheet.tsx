@@ -118,18 +118,18 @@ export function RequestSheet({
     <Sheet onClose={busy ? () => {} : onClose} full>
       <div className="grid gap-5" data-testid="request-sheet">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-bold">{t('requestTitle', lang)}</h2>
+          <h2 className="font-display text-2xl text-blue">{t('requestTitle', lang)}</h2>
           <button onClick={onClose} disabled={busy} className="text-sm text-muted underline">{t('close', lang)}</button>
         </div>
 
         <section>
-          <h3 className="mb-2 text-sm font-semibold text-muted">{t('cart', lang)}</h3>
+          <h3 className="mb-2 font-mono text-xs font-bold uppercase tracking-widest text-muted">{t('cart', lang)}</h3>
           {cart.length === 0 ? (
             <p className="text-sm text-muted">{t('cartEmpty', lang)}</p>
           ) : (
             <ul className="grid gap-1">
               {cart.map((c) => (
-                <li key={c.itemId} className="flex items-center justify-between rounded-xl bg-card px-3 py-2">
+                <li key={c.itemId} className="flex items-center justify-between rounded-xl bg-card-2 px-3 py-2">
                   <span className="font-semibold">{localName(menu, c.itemId, lang)} × {c.qty}</span>
                   <button onClick={() => onRemove(c.itemId)} className="text-sm text-muted underline">{t('remove', lang)}</button>
                 </li>
@@ -139,10 +139,10 @@ export function RequestSheet({
         </section>
 
         <section>
-          <h3 className="mb-2 text-sm font-semibold text-muted">{t('quickRequests', lang)}</h3>
+          <h3 className="mb-2 font-mono text-xs font-bold uppercase tracking-widest text-muted">{t('quickRequests', lang)}</h3>
           <div className="flex flex-wrap gap-2">
             {CHIP_CODES.map((c) => (
-              <button key={c} onClick={() => toggleChip(c)} aria-pressed={chips.includes(c)} className={`rounded-full px-4 py-2 ${chips.includes(c) ? 'bg-foreground font-bold text-background' : 'border border-line bg-card'}`} data-testid={`chip-${c}`}>
+              <button key={c} onClick={() => toggleChip(c)} aria-pressed={chips.includes(c)} className={`rounded-full px-4 py-2 ${chips.includes(c) ? 'bg-lime font-bold text-ink' : 'border border-line bg-card-2'}`} data-testid={`chip-${c}`}>
                 {CHIP_LOCAL[c][lang]}
               </button>
             ))}
@@ -150,10 +150,10 @@ export function RequestSheet({
         </section>
 
         <section>
-          <h3 className="mb-2 text-sm font-semibold text-muted">{t('allergyChips', lang)}</h3>
+          <h3 className="mb-2 font-mono text-xs font-bold uppercase tracking-widest text-muted">{t('allergyChips', lang)}</h3>
           <div className="flex flex-wrap gap-2">
             {shownAllergies.map((a) => (
-              <button key={a} onClick={() => toggleAllergy(a)} aria-pressed={guestAllergens.includes(a)} className={`rounded-full px-3 py-1.5 text-sm ${guestAllergens.includes(a) ? 'bg-danger font-bold text-white' : 'border border-line bg-card'}`}>
+              <button key={a} onClick={() => toggleAllergy(a)} aria-pressed={guestAllergens.includes(a)} className={`rounded-full px-3 py-1.5 text-sm ${guestAllergens.includes(a) ? 'bg-danger font-bold text-white' : 'border border-line bg-card-2'}`}>
                 {ALLERGENS[a].emoji} {ALLERGENS[a].names[lang]}
               </button>
             ))}
@@ -162,7 +162,7 @@ export function RequestSheet({
         </section>
 
         <section className="grid gap-2">
-          <h3 className="text-sm font-semibold text-muted">{t('freeText', lang)}</h3>
+          <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-muted">{t('freeText', lang)}</h3>
           <textarea value={text} onChange={(e) => setText(e.target.value.slice(0, 300))} rows={2} placeholder={t('freeTextPh', lang)} className="rounded-xl border border-line bg-card px-3 py-2" disabled={busy} data-testid="free-text" />
           <div className="flex flex-wrap items-center gap-2">
             {micSupported && rec.state !== 'unsupported' ? (
@@ -179,7 +179,7 @@ export function RequestSheet({
 
         {showSamples && (
           <section className="grid gap-2 rounded-xl border border-dashed border-line p-3">
-            <h3 className="text-sm font-semibold text-muted">{t('samples', lang)}</h3>
+            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-muted">{t('samples', lang)}</h3>
             <div className="flex flex-wrap gap-2">
               {SAMPLES.map((s) => (
                 <button key={s.lang} onClick={() => onSample(s)} disabled={busy} className="rounded-full border border-line bg-card px-4 py-2 text-sm" data-testid={`sample-${s.lang}`}>
@@ -190,7 +190,7 @@ export function RequestSheet({
           </section>
         )}
 
-        {notice && <p className="rounded-xl bg-amber-50 p-3 text-sm font-semibold text-amber-900" role="alert">{notice}</p>}
+        {notice && <p className="rounded-xl bg-lime/10 p-3 text-sm font-semibold text-lime" role="alert">{notice}</p>}
 
         <button onClick={onMake} disabled={busy || rec.state === 'recording'} className="rounded-2xl bg-brand px-6 py-4 text-lg font-bold text-brand-ink disabled:opacity-60" data-testid="make-card-btn">
           {busy ? t('working', lang) : t('makeCard', lang)}

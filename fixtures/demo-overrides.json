@@ -1,9 +1,7 @@
-{
-  "match": "name_ko",
+{ "match": "name_ko",
   "items": {
     "비빔밥": { "allergens": ["sesame", "egg", "soy", "wheat"], "allergens_source": "store_confirmed" },
-    "부대찌개": { "allergens": ["pork", "wheat", "soy", "milk"], "allergens_source": "store_confirmed" },
-    "해물파전": { "allergens": ["shrimp", "squid", "wheat", "egg"], "allergens_source": "store_confirmed" },
-    "물냉면": { "allergens": ["buckwheat", "wheat", "beef", "egg"], "allergens_source": "store_confirmed" }
+    "부대찌개": { "allergens": ["pork", "wheat", "soy", "milk", "fish", "shrimp"], "allergens_source": "store_confirmed" },
+    "해물파전": { "allergens": ["wheat", "egg", "squid", "shrimp", "shellfish", "soy"], "allergens_source": "store_confirmed" }
   }
 }

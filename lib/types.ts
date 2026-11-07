@@ -3,7 +3,7 @@ import type { AllergenCode } from './allergens';
 
 export type { AllergenCode };
 
-export const LANGS = ['en', 'ja', 'zh-Hans', 'zh-Hant', 'es'] as const;
+export const LANGS = ['en', 'ja', 'zh-Hans', 'zh-Hant', 'es', 'ko'] as const;
 export type LangCode = (typeof LANGS)[number];
 
 export const CATEGORIES = ['main', 'side', 'drink', 'alcohol', 'dessert', 'set', 'other'] as const;

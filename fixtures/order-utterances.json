@@ -1,15 +1,159 @@
 {
-  "_comment": "AC-31/32/34: 데모 메뉴(demo-menu.draft.json) 기준 테스트 발화 10건(언어 3개 + 화면 언어와 다른 언어 1건). expect_items는 name_ko, expect_conflicts는 '메뉴명:알레르기'(가게 확인/추정 무관).",
-  "cases": [
-    { "lang": "zh-Hans", "text": "我要一份拌饭，不要太辣，我对芝麻过敏。", "cart": [], "expect_items": ["비빔밥"], "expect_allergens": ["sesame"], "expect_conflicts": ["비빔밥:sesame"] },
-    { "lang": "zh-Hans", "text": "两份部队锅，再来一碗米饭。", "cart": [], "expect_items": ["부대찌개", "공기밥"], "expect_allergens": [], "expect_conflicts": [] },
-    { "lang": "zh-Hans", "text": "海鲜葱饼一个，我对虾过敏，可以吗？", "cart": [], "expect_items": ["해물파전"], "expect_allergens": ["shrimp"], "expect_conflicts": ["해물파전:shrimp"] },
-    { "lang": "ja", "text": "ビビンバを一つ、辛さ控えめで。ごまアレルギーがあります。", "cart": [], "expect_items": ["비빔밥"], "expect_allergens": ["sesame"], "expect_conflicts": ["비빔밥:sesame"] },
-    { "lang": "ja", "text": "水冷麺を二つと、焼酎を一本ください。", "cart": [], "expect_items": ["물냉면", "소주"], "expect_allergens": [], "expect_conflicts": [] },
-    { "lang": "ja", "text": "卵アレルギーです。スンドゥブチゲを一つ。", "cart": [], "expect_items": ["순두부찌개"], "expect_allergens": ["egg"], "expect_conflicts": ["순두부찌개:egg"] },
-    { "lang": "en", "text": "One bibimbap, less spicy please. I'm allergic to sesame.", "cart": [], "expect_items": ["비빔밥"], "expect_allergens": ["sesame"], "expect_conflicts": ["비빔밥:sesame"] },
-    { "lang": "en", "text": "Can I get the army stew and a coke? No cilantro.", "cart": [], "expect_items": ["부대찌개", "콜라"], "expect_allergens": [], "expect_conflicts": [] },
-    { "lang": "en", "text": "I'd like a margherita pizza.", "cart": [], "expect_items": [], "expect_unmatched": true, "expect_allergens": [], "expect_conflicts": [] },
-    { "lang": "en", "text": "我对花生过敏，要一份泡菜汤。", "cart": [], "expect_items": ["김치찌개"], "expect_allergens": ["peanut"], "expect_conflicts": [], "_note": "화면 언어(en)와 다른 언어(중국어) 발화" }
+  "menu_file": "demo-menu.draft.json",
+  "overrides_file": "demo-overrides.json",
+  "demo_zh": "zh-Hans",
+  "utterances": [
+    {
+      "id": "u01",
+      "screen_lang": "en",
+      "utterance_lang": "en",
+      "text": "One bibimbap, please. Not too spicy, and I'm allergic to sesame.",
+      "expected": {
+        "lines_ko": [{ "item_id": "i01", "text_ko": "비빔밥", "qty": 1 }],
+        "guest_allergens": ["sesame"],
+        "conflicts": [{ "item_id": "i01", "allergen": "sesame", "source": "store_confirmed" }],
+        "requests_ko": ["덜 맵게 해 주세요"],
+        "unmatched_note_expected": false
+      },
+      "note": "데모 대표 문장(영어)"
+    },
+    {
+      "id": "u02",
+      "screen_lang": "en",
+      "utterance_lang": "en",
+      "text": "Could we get the seafood pancake and two beers?",
+      "expected": {
+        "lines_ko": [
+          { "item_id": "i11", "text_ko": "해물파전", "qty": 1 },
+          { "item_id": "i16", "text_ko": "맥주", "qty": 2 }
+        ],
+        "guest_allergens": [],
+        "conflicts": [],
+        "requests_ko": [],
+        "unmatched_note_expected": false
+      },
+      "note": "여러 메뉴와 수량"
+    },
+    {
+      "id": "u03",
+      "screen_lang": "en",
+      "utterance_lang": "en",
+      "text": "I'm allergic to peanuts. Can I have the beef short rib soup?",
+      "expected": {
+        "lines_ko": [{ "item_id": "i06", "text_ko": "갈비탕", "qty": 1 }],
+        "guest_allergens": ["peanut"],
+        "conflicts": [],
+        "requests_ko": [],
+        "unmatched_note_expected": false
+      },
+      "note": "충돌 없음. 갈비탕은 가게 확인 전(ai_estimated)이라 회색 문구도 나오지 않아야 하고 '안전' 표현이 없어야 한다"
+    },
+    {
+      "id": "u04",
+      "screen_lang": "ja",
+      "utterance_lang": "ja",
+      "text": "冷麺を2つお願いします。そばアレルギーがあるんですけど、大丈夫ですか？",
+      "expected": {
+        "lines_ko": [{ "item_id": "i04", "text_ko": "냉면", "qty": 2 }],
+        "guest_allergens": ["buckwheat"],
+        "conflicts": [{ "item_id": "i04", "allergen": "buckwheat", "source": "ai_estimated" }],
+        "requests_ko": [],
+        "unmatched_note_expected": false
+      },
+      "note": "'大丈夫ですか'에 모델이 괜찮다/안전하다고 답하지 않는지 본다. 충돌은 주황(추정)"
+    },
+    {
+      "id": "u05",
+      "screen_lang": "ja",
+      "utterance_lang": "ja",
+      "text": "キムチチゲと海鮮チヂミを一つずつください。辛さは控えめでお願いします。",
+      "expected": {
+        "lines_ko": [
+          { "item_id": "i07", "text_ko": "김치찌개", "qty": 1 },
+          { "item_id": "i11", "text_ko": "해물파전", "qty": 1 }
+        ],
+        "guest_allergens": [],
+        "conflicts": [],
+        "requests_ko": ["덜 맵게 해 주세요"],
+        "unmatched_note_expected": false
+      },
+      "note": "해물파전의 일본어 통칭(海鮮チヂミ) 매칭"
+    },
+    {
+      "id": "u06",
+      "screen_lang": "ja",
+      "utterance_lang": "ja",
+      "text": "サムギョプサルを2人前と、ビールを1本ください。",
+      "expected": {
+        "lines_ko": [
+          { "item_id": null, "text_ko": "삼겹살", "qty": 2 },
+          { "item_id": "i16", "text_ko": "맥주", "qty": 1 }
+        ],
+        "guest_allergens": [],
+        "conflicts": [],
+        "requests_ko": [],
+        "unmatched_note_expected": true
+      },
+      "note": "메뉴판에 없는 음식. 삼겹살은 item_id null로 남고 비슷한 메뉴(제육덮밥 등)로 바뀌면 오답"
+    },
+    {
+      "id": "u07",
+      "screen_lang": "zh-Hans",
+      "utterance_lang": "zh-Hans",
+      "text": "我要一份拌饭，不要太辣，我对芝麻过敏。",
+      "expected": {
+        "lines_ko": [{ "item_id": "i01", "text_ko": "비빔밥", "qty": 1 }],
+        "guest_allergens": ["sesame"],
+        "conflicts": [{ "item_id": "i01", "allergen": "sesame", "source": "store_confirmed" }],
+        "requests_ko": ["덜 맵게 해 주세요"],
+        "unmatched_note_expected": false
+      },
+      "note": "데모 대표 문장(중국어). 녹음 샘플과 같은 내용"
+    },
+    {
+      "id": "u08",
+      "screen_lang": "zh-Hans",
+      "utterance_lang": "zh-Hans",
+      "text": "来一份部队锅，再来一瓶烧酒。我对虾过敏。",
+      "expected": {
+        "lines_ko": [
+          { "item_id": "i10", "text_ko": "부대찌개", "qty": 1 },
+          { "item_id": "i15", "text_ko": "소주", "qty": 1 }
+        ],
+        "guest_allergens": ["shrimp"],
+        "conflicts": [{ "item_id": "i10", "allergen": "shrimp", "source": "store_confirmed" }],
+        "requests_ko": [],
+        "unmatched_note_expected": false
+      },
+      "note": "부대찌개의 새우는 김치 속 새우젓 기준. 가게 확인값에서 빼면 이 충돌은 사라진다"
+    },
+    {
+      "id": "u09",
+      "screen_lang": "zh-Hans",
+      "utterance_lang": "zh-Hans",
+      "text": "两份大酱汤，不要放香菜。",
+      "expected": {
+        "lines_ko": [{ "item_id": "i08", "text_ko": "된장찌개", "qty": 2 }],
+        "guest_allergens": [],
+        "conflicts": [],
+        "requests_ko": ["고수는 빼 주세요"],
+        "unmatched_note_expected": false
+      },
+      "note": "된장찌개의 중국어 통칭(大酱汤) 매칭과 칩 사전에 있는 요청"
+    },
+    {
+      "id": "u10",
+      "screen_lang": "en",
+      "utterance_lang": "zh-Hans",
+      "text": "一份泡菜炒饭，不要加鸡蛋，我对鸡蛋过敏。",
+      "expected": {
+        "lines_ko": [{ "item_id": "i02", "text_ko": "김치볶음밥", "qty": 1 }],
+        "guest_allergens": ["egg"],
+        "conflicts": [{ "item_id": "i02", "allergen": "egg", "source": "ai_estimated" }],
+        "requests_ko": ["달걀은 빼 주세요"],
+        "unmatched_note_expected": false
+      },
+      "note": "화면 언어(en)와 발화 언어(zh)가 다른 건. 메뉴·알레르기만 채점하고 back_translation 언어는 기록만 한다"
+    }
   ]
 }

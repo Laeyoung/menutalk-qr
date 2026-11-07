@@ -65,16 +65,16 @@ export function DetailSheet({
     <Sheet onClose={onClose}>
       <div className="grid gap-4" data-testid="detail-sheet">
         <div>
-          <h2 className="text-2xl font-bold leading-snug">{loc?.name ?? item.name_ko}</h2>
-          <p className="text-muted">{item.name_ko}</p>
+          <h2 className="text-2xl font-bold leading-snug text-heading">{loc?.name ?? item.name_ko}</h2>
+          {lang !== 'ko' && <p className="text-muted">{item.name_ko}</p>}
         </div>
         {level && (
-          <div className={`rounded-xl px-4 py-2 text-sm font-bold text-white ${level === 'red' ? 'bg-danger' : 'bg-warn'}`}>
+          <div className={`rounded-xl px-4 py-2 text-sm font-bold ${level === 'red' ? 'bg-danger text-white' : 'bg-warn text-ink'}`}>
             ⚠ {t('conflictWarn', lang)}: {hits.map((a) => ALLERGENS[a].names[lang]).join(', ')}
           </div>
         )}
         <div className="flex flex-wrap items-center gap-3">
-          <button onClick={onPlay} className="rounded-full bg-foreground px-5 py-3 font-bold text-background" data-testid="play-btn">{label}</button>
+          <button onClick={onPlay} className="rounded-full bg-cyan px-5 py-3 font-bold text-ink" data-testid="play-btn">{label}</button>
           <span className="rounded-full border border-line px-2 py-0.5 text-xs text-muted">{t('aiVoice', lang)}</span>
           {failCount >= 2 && (
             <button onClick={onBrowser} className="rounded-full border border-line px-4 py-2 text-sm" data-testid="browser-voice-btn">🔈 {t('playBrowser', lang)}</button>
@@ -83,22 +83,22 @@ export function DetailSheet({
         {loc?.detail && <p className="text-base leading-relaxed">{loc.detail}</p>}
         {loc?.how_to_eat && (
           <div>
-            <h3 className="text-sm font-semibold text-muted">{t('howToEat', lang)}</h3>
+            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-muted">{t('howToEat', lang)}</h3>
             <p>{loc.how_to_eat}</p>
           </div>
         )}
         <div className="flex flex-wrap gap-2 text-sm">
-          {item.spice_level > 0 && <span className="rounded-full bg-red-50 px-2 py-0.5 text-red-700">{'🌶'.repeat(item.spice_level)} {SPICE_LABEL[lang][item.spice_level]}</span>}
-          <span className="font-semibold">{item.price_krw != null ? `₩${item.price_krw.toLocaleString('en-US')}` : t('priceMarket', lang)}</span>
+          {item.spice_level > 0 && <span className="rounded-full bg-pink/10 px-2 py-0.5 text-pink">{'🌶'.repeat(item.spice_level)} {SPICE_LABEL[lang][item.spice_level]}</span>}
+          <span className="font-mono font-bold text-lime">{item.price_krw != null ? `₩${item.price_krw.toLocaleString('en-US')}` : t('priceMarket', lang)}</span>
         </div>
         {item.main_ingredients_ko.length > 0 && (
           <div>
-            <h3 className="text-sm font-semibold text-muted">{t('ingredients', lang)}</h3>
+            <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-muted">{t('ingredients', lang)}</h3>
             <p className="text-sm">{item.main_ingredients_ko.join(', ')}</p>
           </div>
         )}
         <div>
-          <h3 className="text-sm font-semibold text-muted">{t('allergyInfo', lang)}</h3>
+          <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-muted">{t('allergyInfo', lang)}</h3>
           {item.allergens.length ? <AllergenBadges item={item} lang={lang} /> : <p className="text-sm text-muted">—</p>}
           <p className="mt-2 text-xs text-muted">{t('staffConfirm', lang)}</p>
         </div>

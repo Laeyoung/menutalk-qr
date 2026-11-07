@@ -129,21 +129,21 @@ export function UploadForm() {
 
       <label className={`flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-line bg-card px-4 py-10 text-center ${busy ? 'opacity-60' : ''}`}>
         <span className="text-4xl" aria-hidden>📷</span>
-        <span className="text-lg font-bold">메뉴판 사진 선택</span>
+        <span className="text-lg font-bold text-heading">메뉴판 사진 선택</span>
         <span className="text-sm text-muted">카메라로 찍거나 앨범에서 고르세요 (JPEG·PNG·WEBP)</span>
         <input type="file" accept="image/jpeg,image/png,image/webp" className="sr-only" disabled={busy} onChange={(e) => onFile(e.target.files?.[0])} data-testid="menu-photo" />
       </label>
 
       {phase === 'resizing' && <p className="text-center text-muted">사진을 줄이는 중…</p>}
       {phase === 'extracting' && (
-        <div className="rounded-2xl bg-card p-5 text-center shadow-sm" role="status">
+        <div className="rounded-3xl bg-card p-6 text-center" role="status">
           <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-4 border-line border-t-brand" />
           <p className="font-semibold">{WAIT_MESSAGES[Math.min(WAIT_MESSAGES.length - 1, Math.floor(elapsed / 10))]}</p>
           <p className="mt-1 text-sm text-muted">{elapsed}초 경과 · 보통 20초 안팎</p>
         </div>
       )}
       {phase === 'error' && error && (
-        <div className="grid gap-3 rounded-2xl border border-danger/30 bg-red-50 p-4" role="alert">
+        <div className="grid gap-3 rounded-2xl border border-pink/40 bg-pink/10 p-4" role="alert">
           <p className="font-semibold text-danger">{error.message}</p>
           {error.retryable && dataUrl && (
             <div className="flex flex-wrap gap-2">

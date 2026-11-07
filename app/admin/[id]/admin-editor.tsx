@@ -230,8 +230,8 @@ export function AdminEditor({ menuId }: { menuId: string }) {
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pb-40 pt-6">
       <header className="grid gap-3">
         <div className="flex items-center justify-between gap-2">
-          <h1 className="text-2xl font-bold">메뉴 확인·공개</h1>
-          {fixture && <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">데모 정답표 초안</span>}
+          <h1 className="font-display text-3xl text-blue">메뉴 확인·공개</h1>
+          {fixture && <span className="rounded-full bg-lime/10 px-3 py-1 text-xs font-semibold text-lime">데모 정답표 초안</span>}
         </div>
         <label className="grid gap-1">
           <span className="text-sm font-semibold">가게 이름</span>
@@ -267,7 +267,7 @@ export function AdminEditor({ menuId }: { menuId: string }) {
           데모 번역(사람이 쓴 fixture) 사용 — 다음 요청부터 적용
         </label>
         {(warnings.length > 0 || lowCount > 0) && (
-          <ul className="rounded-xl bg-amber-50 p-3 text-sm text-amber-900">
+          <ul className="rounded-xl bg-lime/10 p-3 text-sm text-lime">
             {warnings.map((w, i) => <li key={i}>• {w}</li>)}
             {lowCount > 0 && <li>• 판독이 불확실한 메뉴 {lowCount}개 (노란 칸)</li>}
           </ul>
@@ -299,8 +299,8 @@ export function AdminEditor({ menuId }: { menuId: string }) {
       </footer>
 
       {published && (
-        <section className="mt-8 grid gap-3 rounded-2xl bg-card p-5 shadow-sm" data-testid="published-panel">
-          <h2 className="text-lg font-bold">공개 완료 — 테이블에 이 QR을 붙이세요</h2>
+        <section className="mt-8 grid gap-3 rounded-3xl bg-card p-6" data-testid="published-panel">
+          <h2 className="font-display text-2xl text-lime">공개 완료 — 테이블에 이 QR을 붙이세요</h2>
           <QrPanel url={published.publicUrl} shortUrl={published.shortUrl} size={320} storeName={storeName.trim() || null} />
           <p className="text-xs text-muted">손님 화면 반영은 재공개 후 최대 약 60초 늦을 수 있습니다. 관리 링크(이 페이지 주소)는 이 기기에 저장돼 있습니다.</p>
           <button className="justify-self-start text-sm underline" onClick={() => setStatus('editing')}>계속 고치기</button>
@@ -315,9 +315,9 @@ function ItemEditor({ item, onChange, onToggleAllergen, stale }: { item: MenuIte
   const confirmed = item.allergens_source === 'store_confirmed';
   const shown = moreAllergens ? ALLERGEN_CODES : (ALLERGEN_CODES.filter((a) => item.allergens.includes(a)) as readonly AllergenCode[]);
   return (
-    <li className={`grid gap-3 rounded-2xl border p-4 ${item.confidence === 'low' ? 'border-amber-300 bg-amber-50' : 'border-line bg-card'}`} data-testid={`item-${item.item_id}`}>
+    <li className={`grid gap-3 rounded-3xl border p-5 ${item.confidence === 'low' ? 'border-lime/50 bg-lime/10' : 'border-line bg-card'}`} data-testid={`item-${item.item_id}`}>
       <div className="grid grid-cols-[1fr_auto] items-start gap-2">
-        <input value={item.name_ko} onChange={(e) => onChange({ name_ko: e.target.value })} maxLength={60} className="min-w-0 rounded-lg border border-line bg-white px-3 py-2 text-lg font-bold" aria-label="메뉴명" />
+        <input value={item.name_ko} onChange={(e) => onChange({ name_ko: e.target.value })} maxLength={60} className="min-w-0 rounded-lg border border-line bg-card-2 px-3 py-2 text-lg font-bold text-heading" aria-label="메뉴명" />
         <div className="flex items-center gap-1">
           <input
             inputMode="numeric"
@@ -327,21 +327,21 @@ function ItemEditor({ item, onChange, onToggleAllergen, stale }: { item: MenuIte
               const v = e.target.value.replace(/[^0-9]/g, '');
               onChange({ price_krw: v ? Math.min(10_000_000, Number(v)) : null });
             }}
-            className="w-28 rounded-lg border border-line bg-white px-3 py-2 text-right"
+            className="w-28 rounded-lg border border-line bg-card-2 px-3 py-2 text-right"
             aria-label="가격"
           />
           <span className="text-sm text-muted">원</span>
         </div>
       </div>
-      {item.confidence === 'low' && item.unreadable_note && <p className="text-sm text-amber-900">⚠ {item.unreadable_note}</p>}
+      {item.confidence === 'low' && item.unreadable_note && <p className="text-sm text-lime">⚠ {item.unreadable_note}</p>}
       {stale && <p className="text-xs text-brand">메뉴명이 바뀌어 공개할 때 이 묶음을 다시 번역합니다</p>}
       <div className="flex flex-wrap items-center gap-3 text-sm">
-        <select value={item.category} onChange={(e) => onChange({ category: e.target.value as Category })} className="rounded-lg border border-line bg-white px-2 py-1" aria-label="분류">
+        <select value={item.category} onChange={(e) => onChange({ category: e.target.value as Category })} className="rounded-lg border border-line bg-card-2 px-2 py-1" aria-label="분류">
           {CATEGORIES.map((c) => <option key={c} value={c}>{CATEGORY_KO[c]}</option>)}
         </select>
         <div className="flex overflow-hidden rounded-lg border border-line" role="radiogroup" aria-label="맵기">
           {([0, 1, 2, 3] as SpiceLevel[]).map((s) => (
-            <button key={s} type="button" role="radio" aria-checked={item.spice_level === s} onClick={() => onChange({ spice_level: s })} className={`px-2 py-1 ${item.spice_level === s ? 'bg-brand text-brand-ink' : 'bg-white'}`}>
+            <button key={s} type="button" role="radio" aria-checked={item.spice_level === s} onClick={() => onChange({ spice_level: s })} className={`px-2 py-1 ${item.spice_level === s ? 'bg-brand text-brand-ink' : 'bg-card-2'}`}>
               {s === 0 ? '안 매움' : '🌶'.repeat(s)}
             </button>
           ))}
@@ -353,7 +353,7 @@ function ItemEditor({ item, onChange, onToggleAllergen, stale }: { item: MenuIte
           {shown.map((a) => {
             const on = item.allergens.includes(a);
             return (
-              <button key={a} type="button" onClick={() => onToggleAllergen(a)} aria-pressed={on} className={`rounded-full px-2.5 py-1 text-sm ${on ? (confirmed ? 'badge-confirmed bg-red-50 text-red-700' : 'badge-estimated bg-orange-50 text-orange-700') : 'border border-line bg-white text-muted'}`}>
+              <button key={a} type="button" onClick={() => onToggleAllergen(a)} aria-pressed={on} className={`rounded-full px-2.5 py-1 text-sm ${on ? (confirmed ? 'badge-confirmed bg-pink/10 text-pink' : 'badge-estimated bg-lime/10 text-lime') : 'border border-line bg-card-2 text-muted'}`}>
                 {ALLERGENS[a].names.ko}
               </button>
             );
@@ -362,7 +362,7 @@ function ItemEditor({ item, onChange, onToggleAllergen, stale }: { item: MenuIte
             {moreAllergens ? '접기' : item.allergens.length ? '+ 알레르기 추가' : '알레르기 없음 · + 추가'}
           </button>
         </div>
-        <label className={`flex items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold ${confirmed ? 'bg-red-50 text-red-800' : 'bg-white'}`}>
+        <label className={`flex items-center gap-2 rounded-lg px-2 py-2 text-sm font-semibold ${confirmed ? 'bg-pink/10 text-pink' : 'bg-card-2'}`}>
           <input type="checkbox" checked={confirmed} onChange={(e) => onChange({ allergens_source: e.target.checked ? 'store_confirmed' : 'ai_estimated' })} className="h-5 w-5" data-testid={`confirm-${item.item_id}`} />
           이 메뉴 알레르기 확인함
           {!confirmed && <span className="font-normal text-muted">(지금은 AI 추정)</span>}

@@ -1,6 +1,6 @@
 # 메뉴톡 QR (말하는 메뉴판)
 
-사장님이 한국어 메뉴판 사진 한 장을 올리면 외국인용 5개 언어 음성 메뉴와 QR이 생깁니다. 손님이 자기 언어로 말하거나 고른 요청은 **가게가 확인한 알레르기 데이터와 코드로 대조**된 뒤, 직원이 바로 읽는 큰 한국어 주문 카드로 바뀝니다.
+사장님이 한국어 메뉴판 사진 한 장을 올리면 외국인용 5개 언어와 한국어(6개) 음성 메뉴와 QR이 생깁니다. 손님이 자기 언어로 말하거나 고른 요청은 **가게가 확인한 알레르기 데이터와 코드로 대조**된 뒤, 직원이 바로 읽는 큰 한국어 주문 카드로 바뀝니다.
 
 - 설계 문서: `../10x/02-talking-menu-qr/03-개발Spec.md`(Spec), `05-개발Plan.md`(Plan)
 - 개발 중 결정: `../DECISIONS.md`
@@ -42,6 +42,7 @@ npm run typecheck && npm run lint
 | `MODEL_EXTRACT` `MODEL_EXTRACT_RETRY` `MODEL_LOCALIZE` `MODEL_ORDER` `MODEL_TTS` `MODEL_STT` | | 모델 이름 덮어쓰기(기본값 Spec 7.1) |
 | `EFFORT_EXTRACT` `EFFORT_LOCALIZE` `EFFORT_ORDER` | | 기본 low / none / none |
 | `PUBLIC_ORIGIN` | | QR에 넣을 주소를 고정할 때(예: `https://oba02-menutalk.vercel.app`) |
+| `GUUEY_SHARE_URL` | | Guuey 에이전트 공유 페이지 URL. 넣으면 손님 화면에 "메뉴 상담하기" 카드가 나온다(비어 있으면 숨김) |
 | `BLOB_READ_PREFIX` | 시험용 | 값을 넣으면 Blob 읽기를 일부러 실패시켜 정적 사본 폴백을 확인(AC-27) |
 
 ## 운영 스크립트
@@ -77,6 +78,9 @@ app/api/menus            POST 추출(fixture·dryRun·sol 재시도·detail orig
 app/api/menus/[id]       GET 공개본(no-store) · /draft · /localize(언어×묶음≤10) · /publish
 app/api/audio/...        TTS 캐시 + 302 (불변 경로 = tts_hash)
 app/api/order-card       모델 카드(전사 + luna), 충돌은 lib/allergy.ts
+app/api/tools/[tool]     Guuey 메뉴 도구 HTTP 표면(search_menu · check_dietary_constraints · build_order_card), GET /api/tools/menu
+lib/menu-tools.ts        도구 3개 계산·검증(순수 함수, Guuey worker와 공유)
+lib/fixture-menu.ts      한끼식당 정답표 + 가게 확인값 → 도구 데이터
 lib/allergens.ts         알레르기 코드 단일 원천(스키마 enum·다국어 이름·칩)
 lib/allergy.ts           충돌 계산(브라우저·서버 공용) — 판단은 코드가 한다
 lib/order/rule-card.ts   규칙 카드(네트워크 0건)
@@ -84,5 +88,5 @@ lib/tts-text.ts          음성 대본 생성(코드)
 lib/openai/structured.ts callStructured: refusal·incomplete·zod·429 백오프
 lib/blob-json.ts         Blob JSON/바이너리 헬퍼 + 로컬 대체
 prompts/                 프롬프트(튜닝은 여기서만)
-fixtures/                데모 정답표 초안·가게 확인값·5개 언어 현지화·테스트 발화
+fixtures/                데모 정답표 초안·가게 확인값·6개 언어 현지화·테스트 발화
 ```

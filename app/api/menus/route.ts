@@ -3,12 +3,12 @@ import { paths, writeJson } from '@/lib/blob-json';
 import { callStructured } from '@/lib/openai/structured';
 import { mapUpstream } from '@/lib/server/upstream';
 import { normalizeExtractedItems } from '@/lib/publish';
+import { loadFixtureDraft } from '@/lib/fixture-menu';
 import { menuExtractionSchema, zExtraction } from '@/lib/schemas';
 import { EFFORT, flags, MODELS } from '@/lib/server/env';
 import { ApiError, errorResponse, isDemoRequest, newAdminKey, newMenuId, sha256hex } from '@/lib/server/http';
 import type { MenuDraft } from '@/lib/types';
 import { EXTRACT_INSTRUCTIONS, extractUserText } from '@/prompts/extract';
-import fixture from '@/fixtures/demo-menu.draft.json';
 import { z } from 'zod';
 
 export const runtime = 'nodejs';
@@ -44,11 +44,11 @@ export async function POST(req: Request) {
     let draftCore: Pick<MenuDraft, 'store_name' | 'warnings' | 'items' | 'source'>;
 
     if (body.fixture) {
-      const f = zExtraction.parse(fixture);
+      const f = loadFixtureDraft();
       draftCore = {
         store_name: storeName ?? f.store_name,
         warnings: f.warnings,
-        items: normalizeExtractedItems(f.items),
+        items: f.items,
         source: { model: 'fixture', effort: 'none', detail, latency_ms: 0, usage: {}, fixture: true },
       };
     } else {

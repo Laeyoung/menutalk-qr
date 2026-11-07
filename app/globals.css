@@ -1,38 +1,101 @@
 @import "tailwindcss";
 
+/*
+ * Design tokens — OBA.RUN 2nd 행사 발표 테마(다크 네온)와 맞춘다(DECISIONS D-14).
+ * 팔레트 7색: background #0B0B10 · card #17181F · lime #BFFF00 · pink #FF2D7A · blue #9AA8FF · cyan #4CD7F6 · text #C9CEF0
+ * 역할: 라임 = 강조(주요 버튼, 강조 문구) · 핑크 = 포인트(가게 확인 경고, 알레르기) · 블루 = 제목 · 시안 = 그래픽 포인트
+ * 파생 토큰(card-2, line, muted, paper, ink)은 위 7색에서 만든 보조 값이다.
+ */
 :root {
-  --background: #fffaf3;
-  --foreground: #1f1a17;
-  --muted: #6b625b;
-  --card: #ffffff;
-  --line: #eadfd3;
-  --brand: #c2410c;
-  --brand-ink: #ffffff;
-  --danger: #dc2626;
-  --warn: #ea580c;
+  --background: #0b0b10;
+  --card: #17181f;
+  --card-2: #20222c;
+  --line: #2b2e3d;
+  --foreground: #c9cef0;
+  --heading: #ffffff;
+  --muted: #8a90b5;
+  --lime: #bfff00;
+  --pink: #ff2d7a;
+  --blue: #9aa8ff;
+  --cyan: #4cd7f6;
+  --ink: #0b0b10;
+  /* 직원용 주문 카드는 밝은 "종이" 화면으로 뒤집는다(Spec S7: 흰 배경·큰 한국어) */
+  --paper: #f4f5ff;
+  --paper-line: #d9dcf2;
+  --paper-muted: #5b6080;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
   --color-card: var(--card);
+  --color-card-2: var(--card-2);
   --color-line: var(--line);
-  --color-brand: var(--brand);
-  --color-brand-ink: var(--brand-ink);
-  --color-danger: var(--danger);
-  --color-warn: var(--warn);
-  --font-sans: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Hiragino Sans", "PingFang SC", "PingFang TC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+  --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
+  --color-muted: var(--muted);
+  --color-lime: var(--lime);
+  --color-pink: var(--pink);
+  --color-blue: var(--blue);
+  --color-cyan: var(--cyan);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-line: var(--paper-line);
+  --color-paper-muted: var(--paper-muted);
+  /* 의미 별칭: 컴포넌트는 역할 이름을 쓴다 */
+  --color-brand: var(--lime);
+  --color-brand-ink: var(--ink);
+  --color-danger: var(--pink);
+  --color-warn: var(--lime);
+
+  --font-sans: var(--font-noto), "Apple SD Gothic Neo", "Hiragino Sans", "PingFang SC", "PingFang TC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: var(--font-black-han), var(--font-noto), "Apple SD Gothic Neo", system-ui, sans-serif;
+  --font-mono: var(--font-roboto-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-card: 1.5rem;
 }
 
-html, body {
+html,
+body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  color-scheme: dark;
+  /* 한국어는 어절 단위로 줄바꿈(발표 자료와 같은 줄바꿈) */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* 제목: Black Han Sans (발표 자료의 헤드라인 글꼴). CJK 외 글자는 Noto로 떨어진다 */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 /* iOS 입력 확대 방지: 입력 글꼴 최소 16px (Spec 9.4) */
 input, select, textarea, button { font-size: 16px; }
 
-.badge-confirmed { border: 1.5px solid currentColor; }
-.badge-estimated { border: 1.5px dashed currentColor; }
+input, select, textarea {
+  background: var(--card-2);
+  color: var(--heading);
+  border-color: var(--line);
+}
+input::placeholder, textarea::placeholder { color: var(--muted); }
+input[type="checkbox"] { accent-color: var(--lime); }
+
+:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+
+/* 알레르기 배지: 가게 확인 = 실선 핑크, AI 추정 = 점선 라임 (AC-22) */
+.badge-confirmed { border: 1.5px solid var(--pink); color: var(--pink); }
+.badge-estimated { border: 1.5px dashed var(--lime); color: var(--lime); }
+
+/* 발표 표지의 격자 배경 */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(201 206 240 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(201 206 240 / 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+}

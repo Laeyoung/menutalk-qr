@@ -13,7 +13,7 @@ const args = Object.fromEntries(
 );
 const base = (args.base || 'http://localhost:3000').replace(/\/$/, '');
 const demoKey = args.key || process.env.DEMO_KEY || '';
-const langs = (args.langs || 'en,ja,zh-Hans,zh-Hant,es').split(',');
+const langs = (args.langs || 'en,ko').split(',');
 const useModel = Boolean(args['model-localize']);
 const out = args.out || 'public/demo/menu.json';
 const staticId = args['static-id'];

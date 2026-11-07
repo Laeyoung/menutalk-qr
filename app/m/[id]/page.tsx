@@ -22,5 +22,6 @@ export default async function MenuPage(props: PageProps<'/m/[id]'>) {
       </main>
     );
   }
-  return <GuestMenu menu={r.menu} source={r.source} />;
+  // 상담 링크는 서버 env에서 읽어 넘긴다(빌드 시 번들에 박히지 않게). 비밀값이 아닌 공개 공유 URL이다.
+  return <GuestMenu menu={r.menu} source={r.source} consultUrl={process.env.GUUEY_SHARE_URL || null} />;
 }

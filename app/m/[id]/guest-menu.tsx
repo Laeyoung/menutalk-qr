@@ -13,7 +13,7 @@ import { OrderCardView } from './order-card-view';
 import { RequestSheet } from './request-sheet';
 import { AllergenBadges, Sheet } from './ui';
 
-export function GuestMenu({ menu: initialMenu, source }: { menu: PublishedMenu; source: 'blob' | 'static' }) {
+export function GuestMenu({ menu: initialMenu, source, consultUrl }: { menu: PublishedMenu; source: 'blob' | 'static'; consultUrl: string | null }) {
   const [menu, setMenu] = useState(initialMenu);
   const [lang, setLangState] = useState<LangCode>(() => (initialMenu.langs.includes('en') ? 'en' : initialMenu.langs[0]));
   const [langOpen, setLangOpen] = useState(false);
@@ -86,12 +86,12 @@ export function GuestMenu({ menu: initialMenu, source }: { menu: PublishedMenu; 
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
         <header className="sticky top-0 z-20 flex items-center gap-2 border-b border-line bg-background/95 px-4 py-3 backdrop-blur">
           <div className="min-w-0 flex-1">
-            <div className="truncate text-lg font-bold">{menu.store_name ?? 'Menu'}</div>
+            <div className="truncate font-display text-xl text-heading">{menu.store_name ?? 'Menu'}</div>
           </div>
           <button onClick={() => setAllergyOpen(true)} className={`shrink-0 rounded-full border px-3 py-2 text-sm font-semibold ${allergies.length ? 'border-danger text-danger' : 'border-line'}`} data-testid="my-allergies-btn">
             ⚠ {t('myAllergies', lang)}{allergies.length ? ` (${allergies.length})` : ''}
           </button>
-          <button onClick={() => setLangOpen(true)} className="shrink-0 rounded-full bg-foreground px-3 py-2 text-sm font-bold text-background" aria-label={t('language', lang)} data-testid="lang-btn">
+          <button onClick={() => setLangOpen(true)} className="shrink-0 rounded-full bg-blue px-3 py-2 text-sm font-bold text-ink" aria-label={t('language', lang)} data-testid="lang-btn">
             🌐 {LANG_LABEL[lang]}
           </button>
         </header>
@@ -100,7 +100,7 @@ export function GuestMenu({ menu: initialMenu, source }: { menu: PublishedMenu; 
           <Sheet onClose={() => setLangOpen(false)}>
             <div className="grid gap-2">
               {menu.langs.map((l) => (
-                <button key={l} onClick={() => { setLang(l); setLangOpen(false); }} className={`rounded-xl px-4 py-4 text-left text-xl font-bold ${l === lang ? 'bg-foreground text-background' : 'bg-card'}`} data-testid={`lang-${l}`}>
+                <button key={l} onClick={() => { setLang(l); setLangOpen(false); }} className={`rounded-xl px-4 py-4 text-left text-xl font-bold ${l === lang ? 'bg-blue text-ink' : 'bg-card-2 text-heading'}`} data-testid={`lang-${l}`}>
                   {LANG_LABEL[l]}
                 </button>
               ))}
@@ -113,9 +113,18 @@ export function GuestMenu({ menu: initialMenu, source }: { menu: PublishedMenu; 
         )}
 
         <main className="flex-1 px-4 pb-32 pt-2">
+          {consultUrl && (
+            <div className="mt-4 grid gap-2">
+              <a href={consultUrl} target="_blank" rel="noreferrer" className="grid gap-1 rounded-3xl border border-cyan/60 bg-card p-5" data-testid="consult-link">
+                <span className="font-display text-xl text-cyan">💬 {t('consult', lang)}</span>
+                <span className="text-sm text-foreground">{t('consultSub', lang)}</span>
+              </a>
+              <p className="px-1 text-xs text-muted">{t('consultFallback', lang)}</p>
+            </div>
+          )}
           {sections.map((sec, si) => (
             <section key={si} className="mt-4">
-              {sec.title && <h2 className="mb-2 text-sm font-semibold text-muted">{sec.title}</h2>}
+              {sec.title && <h2 className="mb-2 font-mono text-xs font-bold uppercase tracking-widest text-cyan">{sec.title}</h2>}
               <ul className="grid gap-3">
                 {sec.items.map((it) => (
                   <MenuCard key={it.item_id} item={it} lang={lang} name={loc[it.item_id]?.name ?? it.name_ko} short={loc[it.item_id]?.short ?? ''} allergies={allergies} inCart={cart.some((c) => c.itemId === it.item_id)} onToggle={() => toggleCart(it.item_id)} onOpen={() => setDetailId(it.item_id)} />
@@ -131,7 +140,7 @@ export function GuestMenu({ menu: initialMenu, source }: { menu: PublishedMenu; 
           <div className="mx-auto max-w-xl">
             <button onClick={() => setRequestOpen(true)} className="flex w-full items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-4 text-lg font-bold text-brand-ink" data-testid="request-btn">
               🗣 {t('request', lang)}
-              {cart.length > 0 && <span className="rounded-full bg-white px-2 text-sm text-brand">{cart.length}</span>}
+              {cart.length > 0 && <span className="rounded-full bg-card-2 px-2 text-sm text-brand">{cart.length}</span>}
             </button>
           </div>
         </div>
@@ -164,24 +173,24 @@ function MenuCard({ item, lang, name, short, allergies, inCart, onToggle, onOpen
   const level = conflictLevel(item, allergies);
   const hits = itemConflicts(item, allergies);
   return (
-    <li className={`overflow-hidden rounded-2xl border bg-card shadow-sm ${level === 'red' ? 'border-danger' : level === 'orange' ? 'border-warn' : 'border-line'}`} data-testid={`card-${item.item_id}`} data-conflict={level ?? 'none'}>
+    <li className={`overflow-hidden rounded-3xl border bg-card ${level === 'red' ? 'border-danger' : level === 'orange' ? 'border-warn' : 'border-line'}`} data-testid={`card-${item.item_id}`} data-conflict={level ?? 'none'}>
       {level && (
-        <div className={`px-4 py-1.5 text-sm font-bold text-white ${level === 'red' ? 'bg-danger' : 'bg-warn'}`}>
+        <div className={`px-4 py-1.5 text-sm font-bold ${level === 'red' ? 'bg-danger text-white' : 'bg-warn text-ink'}`}>
           ⚠ {t('conflictWarn', lang)}: {hits.map((a) => ALLERGENS[a].names[lang]).join(', ')} · {level === 'red' ? t('storeConfirmed', lang) : t('estimated', lang)}
         </div>
       )}
       <div className="grid gap-2 p-4">
         <button onClick={onOpen} className="grid gap-1 text-left">
           <div className="flex items-start justify-between gap-3">
-            <span className="text-lg font-bold leading-snug">{name}</span>
-            <span className="shrink-0 font-semibold">{item.price_krw != null ? `₩${item.price_krw.toLocaleString('en-US')}` : t('priceMarket', lang)}</span>
+            <span className="text-lg font-bold leading-snug text-heading">{name}</span>
+            <span className="shrink-0 font-mono font-bold text-lime">{item.price_krw != null ? `₩${item.price_krw.toLocaleString('en-US')}` : t('priceMarket', lang)}</span>
           </div>
-          <span className="text-sm text-muted">{item.name_ko}{item.price_note ? ` · ${item.price_note}` : ''}</span>
+          <span className="text-sm text-muted">{lang === 'ko' ? item.price_note : item.name_ko}{lang !== 'ko' && item.price_note ? ` · ${item.price_note}` : ''}</span>
           {short && <span className="text-sm">{short}</span>}
         </button>
         <div className="flex flex-wrap items-center gap-1.5">
           {item.spice_level > 0 && (
-            <span className="rounded-full bg-red-50 px-2 py-0.5 text-xs text-red-700" title={SPICE_LABEL[lang][item.spice_level]}>
+            <span className="rounded-full bg-pink/10 px-2 py-0.5 text-xs text-pink" title={SPICE_LABEL[lang][item.spice_level]}>
               {'🌶'.repeat(item.spice_level)} {SPICE_LABEL[lang][item.spice_level]}
             </span>
           )}
@@ -199,12 +208,12 @@ function AllergySheet({ lang, initial, onDone, onSkip }: { lang: LangCode; initi
   const [sel, setSel] = useState<AllergenCode[]>(initial);
   return (
     <Sheet onClose={onSkip}>
-      <h2 className="text-xl font-bold">{t('chooseAllergies', lang)}</h2>
+      <h2 className="font-display text-2xl text-blue">{t('chooseAllergies', lang)}</h2>
       <div className="mt-4 flex flex-wrap gap-2">
         {GUEST_CHIP_ORDER.map((a) => {
           const on = sel.includes(a);
           return (
-            <button key={a} onClick={() => setSel((s) => (on ? s.filter((x) => x !== a) : [...s, a]))} aria-pressed={on} className={`rounded-full px-4 py-2 text-base ${on ? 'bg-danger font-bold text-white' : 'border border-line bg-card'}`} data-testid={`allergy-${a}`}>
+            <button key={a} onClick={() => setSel((s) => (on ? s.filter((x) => x !== a) : [...s, a]))} aria-pressed={on} className={`rounded-full px-4 py-2 text-base ${on ? 'bg-danger font-bold text-white' : 'border border-line bg-card-2'}`} data-testid={`allergy-${a}`}>
               {ALLERGENS[a].emoji} {ALLERGENS[a].names[lang]}
             </button>
           );
@@ -212,7 +221,7 @@ function AllergySheet({ lang, initial, onDone, onSkip }: { lang: LangCode; initi
       </div>
       <div className="mt-6 grid grid-cols-2 gap-2">
         <button onClick={onSkip} className="rounded-2xl border border-line px-4 py-3 font-semibold">{t('skip', lang)}</button>
-        <button onClick={() => onDone(sel)} className="rounded-2xl bg-foreground px-4 py-3 font-bold text-background" data-testid="allergy-done">{t('done', lang)}</button>
+        <button onClick={() => onDone(sel)} className="rounded-2xl bg-lime px-4 py-3 font-bold text-ink" data-testid="allergy-done">{t('done', lang)}</button>
       </div>
     </Sheet>
   );

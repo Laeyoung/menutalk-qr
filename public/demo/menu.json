@@ -1,14 +1,11 @@
 {
   "menu_id": "demo",
-  "store_name": "을지로 영순식당",
-  "published_at": "2026-11-07T03:12:36.395Z",
-  "rev": 1794021156,
+  "store_name": "한끼식당",
+  "published_at": "2026-11-07T05:13:30.750Z",
+  "rev": 1794028410,
   "langs": [
     "en",
-    "ja",
-    "zh-Hans",
-    "zh-Hant",
-    "es"
+    "ko"
   ],
   "items": [
     {
@@ -21,7 +18,9 @@
       "spice_level": 1,
       "main_ingredients_ko": [
         "밥",
-        "나물",
+        "콩나물",
+        "시금치",
+        "고사리",
         "달걀",
         "고추장",
         "참기름"
@@ -36,31 +35,134 @@
     },
     {
       "item_id": "i02",
-      "name_ko": "돌솥비빔밥",
-      "price_krw": 10000,
+      "name_ko": "김치볶음밥",
+      "price_krw": 8000,
       "price_note": null,
       "category": "main",
       "section_ko": "식사",
       "spice_level": 1,
       "main_ingredients_ko": [
         "밥",
-        "나물",
-        "소고기",
+        "김치",
+        "돼지고기",
         "달걀",
-        "고추장",
+        "대파",
+        "간장",
         "참기름"
       ],
       "allergens": [
-        "sesame",
+        "pork",
         "egg",
         "soy",
         "wheat",
-        "beef"
+        "sesame",
+        "fish",
+        "shrimp"
       ],
       "allergens_source": "ai_estimated"
     },
     {
       "item_id": "i03",
+      "name_ko": "제육덮밥",
+      "price_krw": 10000,
+      "price_note": null,
+      "category": "main",
+      "section_ko": "식사",
+      "spice_level": 2,
+      "main_ingredients_ko": [
+        "밥",
+        "돼지고기",
+        "고추장",
+        "양파",
+        "대파",
+        "참깨"
+      ],
+      "allergens": [
+        "pork",
+        "soy",
+        "wheat",
+        "sesame"
+      ],
+      "allergens_source": "ai_estimated"
+    },
+    {
+      "item_id": "i04",
+      "name_ko": "냉면",
+      "price_krw": 11000,
+      "price_note": null,
+      "category": "main",
+      "section_ko": "식사",
+      "spice_level": 0,
+      "main_ingredients_ko": [
+        "메밀면",
+        "소고기 육수",
+        "소고기 편육",
+        "오이",
+        "무절임",
+        "삶은 달걀",
+        "배"
+      ],
+      "allergens": [
+        "buckwheat",
+        "wheat",
+        "beef",
+        "egg",
+        "soy",
+        "sesame"
+      ],
+      "allergens_source": "ai_estimated"
+    },
+    {
+      "item_id": "i05",
+      "name_ko": "잔치국수",
+      "price_krw": 7000,
+      "price_note": null,
+      "category": "main",
+      "section_ko": "식사",
+      "spice_level": 0,
+      "main_ingredients_ko": [
+        "소면",
+        "멸치 육수",
+        "애호박",
+        "달걀 지단",
+        "김",
+        "양념간장"
+      ],
+      "allergens": [
+        "wheat",
+        "fish",
+        "egg",
+        "soy",
+        "sesame"
+      ],
+      "allergens_source": "ai_estimated"
+    },
+    {
+      "item_id": "i06",
+      "name_ko": "갈비탕",
+      "price_krw": 13000,
+      "price_note": null,
+      "category": "main",
+      "section_ko": "식사",
+      "spice_level": 0,
+      "main_ingredients_ko": [
+        "소갈비",
+        "무",
+        "당면",
+        "대파",
+        "달걀 지단",
+        "간장"
+      ],
+      "allergens": [
+        "beef",
+        "soy",
+        "wheat",
+        "egg"
+      ],
+      "allergens_source": "ai_estimated"
+    },
+    {
+      "item_id": "i07",
       "name_ko": "김치찌개",
       "price_krw": 9000,
       "price_note": null,
@@ -71,18 +173,19 @@
         "김치",
         "돼지고기",
         "두부",
-        "파"
+        "대파",
+        "양파"
       ],
       "allergens": [
         "pork",
         "soy",
-        "shrimp",
-        "fish"
+        "fish",
+        "shrimp"
       ],
       "allergens_source": "ai_estimated"
     },
     {
-      "item_id": "i04",
+      "item_id": "i08",
       "name_ko": "된장찌개",
       "price_krw": 8000,
       "price_note": null,
@@ -94,6 +197,7 @@
         "두부",
         "애호박",
         "감자",
+        "양파",
         "멸치 육수"
       ],
       "allergens": [
@@ -104,7 +208,31 @@
       "allergens_source": "ai_estimated"
     },
     {
-      "item_id": "i05",
+      "item_id": "i09",
+      "name_ko": "순두부찌개",
+      "price_krw": 9000,
+      "price_note": null,
+      "category": "main",
+      "section_ko": "찌개",
+      "spice_level": 2,
+      "main_ingredients_ko": [
+        "순두부",
+        "바지락",
+        "돼지고기",
+        "달걀",
+        "대파",
+        "고춧가루"
+      ],
+      "allergens": [
+        "soy",
+        "shellfish",
+        "pork",
+        "egg"
+      ],
+      "allergens_source": "ai_estimated"
+    },
+    {
+      "item_id": "i10",
       "name_ko": "부대찌개",
       "price_krw": 11000,
       "price_note": "1인",
@@ -115,205 +243,106 @@
         "햄",
         "소시지",
         "김치",
+        "두부",
         "라면사리",
+        "슬라이스 치즈",
         "고추장"
       ],
       "allergens": [
         "pork",
         "wheat",
         "soy",
-        "milk"
+        "milk",
+        "fish",
+        "shrimp"
       ],
       "allergens_source": "store_confirmed"
-    },
-    {
-      "item_id": "i06",
-      "name_ko": "순두부찌개",
-      "price_krw": 9000,
-      "price_note": null,
-      "category": "main",
-      "section_ko": "찌개",
-      "spice_level": 2,
-      "main_ingredients_ko": [
-        "순두부",
-        "바지락",
-        "달걀",
-        "고춧가루"
-      ],
-      "allergens": [
-        "soy",
-        "shellfish",
-        "egg"
-      ],
-      "allergens_source": "ai_estimated"
-    },
-    {
-      "item_id": "i07",
-      "name_ko": "제육볶음",
-      "price_krw": 11000,
-      "price_note": null,
-      "category": "main",
-      "section_ko": "볶음",
-      "spice_level": 2,
-      "main_ingredients_ko": [
-        "돼지고기",
-        "양파",
-        "고추장",
-        "참기름"
-      ],
-      "allergens": [
-        "pork",
-        "soy",
-        "wheat",
-        "sesame"
-      ],
-      "allergens_source": "ai_estimated"
-    },
-    {
-      "item_id": "i08",
-      "name_ko": "불고기",
-      "price_krw": 13000,
-      "price_note": null,
-      "category": "main",
-      "section_ko": "볶음",
-      "spice_level": 0,
-      "main_ingredients_ko": [
-        "소고기",
-        "양파",
-        "간장",
-        "배",
-        "참기름"
-      ],
-      "allergens": [
-        "beef",
-        "soy",
-        "wheat",
-        "sesame"
-      ],
-      "allergens_source": "ai_estimated"
-    },
-    {
-      "item_id": "i09",
-      "name_ko": "해물파전",
-      "price_krw": 15000,
-      "price_note": null,
-      "category": "side",
-      "section_ko": "전",
-      "spice_level": 0,
-      "main_ingredients_ko": [
-        "파",
-        "새우",
-        "오징어",
-        "부침가루",
-        "달걀"
-      ],
-      "allergens": [
-        "shrimp",
-        "squid",
-        "wheat",
-        "egg"
-      ],
-      "allergens_source": "store_confirmed"
-    },
-    {
-      "item_id": "i10",
-      "name_ko": "김치전",
-      "price_krw": 12000,
-      "price_note": null,
-      "category": "side",
-      "section_ko": "전",
-      "spice_level": 1,
-      "main_ingredients_ko": [
-        "김치",
-        "부침가루",
-        "돼지고기"
-      ],
-      "allergens": [
-        "wheat",
-        "pork",
-        "shrimp",
-        "fish"
-      ],
-      "allergens_source": "ai_estimated"
     },
     {
       "item_id": "i11",
-      "name_ko": "물냉면",
-      "price_krw": 10000,
+      "name_ko": "해물파전",
+      "price_krw": 15000,
       "price_note": null,
       "category": "main",
-      "section_ko": "면",
+      "section_ko": "안주·주류",
       "spice_level": 0,
       "main_ingredients_ko": [
-        "메밀면",
-        "소고기 육수",
-        "오이",
-        "배",
-        "삶은 달걀"
+        "밀가루 반죽",
+        "쪽파",
+        "오징어",
+        "새우",
+        "홍합",
+        "달걀",
+        "초간장"
       ],
       "allergens": [
-        "buckwheat",
         "wheat",
-        "beef",
-        "egg"
+        "egg",
+        "squid",
+        "shrimp",
+        "shellfish",
+        "soy"
       ],
       "allergens_source": "store_confirmed"
     },
     {
       "item_id": "i12",
-      "name_ko": "비빔냉면",
-      "price_krw": 10000,
+      "name_ko": "고등어구이",
+      "price_krw": 12000,
       "price_note": null,
       "category": "main",
-      "section_ko": "면",
-      "spice_level": 2,
+      "section_ko": "안주·주류",
+      "spice_level": 0,
       "main_ingredients_ko": [
-        "메밀면",
-        "고추장 양념",
-        "오이",
-        "삶은 달걀",
-        "참기름"
+        "고등어",
+        "소금"
       ],
       "allergens": [
-        "buckwheat",
-        "wheat",
-        "egg",
-        "soy",
-        "sesame"
+        "mackerel",
+        "fish"
       ],
       "allergens_source": "ai_estimated"
     },
     {
       "item_id": "i13",
-      "name_ko": "계란찜",
-      "price_krw": 5000,
-      "price_note": null,
-      "category": "side",
-      "section_ko": "사이드",
-      "spice_level": 0,
+      "name_ko": "낙지볶음",
+      "price_krw": null,
+      "price_note": "시가",
+      "category": "main",
+      "section_ko": "안주·주류",
+      "spice_level": 3,
       "main_ingredients_ko": [
-        "달걀",
-        "파",
-        "새우젓"
+        "낙지",
+        "양파",
+        "대파",
+        "고추장",
+        "고춧가루",
+        "참기름"
       ],
       "allergens": [
-        "egg",
-        "shrimp"
+        "other",
+        "soy",
+        "wheat",
+        "sesame"
       ],
       "allergens_source": "ai_estimated"
     },
     {
       "item_id": "i14",
-      "name_ko": "공기밥",
-      "price_krw": 1000,
+      "name_ko": "계란말이",
+      "price_krw": 8000,
       "price_note": null,
       "category": "side",
-      "section_ko": "사이드",
+      "section_ko": "안주·주류",
       "spice_level": 0,
       "main_ingredients_ko": [
-        "쌀밥"
+        "달걀",
+        "대파",
+        "당근"
       ],
-      "allergens": [],
+      "allergens": [
+        "egg"
+      ],
       "allergens_source": "ai_estimated"
     },
     {
@@ -322,62 +351,190 @@
       "price_krw": 5000,
       "price_note": null,
       "category": "alcohol",
-      "section_ko": "주류",
+      "section_ko": "안주·주류",
       "spice_level": 0,
-      "main_ingredients_ko": [],
+      "main_ingredients_ko": [
+        "희석식 소주"
+      ],
       "allergens": [],
       "allergens_source": "ai_estimated"
     },
     {
       "item_id": "i16",
+      "name_ko": "맥주",
+      "price_krw": 5000,
+      "price_note": null,
+      "category": "alcohol",
+      "section_ko": "안주·주류",
+      "spice_level": 0,
+      "main_ingredients_ko": [
+        "맥아(보리)",
+        "홉"
+      ],
+      "allergens": [
+        "other"
+      ],
+      "allergens_source": "ai_estimated"
+    },
+    {
+      "item_id": "i17",
+      "name_ko": "막걸리",
+      "price_krw": 4000,
+      "price_note": null,
+      "category": "alcohol",
+      "section_ko": "안주·주류",
+      "spice_level": 0,
+      "main_ingredients_ko": [
+        "쌀",
+        "누룩"
+      ],
+      "allergens": [
+        "wheat"
+      ],
+      "allergens_source": "ai_estimated"
+    },
+    {
+      "item_id": "i18",
       "name_ko": "콜라",
       "price_krw": 2000,
       "price_note": null,
       "category": "drink",
-      "section_ko": "음료",
+      "section_ko": "안주·주류",
       "spice_level": 0,
-      "main_ingredients_ko": [],
+      "main_ingredients_ko": [
+        "탄산음료"
+      ],
       "allergens": [],
       "allergens_source": "ai_estimated"
     }
   ],
   "locales": {
     "en": {
+      "i01": {
+        "item_id": "i01",
+        "name": "Bibimbap (Mixed Rice Bowl)",
+        "short": "Rice with seasoned vegetables, egg and chili paste",
+        "detail": "Warm rice topped with bean sprouts, spinach, bracken and an egg, served with gochujang chili paste and sesame oil. One bowl is a full meal for one.",
+        "how_to_eat": "Add chili paste to taste and mix everything well before eating.",
+        "tts_text": "Bibimbap, Mixed Rice Bowl. Rice with seasoned vegetables, egg and chili paste. Warm rice topped with bean sprouts, spinach, bracken and an egg, served with gochujang chili paste and sesame oil. One bowl is a full meal for one.",
+        "tts_hash": "7c7ce84d"
+      },
+      "i02": {
+        "item_id": "i02",
+        "name": "Kimchi-bokkeumbap (Kimchi Fried Rice)",
+        "short": "Fried rice with kimchi, pork and a fried egg",
+        "detail": "Rice is stir-fried with kimchi, pork, green onion and soy sauce, then topped with an egg. Mildly spicy, one portion for one person.",
+        "how_to_eat": null,
+        "tts_text": "Kimchi-bokkeumbap, Kimchi Fried Rice. Fried rice with kimchi, pork and a fried egg. Rice is stir-fried with kimchi, pork, green onion and soy sauce, then topped with an egg. Mildly spicy, one portion for one person.",
+        "tts_hash": "6f959846"
+      },
+      "i03": {
+        "item_id": "i03",
+        "name": "Jeyuk-deopbap (Spicy Pork over Rice)",
+        "short": "Spicy stir-fried pork over rice",
+        "detail": "Pork, onion and green onion are stir-fried in gochujang sauce and served over rice with sesame seeds. Spicy, one portion for one person.",
+        "how_to_eat": null,
+        "tts_text": "Jeyuk-deopbap, Spicy Pork over Rice. Spicy stir-fried pork over rice. Pork, onion and green onion are stir-fried in gochujang sauce and served over rice with sesame seeds. Spicy, one portion for one person.",
+        "tts_hash": "d460842b"
+      },
+      "i04": {
+        "item_id": "i04",
+        "name": "Naengmyeon (Cold Buckwheat Noodles)",
+        "short": "Chewy buckwheat noodles in icy beef broth",
+        "detail": "Buckwheat noodles in chilled beef broth with sliced beef, cucumber, pickled radish, pear and a boiled egg. Refreshing and not spicy, one bowl per person.",
+        "how_to_eat": "Add vinegar and mustard to taste; staff can cut the noodles with scissors.",
+        "tts_text": "Naengmyeon, Cold Buckwheat Noodles. Chewy buckwheat noodles in icy beef broth. Buckwheat noodles in chilled beef broth with sliced beef, cucumber, pickled radish, pear and a boiled egg. Refreshing and not spicy, one bowl per person.",
+        "tts_hash": "d31b4817"
+      },
+      "i05": {
+        "item_id": "i05",
+        "name": "Janchi-guksu (Warm Noodle Soup)",
+        "short": "Thin wheat noodles in light anchovy broth",
+        "detail": "Thin wheat noodles in a mild anchovy broth with zucchini, egg strips and seaweed, seasoned with soy sauce dressing. Light and not spicy, one bowl per person.",
+        "how_to_eat": null,
+        "tts_text": "Janchi-guksu, Warm Noodle Soup. Thin wheat noodles in light anchovy broth. Thin wheat noodles in a mild anchovy broth with zucchini, egg strips and seaweed, seasoned with soy sauce dressing. Light and not spicy, one bowl per person.",
+        "tts_hash": "05437f28"
+      },
+      "i06": {
+        "item_id": "i06",
+        "name": "Galbitang (Beef Short Rib Soup)",
+        "short": "Clear soup with tender beef short ribs",
+        "detail": "Beef short ribs are simmered for a long time with radish and glass noodles into a clear, savory soup. Not spicy, one bowl per person, served with rice.",
+        "how_to_eat": null,
+        "tts_text": "Galbitang, Beef Short Rib Soup. Clear soup with tender beef short ribs. Beef short ribs are simmered for a long time with radish and glass noodles into a clear, savory soup. Not spicy, one bowl per person, served with rice.",
+        "tts_hash": "bf3cbf2d"
+      },
+      "i07": {
+        "item_id": "i07",
+        "name": "Kimchi-jjigae (Kimchi Stew)",
+        "short": "Spicy stew of aged kimchi, pork and tofu",
+        "detail": "Well-aged kimchi is simmered with pork, tofu, green onion and onion into a sour and spicy stew. One portion for one person, served with rice.",
+        "how_to_eat": null,
+        "tts_text": "Kimchi-jjigae, Kimchi Stew. Spicy stew of aged kimchi, pork and tofu. Well-aged kimchi is simmered with pork, tofu, green onion and onion into a sour and spicy stew. One portion for one person, served with rice.",
+        "tts_hash": "4c43e2d0"
+      },
+      "i08": {
+        "item_id": "i08",
+        "name": "Doenjang-jjigae (Soybean Paste Stew)",
+        "short": "Savory soybean paste stew with tofu and zucchini",
+        "detail": "Fermented soybean paste is simmered in anchovy broth with tofu, zucchini, potato and onion. Mild and earthy, one portion for one person.",
+        "how_to_eat": null,
+        "tts_text": "Doenjang-jjigae, Soybean Paste Stew. Savory soybean paste stew with tofu and zucchini. Fermented soybean paste is simmered in anchovy broth with tofu, zucchini, potato and onion. Mild and earthy, one portion for one person.",
+        "tts_hash": "911eea4d"
+      },
+      "i09": {
+        "item_id": "i09",
+        "name": "Sundubu-jjigae (Soft Tofu Stew)",
+        "short": "Spicy silky tofu stew with clams, pork and egg",
+        "detail": "Extra-soft tofu, clams and pork are boiled in a red chili broth, and an egg is added at the end. One bubbling pot for one person.",
+        "how_to_eat": "Stir the egg into the hot stew right away so it cooks.",
+        "tts_text": "Sundubu-jjigae, Soft Tofu Stew. Spicy silky tofu stew with clams, pork and egg. Extra-soft tofu, clams and pork are boiled in a red chili broth, and an egg is added at the end. One bubbling pot for one person.",
+        "tts_hash": "4089aef4"
+      },
+      "i10": {
+        "item_id": "i10",
+        "name": "Budae-jjigae (Army Stew)",
+        "short": "Spicy hot pot with ham, sausage, kimchi and noodles",
+        "detail": "Ham, sausage, kimchi, tofu, instant noodles and a slice of cheese are boiled in a spicy chili paste broth. Priced per person and usually eaten with rice.",
+        "how_to_eat": "Eat the noodles first before they get soft.",
+        "tts_text": "Budae-jjigae, Army Stew. Spicy hot pot with ham, sausage, kimchi and noodles. Ham, sausage, kimchi, tofu, instant noodles and a slice of cheese are boiled in a spicy chili paste broth. Priced per person and usually eaten with rice.",
+        "tts_hash": "16f65ab1"
+      },
       "i11": {
         "item_id": "i11",
-        "name": "Mul-naengmyeon (Cold Buckwheat Noodles)",
-        "short": "Chewy buckwheat noodles in icy beef broth",
-        "detail": "Buckwheat noodles served in a chilled, slightly tangy beef broth with cucumber, pear and a boiled egg. Refreshing and not spicy, one bowl per person.",
-        "how_to_eat": "Add vinegar and mustard to taste; staff can cut the noodles with scissors.",
-        "tts_text": "Mul-naengmyeon, Cold Buckwheat Noodles. Chewy buckwheat noodles in icy beef broth. Buckwheat noodles served in a chilled, slightly tangy beef broth with cucumber, pear and a boiled egg. Refreshing and not spicy, one bowl per person.",
-        "tts_hash": "d0fc97f1"
+        "name": "Haemul-pajeon (Seafood Scallion Pancake)",
+        "short": "Crispy pancake with scallion, squid, shrimp and mussels",
+        "detail": "A large savory pancake of scallions, squid, shrimp and mussels in a wheat and egg batter, served with vinegar soy sauce. Good for sharing between two or three.",
+        "how_to_eat": "Dip each piece in the vinegar soy sauce.",
+        "tts_text": "Haemul-pajeon, Seafood Scallion Pancake. Crispy pancake with scallion, squid, shrimp and mussels. A large savory pancake of scallions, squid, shrimp and mussels in a wheat and egg batter, served with vinegar soy sauce. Good for sharing between two or three.",
+        "tts_hash": "f2d8aba7"
       },
       "i12": {
         "item_id": "i12",
-        "name": "Bibim-naengmyeon (Spicy Cold Noodles)",
-        "short": "Cold buckwheat noodles in spicy chili sauce",
-        "detail": "Chewy buckwheat noodles are tossed in a sweet and spicy chili sauce with cucumber, egg and sesame oil. Served cold, one bowl per person.",
-        "how_to_eat": "Mix the sauce through the noodles well before eating.",
-        "tts_text": "Bibim-naengmyeon, Spicy Cold Noodles. Cold buckwheat noodles in spicy chili sauce. Chewy buckwheat noodles are tossed in a sweet and spicy chili sauce with cucumber, egg and sesame oil. Served cold, one bowl per person.",
-        "tts_hash": "b5958f24"
+        "name": "Godeungeo-gui (Grilled Mackerel)",
+        "short": "Salt-grilled mackerel",
+        "detail": "A whole mackerel fillet seasoned only with salt and grilled until the skin is crisp. Not spicy, good with rice or as a side to share.",
+        "how_to_eat": null,
+        "tts_text": "Godeungeo-gui, Grilled Mackerel. Salt-grilled mackerel. A whole mackerel fillet seasoned only with salt and grilled until the skin is crisp. Not spicy, good with rice or as a side to share.",
+        "tts_hash": "f07354d7"
       },
       "i13": {
         "item_id": "i13",
-        "name": "Gyeran-jjim (Steamed Egg)",
-        "short": "Fluffy steamed egg in a hot pot",
-        "detail": "Eggs are steamed with green onion and seasoned with salted shrimp until soft and fluffy. A mild side dish for the table to share.",
+        "name": "Nakji-bokkeum (Spicy Stir-fried Octopus)",
+        "short": "Very spicy stir-fried small octopus",
+        "detail": "Small octopus is stir-fried with onion and green onion in gochujang and chili flakes, finished with sesame oil. Very spicy, good for sharing; price varies by season.",
         "how_to_eat": null,
-        "tts_text": "Gyeran-jjim, Steamed Egg. Fluffy steamed egg in a hot pot. Eggs are steamed with green onion and seasoned with salted shrimp until soft and fluffy. A mild side dish for the table to share.",
-        "tts_hash": "4129262c"
+        "tts_text": "Nakji-bokkeum, Spicy Stir-fried Octopus. Very spicy stir-fried small octopus. Small octopus is stir-fried with onion and green onion in gochujang and chili flakes, finished with sesame oil. Very spicy, good for sharing; price varies by season.",
+        "tts_hash": "96949453"
       },
       "i14": {
         "item_id": "i14",
-        "name": "Gonggi-bap (Bowl of Rice)",
-        "short": "A bowl of steamed white rice",
-        "detail": "A single bowl of plain steamed rice. Order it with stews and stir-fried dishes.",
+        "name": "Gyeran-mari (Rolled Omelette)",
+        "short": "Fluffy rolled omelette with green onion and carrot",
+        "detail": "Beaten eggs with green onion and carrot are rolled in thin layers and sliced. Mild and not spicy, a side dish to share.",
         "how_to_eat": null,
-        "tts_text": "Gonggi-bap, Bowl of Rice. A bowl of steamed white rice. A single bowl of plain steamed rice. Order it with stews and stir-fried dishes.",
-        "tts_hash": "32ac8780"
+        "tts_text": "Gyeran-mari, Rolled Omelette. Fluffy rolled omelette with green onion and carrot. Beaten eggs with green onion and carrot are rolled in thin layers and sliced. Mild and not spicy, a side dish to share.",
+        "tts_hash": "39c3b3a2"
       },
       "i15": {
         "item_id": "i15",
@@ -390,686 +547,194 @@
       },
       "i16": {
         "item_id": "i16",
+        "name": "Maekju (Korean Beer)",
+        "short": "Cold Korean lager",
+        "detail": "A bottle of light, crisp Korean lager brewed from barley malt and hops. Often mixed with soju.",
+        "how_to_eat": null,
+        "tts_text": "Maekju, Korean Beer. Cold Korean lager. A bottle of light, crisp Korean lager brewed from barley malt and hops. Often mixed with soju.",
+        "tts_hash": "2a11e51b"
+      },
+      "i17": {
+        "item_id": "i17",
+        "name": "Makgeolli (Rice Wine)",
+        "short": "Milky, lightly sweet rice wine",
+        "detail": "A cloudy rice wine made from rice and nuruk starter, lightly sweet and fizzy. Good with savory pancakes.",
+        "how_to_eat": "Gently shake or stir the bottle before pouring.",
+        "tts_text": "Makgeolli, Rice Wine. Milky, lightly sweet rice wine. A cloudy rice wine made from rice and nuruk starter, lightly sweet and fizzy. Good with savory pancakes.",
+        "tts_hash": "9f33c8a6"
+      },
+      "i18": {
+        "item_id": "i18",
         "name": "Cola",
         "short": "Chilled cola",
         "detail": "A cold bottle or can of cola.",
         "how_to_eat": null,
         "tts_text": "Cola. Chilled cola. A cold bottle or can of cola.",
         "tts_hash": "cc01100c"
-      },
-      "i01": {
-        "item_id": "i01",
-        "name": "Bibimbap (Mixed Rice Bowl)",
-        "short": "Rice with seasoned vegetables, egg and chili paste",
-        "detail": "Warm rice topped with seasoned vegetables and a fried egg, served with gochujang chili paste and sesame oil. One bowl is a full meal for one person.",
-        "how_to_eat": "Add as much chili paste as you like and mix everything well before eating.",
-        "tts_text": "Bibimbap, Mixed Rice Bowl. Rice with seasoned vegetables, egg and chili paste. Warm rice topped with seasoned vegetables and a fried egg, served with gochujang chili paste and sesame oil. One bowl is a full meal for one person.",
-        "tts_hash": "9b89d742"
-      },
-      "i02": {
-        "item_id": "i02",
-        "name": "Dolsot Bibimbap (Hot Stone Bowl)",
-        "short": "Bibimbap with beef in a sizzling stone pot",
-        "detail": "Rice, seasoned vegetables, beef and egg served in a very hot stone bowl, so the rice at the bottom turns crispy. A full meal for one person.",
-        "how_to_eat": "Mix quickly while the bowl is hot, and scrape up the crispy rice at the bottom.",
-        "tts_text": "Dolsot Bibimbap, Hot Stone Bowl. Bibimbap with beef in a sizzling stone pot. Rice, seasoned vegetables, beef and egg served in a very hot stone bowl, so the rice at the bottom turns crispy. A full meal for one person.",
-        "tts_hash": "e17644f0"
-      },
-      "i03": {
-        "item_id": "i03",
-        "name": "Kimchi-jjigae (Kimchi Stew)",
-        "short": "Spicy stew of aged kimchi, pork and tofu",
-        "detail": "Well-aged kimchi is simmered with pork, tofu and green onion into a sour and spicy stew. One portion for one person, served with rice.",
-        "how_to_eat": null,
-        "tts_text": "Kimchi-jjigae, Kimchi Stew. Spicy stew of aged kimchi, pork and tofu. Well-aged kimchi is simmered with pork, tofu and green onion into a sour and spicy stew. One portion for one person, served with rice.",
-        "tts_hash": "e60a4230"
-      },
-      "i04": {
-        "item_id": "i04",
-        "name": "Doenjang-jjigae (Soybean Paste Stew)",
-        "short": "Savory soybean paste stew with tofu and zucchini",
-        "detail": "Fermented soybean paste is simmered in anchovy broth with tofu, zucchini and potato. Mild and earthy, one portion for one person.",
-        "how_to_eat": null,
-        "tts_text": "Doenjang-jjigae, Soybean Paste Stew. Savory soybean paste stew with tofu and zucchini. Fermented soybean paste is simmered in anchovy broth with tofu, zucchini and potato. Mild and earthy, one portion for one person.",
-        "tts_hash": "802285b3"
-      },
-      "i05": {
-        "item_id": "i05",
-        "name": "Budae-jjigae (Army Stew)",
-        "short": "Spicy hot pot with ham, sausage, kimchi and noodles",
-        "detail": "Ham, sausage, kimchi and instant noodles are boiled in a spicy chili paste broth. Priced per person and usually eaten with rice.",
-        "how_to_eat": "Eat the noodles first before they get soft.",
-        "tts_text": "Budae-jjigae, Army Stew. Spicy hot pot with ham, sausage, kimchi and noodles. Ham, sausage, kimchi and instant noodles are boiled in a spicy chili paste broth. Priced per person and usually eaten with rice.",
-        "tts_hash": "8e49aae3"
-      },
-      "i06": {
-        "item_id": "i06",
-        "name": "Sundubu-jjigae (Soft Tofu Stew)",
-        "short": "Spicy silky tofu stew with clams and egg",
-        "detail": "Extra-soft tofu and clams are boiled in a red chili broth, and a raw egg is cracked in at the end. One bubbling pot for one person.",
-        "how_to_eat": "Stir the egg into the hot stew right away so it cooks.",
-        "tts_text": "Sundubu-jjigae, Soft Tofu Stew. Spicy silky tofu stew with clams and egg. Extra-soft tofu and clams are boiled in a red chili broth, and a raw egg is cracked in at the end. One bubbling pot for one person.",
-        "tts_hash": "f0027b14"
-      },
-      "i07": {
-        "item_id": "i07",
-        "name": "Jeyuk-bokkeum (Spicy Stir-fried Pork)",
-        "short": "Pork stir-fried in sweet and spicy chili sauce",
-        "detail": "Sliced pork and onion are stir-fried in gochujang sauce and finished with sesame oil. A main dish for one person, best with rice.",
-        "how_to_eat": null,
-        "tts_text": "Jeyuk-bokkeum, Spicy Stir-fried Pork. Pork stir-fried in sweet and spicy chili sauce. Sliced pork and onion are stir-fried in gochujang sauce and finished with sesame oil. A main dish for one person, best with rice.",
-        "tts_hash": "67e02c7f"
-      },
-      "i08": {
-        "item_id": "i08",
-        "name": "Bulgogi (Marinated Beef)",
-        "short": "Sweet soy-marinated beef with onion",
-        "detail": "Thin beef slices marinated in soy sauce, pear and sesame oil are cooked with onion. Sweet and not spicy, one portion for one person.",
-        "how_to_eat": "Try it wrapped with rice in a lettuce leaf if provided.",
-        "tts_text": "Bulgogi, Marinated Beef. Sweet soy-marinated beef with onion. Thin beef slices marinated in soy sauce, pear and sesame oil are cooked with onion. Sweet and not spicy, one portion for one person.",
-        "tts_hash": "c6145cce"
-      },
-      "i09": {
-        "item_id": "i09",
-        "name": "Haemul-pajeon (Seafood Scallion Pancake)",
-        "short": "Crispy pancake with green onion, shrimp and squid",
-        "detail": "A large savory pancake of green onion, shrimp and squid in a wheat and egg batter, fried until crispy. Good for sharing between two or three people.",
-        "how_to_eat": "Dip each piece in the soy dipping sauce.",
-        "tts_text": "Haemul-pajeon, Seafood Scallion Pancake. Crispy pancake with green onion, shrimp and squid. A large savory pancake of green onion, shrimp and squid in a wheat and egg batter, fried until crispy. Good for sharing between two or three people.",
-        "tts_hash": "bbf8e00c"
-      },
-      "i10": {
-        "item_id": "i10",
-        "name": "Kimchi-jeon (Kimchi Pancake)",
-        "short": "Crispy pancake of chopped kimchi and pork",
-        "detail": "Chopped kimchi and a little pork are mixed into a wheat batter and pan-fried. Slightly sour and mildly spicy, good for sharing.",
-        "how_to_eat": null,
-        "tts_text": "Kimchi-jeon, Kimchi Pancake. Crispy pancake of chopped kimchi and pork. Chopped kimchi and a little pork are mixed into a wheat batter and pan-fried. Slightly sour and mildly spicy, good for sharing.",
-        "tts_hash": "00086b64"
       }
     },
-    "ja": {
-      "i11": {
-        "item_id": "i11",
-        "name": "水冷麺（ムルネンミョン）",
-        "short": "冷たい牛骨スープのそば粉冷麺",
-        "detail": "そば粉の麺を冷たく少し酸味のある牛肉スープに入れ、きゅうり、梨、ゆで卵をのせます。辛くない一人前です。",
-        "how_to_eat": "お好みで酢とからしを入れてください。麺ははさみで切ってもらえます。",
-        "tts_text": "水冷麺、ムルネンミョン。冷たい牛骨スープのそば粉冷麺。そば粉の麺を冷たく少し酸味のある牛肉スープに入れ、きゅうり、梨、ゆで卵をのせます。辛くない一人前です。",
-        "tts_hash": "6160446e"
-      },
-      "i12": {
-        "item_id": "i12",
-        "name": "ビビン冷麺",
-        "short": "甘辛だれで和えるそば粉冷麺",
-        "detail": "そば粉の麺を甘辛い唐辛子だれ、きゅうり、卵、ごま油で和えた冷たい麺です。一人前です。",
-        "how_to_eat": "たれを麺によく絡めてから召し上がってください。",
-        "tts_text": "ビビン冷麺。甘辛だれで和えるそば粉冷麺。そば粉の麺を甘辛い唐辛子だれ、きゅうり、卵、ごま油で和えた冷たい麺です。一人前です。",
-        "tts_hash": "c7c47086"
-      },
-      "i13": {
-        "item_id": "i13",
-        "name": "ケランチム（韓国風茶碗蒸し）",
-        "short": "ふわふわの韓国風蒸し卵",
-        "detail": "卵をねぎと一緒に蒸し、アミの塩辛で味付けしたふわふわの料理です。辛くないサイドでシェア向きです。",
-        "how_to_eat": null,
-        "tts_text": "ケランチム、韓国風茶碗蒸し。ふわふわの韓国風蒸し卵。卵をねぎと一緒に蒸し、アミの塩辛で味付けしたふわふわの料理です。辛くないサイドでシェア向きです。",
-        "tts_hash": "645d8a46"
-      },
-      "i14": {
-        "item_id": "i14",
-        "name": "ご飯（コンギパプ）",
-        "short": "白いご飯一杯",
-        "detail": "白いご飯一杯です。チゲや炒め物と一緒に注文してください。",
-        "how_to_eat": null,
-        "tts_text": "ご飯、コンギパプ。白いご飯一杯。白いご飯一杯です。チゲや炒め物と一緒に注文してください。",
-        "tts_hash": "98c17d52"
-      },
-      "i15": {
-        "item_id": "i15",
-        "name": "焼酎（ソジュ）",
-        "short": "韓国の透明な蒸留酒",
-        "detail": "アルコール度数16〜17度ほどの、すっきりした韓国のお酒です。緑の瓶1本をテーブルで分けて飲みます。",
-        "how_to_eat": "自分ではなく相手のグラスに注ぎ、小さなグラスで飲みます。",
-        "tts_text": "焼酎、ソジュ。韓国の透明な蒸留酒。アルコール度数16〜17度ほどの、すっきりした韓国のお酒です。緑の瓶1本をテーブルで分けて飲みます。",
-        "tts_hash": "bd964abc"
-      },
-      "i16": {
-        "item_id": "i16",
-        "name": "コーラ",
-        "short": "冷たいコーラ",
-        "detail": "冷えたコーラです。",
-        "how_to_eat": null,
-        "tts_text": "コーラ。冷たいコーラ。冷えたコーラです。",
-        "tts_hash": "e88ad4d4"
-      },
+    "ko": {
       "i01": {
         "item_id": "i01",
-        "name": "ビビンバ",
-        "short": "ナムルと卵をのせた混ぜご飯",
-        "detail": "ご飯にナムルと目玉焼きをのせ、コチュジャンとごま油を添えます。一人前で一食分です。",
-        "how_to_eat": "コチュジャンをお好みの量入れて、よく混ぜてから召し上がってください。",
-        "tts_text": "ビビンバ。ナムルと卵をのせた混ぜご飯。ご飯にナムルと目玉焼きをのせ、コチュジャンとごま油を添えます。一人前で一食分です。",
-        "tts_hash": "504e3c49"
+        "name": "비빔밥",
+        "short": "밥 위에 나물·달걀·고추장을 올린 한 그릇",
+        "detail": "따뜻한 밥에 콩나물, 시금치, 고사리, 달걀을 올리고 고추장과 참기름을 곁들입니다. 한 그릇이 1인분 식사입니다.",
+        "how_to_eat": "고추장을 입맛에 맞게 넣고 골고루 비벼 드세요.",
+        "tts_text": "비빔밥. 밥 위에 나물 달걀 고추장을 올린 한 그릇. 따뜻한 밥에 콩나물, 시금치, 고사리, 달걀을 올리고 고추장과 참기름을 곁들입니다. 한 그릇이 1인분 식사입니다.",
+        "tts_hash": "e8c54dff"
       },
       "i02": {
         "item_id": "i02",
-        "name": "石焼ビビンバ",
-        "short": "熱い石鍋で出す牛肉入りビビンバ",
-        "detail": "ご飯、ナムル、牛肉、卵を熱い石鍋で出し、底のご飯がおこげになります。一人前です。",
-        "how_to_eat": "鍋が熱いうちに手早く混ぜ、底のおこげも一緒に食べてください。",
-        "tts_text": "石焼ビビンバ。熱い石鍋で出す牛肉入りビビンバ。ご飯、ナムル、牛肉、卵を熱い石鍋で出し、底のご飯がおこげになります。一人前です。",
-        "tts_hash": "fe6af430"
+        "name": "김치볶음밥",
+        "short": "김치·돼지고기를 넣고 볶은 밥에 달걀",
+        "detail": "밥을 김치, 돼지고기, 대파, 간장과 함께 볶고 달걀을 올립니다. 살짝 매운 1인분입니다.",
+        "how_to_eat": null,
+        "tts_text": "김치볶음밥. 김치 돼지고기를 넣고 볶은 밥에 달걀. 밥을 김치, 돼지고기, 대파, 간장과 함께 볶고 달걀을 올립니다. 살짝 매운 1인분입니다.",
+        "tts_hash": "4d8ad372"
       },
       "i03": {
         "item_id": "i03",
-        "name": "キムチチゲ",
-        "short": "熟成キムチと豚肉、豆腐の辛い鍋",
-        "detail": "よく漬かったキムチを豚肉、豆腐、ねぎと煮込んだ酸味のある辛い鍋です。一人前でご飯と一緒に出します。",
+        "name": "제육덮밥",
+        "short": "매콤한 돼지고기 볶음을 올린 덮밥",
+        "detail": "돼지고기, 양파, 대파를 고추장 양념에 볶아 밥 위에 올리고 참깨를 뿌립니다. 매콤한 1인분입니다.",
         "how_to_eat": null,
-        "tts_text": "キムチチゲ。熟成キムチと豚肉、豆腐の辛い鍋。よく漬かったキムチを豚肉、豆腐、ねぎと煮込んだ酸味のある辛い鍋です。一人前でご飯と一緒に出します。",
-        "tts_hash": "d6f5274e"
+        "tts_text": "제육덮밥. 매콤한 돼지고기 볶음을 올린 덮밥. 돼지고기, 양파, 대파를 고추장 양념에 볶아 밥 위에 올리고 참깨를 뿌립니다. 매콤한 1인분입니다.",
+        "tts_hash": "26d427eb"
       },
       "i04": {
         "item_id": "i04",
-        "name": "テンジャンチゲ（韓国味噌鍋）",
-        "short": "豆腐とズッキーニの韓国味噌鍋",
-        "detail": "煮干しのだしでテンジャン、豆腐、ズッキーニ、じゃがいもを煮込みます。まろやかな味で一人前です。",
-        "how_to_eat": null,
-        "tts_text": "テンジャンチゲ、韓国味噌鍋。豆腐とズッキーニの韓国味噌鍋。煮干しのだしでテンジャン、豆腐、ズッキーニ、じゃがいもを煮込みます。まろやかな味で一人前です。",
-        "tts_hash": "d313ad6a"
+        "name": "냉면",
+        "short": "차가운 소고기 육수에 말아 낸 메밀면",
+        "detail": "메밀면을 차가운 소고기 육수에 말고 편육, 오이, 무절임, 배, 삶은 달걀을 올립니다. 맵지 않고 시원한 한 그릇입니다.",
+        "how_to_eat": "식초와 겨자는 입맛대로 넣고, 면은 가위로 잘라 달라고 하세요.",
+        "tts_text": "냉면. 차가운 소고기 육수에 말아 낸 메밀면. 메밀면을 차가운 소고기 육수에 말고 편육, 오이, 무절임, 배, 삶은 달걀을 올립니다. 맵지 않고 시원한 한 그릇입니다.",
+        "tts_hash": "65d73dc4"
       },
       "i05": {
         "item_id": "i05",
-        "name": "プデチゲ（部隊チゲ）",
-        "short": "ハムとソーセージ、キムチのピリ辛鍋",
-        "detail": "ハム、ソーセージ、キムチ、インスタント麺をコチュジャンのスープで煮込みます。ご飯と一緒に食べるのが定番です。",
-        "how_to_eat": "麺が伸びる前に先に麺から食べてください。",
-        "tts_text": "プデチゲ、部隊チゲ。ハムとソーセージ、キムチのピリ辛鍋。ハム、ソーセージ、キムチ、インスタント麺をコチュジャンのスープで煮込みます。ご飯と一緒に食べるのが定番です。",
-        "tts_hash": "0533cd89"
+        "name": "잔치국수",
+        "short": "멸치 육수에 만 소면 국수",
+        "detail": "소면을 담백한 멸치 육수에 말고 애호박, 달걀 지단, 김을 올립니다. 양념간장으로 간을 맞추는 맵지 않은 한 그릇입니다.",
+        "how_to_eat": "양념간장은 조금씩 넣어 간을 맞추세요.",
+        "tts_text": "잔치국수. 멸치 육수에 만 소면 국수. 소면을 담백한 멸치 육수에 말고 애호박, 달걀 지단, 김을 올립니다. 양념간장으로 간을 맞추는 맵지 않은 한 그릇입니다.",
+        "tts_hash": "fecb1ee3"
       },
       "i06": {
         "item_id": "i06",
-        "name": "スンドゥブチゲ",
-        "short": "あさりと卵入りの辛いおぼろ豆腐鍋",
-        "detail": "おぼろ豆腐とあさりを赤い唐辛子スープで煮て、最後に生卵を落とします。一人前の土鍋です。",
-        "how_to_eat": "熱いうちに卵をスープに溶かして火を通してください。",
-        "tts_text": "スンドゥブチゲ。あさりと卵入りの辛いおぼろ豆腐鍋。おぼろ豆腐とあさりを赤い唐辛子スープで煮て、最後に生卵を落とします。一人前の土鍋です。",
-        "tts_hash": "265d3f79"
+        "name": "갈비탕",
+        "short": "소갈비를 오래 끓인 맑은 국물",
+        "detail": "소갈비를 무, 당면과 함께 오래 끓여 맑고 진한 국물을 냅니다. 맵지 않은 1인분이며 밥과 함께 나옵니다.",
+        "how_to_eat": null,
+        "tts_text": "갈비탕. 소갈비를 오래 끓인 맑은 국물. 소갈비를 무, 당면과 함께 오래 끓여 맑고 진한 국물을 냅니다. 맵지 않은 1인분이며 밥과 함께 나옵니다.",
+        "tts_hash": "c28aa1e2"
       },
       "i07": {
         "item_id": "i07",
-        "name": "チェユクポックム（豚肉の辛味炒め）",
-        "short": "甘辛いコチュジャンの豚肉炒め",
-        "detail": "豚肉と玉ねぎをコチュジャンだれで炒め、ごま油で仕上げます。一人前でご飯によく合います。",
+        "name": "김치찌개",
+        "short": "묵은지·돼지고기·두부로 끓인 얼큰한 찌개",
+        "detail": "잘 익은 김치를 돼지고기, 두부, 대파, 양파와 함께 끓여 새콤하고 얼큰합니다. 1인분이며 밥과 함께 나옵니다.",
         "how_to_eat": null,
-        "tts_text": "チェユクポックム、豚肉の辛味炒め。甘辛いコチュジャンの豚肉炒め。豚肉と玉ねぎをコチュジャンだれで炒め、ごま油で仕上げます。一人前でご飯によく合います。",
-        "tts_hash": "98b79cdd"
+        "tts_text": "김치찌개. 묵은지 돼지고기 두부로 끓인 얼큰한 찌개. 잘 익은 김치를 돼지고기, 두부, 대파, 양파와 함께 끓여 새콤하고 얼큰합니다. 1인분이며 밥과 함께 나옵니다.",
+        "tts_hash": "a430adf1"
       },
       "i08": {
         "item_id": "i08",
-        "name": "プルコギ",
-        "short": "甘い醤油だれの牛肉炒め",
-        "detail": "醤油、梨、ごま油に漬けた薄切り牛肉を玉ねぎと一緒に焼きます。甘くて辛くない一人前です。",
-        "how_to_eat": "サンチュがあれば、ご飯と一緒に包んで食べてみてください。",
-        "tts_text": "プルコギ。甘い醤油だれの牛肉炒め。醤油、梨、ごま油に漬けた薄切り牛肉を玉ねぎと一緒に焼きます。甘くて辛くない一人前です。",
-        "tts_hash": "891ea8ac"
+        "name": "된장찌개",
+        "short": "두부·애호박을 넣은 구수한 된장찌개",
+        "detail": "멸치 육수에 된장, 두부, 애호박, 감자, 양파를 넣고 끓입니다. 맵지 않고 구수한 1인분입니다.",
+        "how_to_eat": null,
+        "tts_text": "된장찌개. 두부 애호박을 넣은 구수한 된장찌개. 멸치 육수에 된장, 두부, 애호박, 감자, 양파를 넣고 끓입니다. 맵지 않고 구수한 1인분입니다.",
+        "tts_hash": "04cee43a"
       },
       "i09": {
         "item_id": "i09",
-        "name": "海鮮チヂミ（ヘムルパジョン）",
-        "short": "ねぎ、えび、いかのカリッとしたチヂミ",
-        "detail": "ねぎ、えび、いかを小麦粉と卵の生地で大きく焼いたチヂミです。2〜3人でシェアする量です。",
-        "how_to_eat": "醤油だれにつけて召し上がってください。",
-        "tts_text": "海鮮チヂミ、ヘムルパジョン。ねぎ、えび、いかのカリッとしたチヂミ。ねぎ、えび、いかを小麦粉と卵の生地で大きく焼いたチヂミです。2〜3人でシェアする量です。",
-        "tts_hash": "42d903f7"
+        "name": "순두부찌개",
+        "short": "바지락·돼지고기·달걀을 넣은 얼큰한 순두부",
+        "detail": "아주 부드러운 순두부와 바지락, 돼지고기를 빨간 국물에 끓이고 마지막에 달걀을 넣습니다. 1인분 뚝배기입니다.",
+        "how_to_eat": "뜨거울 때 달걀을 바로 풀어 익혀 드세요.",
+        "tts_text": "순두부찌개. 바지락 돼지고기 달걀을 넣은 얼큰한 순두부. 아주 부드러운 순두부와 바지락, 돼지고기를 빨간 국물에 끓이고 마지막에 달걀을 넣습니다. 1인분 뚝배기입니다.",
+        "tts_hash": "c65533e7"
       },
       "i10": {
         "item_id": "i10",
-        "name": "キムチチヂミ（キムチジョン）",
-        "short": "刻みキムチと豚肉のチヂミ",
-        "detail": "刻んだキムチと少しの豚肉を小麦粉の生地に混ぜて焼きます。少し酸っぱくピリ辛で、シェア向きです。",
-        "how_to_eat": null,
-        "tts_text": "キムチチヂミ、キムチジョン。刻みキムチと豚肉のチヂミ。刻んだキムチと少しの豚肉を小麦粉の生地に混ぜて焼きます。少し酸っぱくピリ辛で、シェア向きです。",
-        "tts_hash": "69536add"
-      }
-    },
-    "zh-Hans": {
-      "i11": {
-        "item_id": "i11",
-        "name": "水冷面",
-        "short": "冰凉牛肉汤荞麦冷面",
-        "detail": "荞麦面放在冰凉微酸的牛肉汤里，配黄瓜、梨和水煮蛋。清爽不辣，一人一碗。",
-        "how_to_eat": "可按口味加醋和芥末，面条可以请店员用剪刀剪短。",
-        "tts_text": "水冷面。冰凉牛肉汤荞麦冷面。荞麦面放在冰凉微酸的牛肉汤里，配黄瓜、梨和水煮蛋。清爽不辣，一人一碗。",
-        "tts_hash": "a5e8f60a"
-      },
-      "i12": {
-        "item_id": "i12",
-        "name": "拌冷面",
-        "short": "甜辣酱拌荞麦冷面",
-        "detail": "荞麦面拌上甜辣辣椒酱，配黄瓜、鸡蛋和香油，冷着吃。一人一碗。",
-        "how_to_eat": "吃之前把酱和面充分拌匀。",
-        "tts_text": "拌冷面。甜辣酱拌荞麦冷面。荞麦面拌上甜辣辣椒酱，配黄瓜、鸡蛋和香油，冷着吃。一人一碗。",
-        "tts_hash": "e8e26dab"
-      },
-      "i13": {
-        "item_id": "i13",
-        "name": "鸡蛋羹（蒸蛋）",
-        "short": "蓬松的韩式蒸蛋",
-        "detail": "鸡蛋加葱蒸制，用虾酱调味，口感松软。温和的配菜，适合大家分享。",
-        "how_to_eat": null,
-        "tts_text": "鸡蛋羹、蒸蛋。蓬松的韩式蒸蛋。鸡蛋加葱蒸制，用虾酱调味，口感松软。温和的配菜，适合大家分享。",
-        "tts_hash": "9dcd1c16"
-      },
-      "i14": {
-        "item_id": "i14",
-        "name": "米饭",
-        "short": "一碗白米饭",
-        "detail": "一碗白米饭。适合和汤锅、炒菜一起点。",
-        "how_to_eat": null,
-        "tts_text": "米饭。一碗白米饭。一碗白米饭。适合和汤锅、炒菜一起点。",
-        "tts_hash": "393580aa"
-      },
-      "i15": {
-        "item_id": "i15",
-        "name": "烧酒",
-        "short": "韩国透明蒸馏酒",
-        "detail": "酒精度约16到17度的清爽韩国酒。一瓶通常全桌分着喝。",
-        "how_to_eat": "习惯上给别人倒酒，用小杯喝。",
-        "tts_text": "烧酒。韩国透明蒸馏酒。酒精度约16到17度的清爽韩国酒。一瓶通常全桌分着喝。",
-        "tts_hash": "44c51de6"
-      },
-      "i16": {
-        "item_id": "i16",
-        "name": "可乐",
-        "short": "冰可乐",
-        "detail": "一瓶冰镇可乐。",
-        "how_to_eat": null,
-        "tts_text": "可乐。冰可乐。一瓶冰镇可乐。",
-        "tts_hash": "a995441c"
-      },
-      "i01": {
-        "item_id": "i01",
-        "name": "拌饭（比宾巴）",
-        "short": "米饭配凉拌蔬菜、鸡蛋和辣酱",
-        "detail": "米饭上铺满凉拌蔬菜和煎蛋，配辣椒酱和香油。一碗是一人份的一餐。",
-        "how_to_eat": "按喜好加入辣椒酱，充分拌匀后再吃。",
-        "tts_text": "拌饭、比宾巴。米饭配凉拌蔬菜、鸡蛋和辣酱。米饭上铺满凉拌蔬菜和煎蛋，配辣椒酱和香油。一碗是一人份的一餐。",
-        "tts_hash": "8b04f8f2"
-      },
-      "i02": {
-        "item_id": "i02",
-        "name": "石锅拌饭",
-        "short": "热石锅里的牛肉拌饭",
-        "detail": "米饭、凉拌蔬菜、牛肉和鸡蛋盛在滚烫的石锅里，锅底会形成锅巴。一人份。",
-        "how_to_eat": "趁石锅还烫的时候快速拌匀，锅底的锅巴也一起吃。",
-        "tts_text": "石锅拌饭。热石锅里的牛肉拌饭。米饭、凉拌蔬菜、牛肉和鸡蛋盛在滚烫的石锅里，锅底会形成锅巴。一人份。",
-        "tts_hash": "2bc1a7a0"
-      },
-      "i03": {
-        "item_id": "i03",
-        "name": "泡菜汤（泡菜锅）",
-        "short": "老泡菜、猪肉和豆腐的辣汤",
-        "detail": "用发酵充分的泡菜和猪肉、豆腐、葱一起炖煮，味道酸辣。一人份，配米饭。",
-        "how_to_eat": null,
-        "tts_text": "泡菜汤、泡菜锅。老泡菜、猪肉和豆腐的辣汤。用发酵充分的泡菜和猪肉、豆腐、葱一起炖煮，味道酸辣。一人份，配米饭。",
-        "tts_hash": "6f5ccea6"
-      },
-      "i04": {
-        "item_id": "i04",
-        "name": "大酱汤",
-        "short": "豆腐和西葫芦的韩式大酱汤",
-        "detail": "用鳀鱼高汤炖煮大酱、豆腐、西葫芦和土豆，味道醇厚温和。一人份。",
-        "how_to_eat": null,
-        "tts_text": "大酱汤。豆腐和西葫芦的韩式大酱汤。用鳀鱼高汤炖煮大酱、豆腐、西葫芦和土豆，味道醇厚温和。一人份。",
-        "tts_hash": "47d913ba"
-      },
-      "i05": {
-        "item_id": "i05",
-        "name": "部队锅",
-        "short": "火腿、香肠、泡菜和面的辣火锅",
-        "detail": "火腿、香肠、泡菜和方便面在辣椒酱汤底里煮。按人份计价，通常配米饭吃。",
-        "how_to_eat": "面条容易泡软，请先吃面。",
-        "tts_text": "部队锅。火腿、香肠、泡菜和面的辣火锅。火腿、香肠、泡菜和方便面在辣椒酱汤底里煮。按人份计价，通常配米饭吃。",
-        "tts_hash": "d8066a90"
-      },
-      "i06": {
-        "item_id": "i06",
-        "name": "嫩豆腐汤",
-        "short": "加蛤蜊和鸡蛋的辣嫩豆腐汤",
-        "detail": "嫩豆腐和蛤蜊在红辣椒汤里煮，最后打入一个生鸡蛋。一人份砂锅。",
-        "how_to_eat": "趁热把鸡蛋搅进汤里让它煮熟。",
-        "tts_text": "嫩豆腐汤。加蛤蜊和鸡蛋的辣嫩豆腐汤。嫩豆腐和蛤蜊在红辣椒汤里煮，最后打入一个生鸡蛋。一人份砂锅。",
-        "tts_hash": "43d65984"
-      },
-      "i07": {
-        "item_id": "i07",
-        "name": "辣炒猪肉",
-        "short": "甜辣辣椒酱炒猪肉",
-        "detail": "猪肉片和洋葱用辣椒酱炒制，最后淋上香油。一人份主菜，适合配米饭。",
-        "how_to_eat": null,
-        "tts_text": "辣炒猪肉。甜辣辣椒酱炒猪肉。猪肉片和洋葱用辣椒酱炒制，最后淋上香油。一人份主菜，适合配米饭。",
-        "tts_hash": "b89b5bff"
-      },
-      "i08": {
-        "item_id": "i08",
-        "name": "韩式烤牛肉（烤肉）",
-        "short": "甜酱油腌牛肉配洋葱",
-        "detail": "薄牛肉片用酱油、梨和香油腌制，和洋葱一起烹调。味甜不辣，一人份。",
-        "how_to_eat": "如有生菜，可以包着米饭一起吃。",
-        "tts_text": "韩式烤牛肉、烤肉。甜酱油腌牛肉配洋葱。薄牛肉片用酱油、梨和香油腌制，和洋葱一起烹调。味甜不辣，一人份。",
-        "tts_hash": "3121e57a"
-      },
-      "i09": {
-        "item_id": "i09",
-        "name": "海鲜葱饼",
-        "short": "葱、虾和鱿鱼的香脆煎饼",
-        "detail": "葱、虾和鱿鱼裹上面粉鸡蛋糊煎成的大煎饼，外皮香脆。适合两三人分享。",
-        "how_to_eat": "蘸酱油汁吃。",
-        "tts_text": "海鲜葱饼。葱、虾和鱿鱼的香脆煎饼。葱、虾和鱿鱼裹上面粉鸡蛋糊煎成的大煎饼，外皮香脆。适合两三人分享。",
-        "tts_hash": "5eed8cb4"
-      },
-      "i10": {
-        "item_id": "i10",
-        "name": "泡菜煎饼",
-        "short": "切碎泡菜和猪肉的煎饼",
-        "detail": "把切碎的泡菜和少许猪肉拌进面糊里煎成。微酸微辣，适合分享。",
-        "how_to_eat": null,
-        "tts_text": "泡菜煎饼。切碎泡菜和猪肉的煎饼。把切碎的泡菜和少许猪肉拌进面糊里煎成。微酸微辣，适合分享。",
-        "tts_hash": "411d7836"
-      }
-    },
-    "zh-Hant": {
-      "i01": {
-        "item_id": "i01",
-        "name": "拌飯（比賓巴）",
-        "short": "白飯配涼拌蔬菜、雞蛋和辣醬",
-        "detail": "白飯上鋪滿涼拌蔬菜和荷包蛋，搭配辣椒醬和香油。一碗是一人份的一餐。",
-        "how_to_eat": "依喜好加入辣椒醬，充分拌勻後再吃。",
-        "tts_text": "拌飯、比賓巴。白飯配涼拌蔬菜、雞蛋和辣醬。白飯上鋪滿涼拌蔬菜和荷包蛋，搭配辣椒醬和香油。一碗是一人份的一餐。",
-        "tts_hash": "278c5124"
-      },
-      "i02": {
-        "item_id": "i02",
-        "name": "石鍋拌飯",
-        "short": "熱石鍋裡的牛肉拌飯",
-        "detail": "白飯、涼拌蔬菜、牛肉和雞蛋盛在滾燙的石鍋裡，鍋底會形成鍋巴。一人份。",
-        "how_to_eat": "趁石鍋還燙的時候快速拌勻，鍋底的鍋巴也一起吃。",
-        "tts_text": "石鍋拌飯。熱石鍋裡的牛肉拌飯。白飯、涼拌蔬菜、牛肉和雞蛋盛在滾燙的石鍋裡，鍋底會形成鍋巴。一人份。",
-        "tts_hash": "faa8f179"
-      },
-      "i03": {
-        "item_id": "i03",
-        "name": "泡菜鍋",
-        "short": "老泡菜、豬肉和豆腐的辣鍋",
-        "detail": "用發酵充分的泡菜和豬肉、豆腐、蔥一起燉煮，味道酸辣。一人份，配白飯。",
-        "how_to_eat": null,
-        "tts_text": "泡菜鍋。老泡菜、豬肉和豆腐的辣鍋。用發酵充分的泡菜和豬肉、豆腐、蔥一起燉煮，味道酸辣。一人份，配白飯。",
-        "tts_hash": "14fe710b"
-      },
-      "i04": {
-        "item_id": "i04",
-        "name": "大醬湯",
-        "short": "豆腐和櫛瓜的韓式大醬湯",
-        "detail": "用鯷魚高湯燉煮大醬、豆腐、櫛瓜和馬鈴薯，味道醇厚溫和。一人份。",
-        "how_to_eat": null,
-        "tts_text": "大醬湯。豆腐和櫛瓜的韓式大醬湯。用鯷魚高湯燉煮大醬、豆腐、櫛瓜和馬鈴薯，味道醇厚溫和。一人份。",
-        "tts_hash": "583d2e80"
-      },
-      "i05": {
-        "item_id": "i05",
-        "name": "部隊鍋",
-        "short": "火腿、香腸、泡菜和麵的辣火鍋",
-        "detail": "火腿、香腸、泡菜和泡麵在辣椒醬湯底裡煮。按人份計價，通常配白飯吃。",
-        "how_to_eat": "麵條容易泡軟，請先吃麵。",
-        "tts_text": "部隊鍋。火腿、香腸、泡菜和麵的辣火鍋。火腿、香腸、泡菜和泡麵在辣椒醬湯底裡煮。按人份計價，通常配白飯吃。",
-        "tts_hash": "e870a9dd"
-      },
-      "i06": {
-        "item_id": "i06",
-        "name": "嫩豆腐鍋",
-        "short": "加蛤蜊和雞蛋的辣嫩豆腐鍋",
-        "detail": "嫩豆腐和蛤蜊在紅辣椒湯裡煮，最後打入一顆生雞蛋。一人份砂鍋。",
-        "how_to_eat": "趁熱把雞蛋攪進湯裡讓它煮熟。",
-        "tts_text": "嫩豆腐鍋。加蛤蜊和雞蛋的辣嫩豆腐鍋。嫩豆腐和蛤蜊在紅辣椒湯裡煮，最後打入一顆生雞蛋。一人份砂鍋。",
-        "tts_hash": "1d8d6541"
-      },
-      "i07": {
-        "item_id": "i07",
-        "name": "辣炒豬肉",
-        "short": "甜辣辣椒醬炒豬肉",
-        "detail": "豬肉片和洋蔥用辣椒醬炒製，最後淋上香油。一人份主菜，適合配白飯。",
-        "how_to_eat": null,
-        "tts_text": "辣炒豬肉。甜辣辣椒醬炒豬肉。豬肉片和洋蔥用辣椒醬炒製，最後淋上香油。一人份主菜，適合配白飯。",
-        "tts_hash": "1e098e78"
-      },
-      "i08": {
-        "item_id": "i08",
-        "name": "韓式烤牛肉（烤肉）",
-        "short": "甜醬油醃牛肉配洋蔥",
-        "detail": "薄牛肉片用醬油、梨和香油醃製，和洋蔥一起烹調。味甜不辣，一人份。",
-        "how_to_eat": "如有生菜，可以包著白飯一起吃。",
-        "tts_text": "韓式烤牛肉、烤肉。甜醬油醃牛肉配洋蔥。薄牛肉片用醬油、梨和香油醃製，和洋蔥一起烹調。味甜不辣，一人份。",
-        "tts_hash": "1d78aa2b"
-      },
-      "i09": {
-        "item_id": "i09",
-        "name": "海鮮蔥煎餅",
-        "short": "蔥、蝦和魷魚的香脆煎餅",
-        "detail": "蔥、蝦和魷魚裹上麵粉雞蛋糊煎成的大煎餅，外皮香脆。適合兩三人分享。",
-        "how_to_eat": "沾醬油汁吃。",
-        "tts_text": "海鮮蔥煎餅。蔥、蝦和魷魚的香脆煎餅。蔥、蝦和魷魚裹上麵粉雞蛋糊煎成的大煎餅，外皮香脆。適合兩三人分享。",
-        "tts_hash": "13212297"
-      },
-      "i10": {
-        "item_id": "i10",
-        "name": "泡菜煎餅",
-        "short": "切碎泡菜和豬肉的煎餅",
-        "detail": "把切碎的泡菜和少許豬肉拌進麵糊裡煎成。微酸微辣，適合分享。",
-        "how_to_eat": null,
-        "tts_text": "泡菜煎餅。切碎泡菜和豬肉的煎餅。把切碎的泡菜和少許豬肉拌進麵糊裡煎成。微酸微辣，適合分享。",
-        "tts_hash": "4c0661ef"
+        "name": "부대찌개",
+        "short": "햄·소시지·김치·라면을 넣은 얼큰한 전골",
+        "detail": "햄, 소시지, 김치, 두부, 라면사리, 치즈를 고추장 국물에 끓입니다. 1인분 가격이며 보통 밥과 함께 먹습니다.",
+        "how_to_eat": "라면이 붇기 전에 면부터 드세요.",
+        "tts_text": "부대찌개. 햄 소시지 김치 라면을 넣은 얼큰한 전골. 햄, 소시지, 김치, 두부, 라면사리, 치즈를 고추장 국물에 끓입니다. 1인분 가격이며 보통 밥과 함께 먹습니다.",
+        "tts_hash": "2d2dae7a"
       },
       "i11": {
         "item_id": "i11",
-        "name": "水冷麵",
-        "short": "冰涼牛肉湯蕎麥冷麵",
-        "detail": "蕎麥麵放在冰涼微酸的牛肉湯裡，配小黃瓜、梨和水煮蛋。清爽不辣，一人一碗。",
-        "how_to_eat": "可依口味加醋和芥末，麵條可以請店員用剪刀剪短。",
-        "tts_text": "水冷麵。冰涼牛肉湯蕎麥冷麵。蕎麥麵放在冰涼微酸的牛肉湯裡，配小黃瓜、梨和水煮蛋。清爽不辣，一人一碗。",
-        "tts_hash": "733c31ec"
+        "name": "해물파전",
+        "short": "쪽파·오징어·새우·홍합을 넣은 바삭한 전",
+        "detail": "쪽파, 오징어, 새우, 홍합을 밀가루와 달걀 반죽에 넣어 크게 부치고 초간장을 곁들입니다. 두세 명이 나눠 먹기 좋습니다.",
+        "how_to_eat": "한 조각씩 초간장에 찍어 드세요.",
+        "tts_text": "해물파전. 쪽파 오징어 새우 홍합을 넣은 바삭한 전. 쪽파, 오징어, 새우, 홍합을 밀가루와 달걀 반죽에 넣어 크게 부치고 초간장을 곁들입니다. 두세 명이 나눠 먹기 좋습니다.",
+        "tts_hash": "86be46c6"
       },
       "i12": {
         "item_id": "i12",
-        "name": "拌冷麵",
-        "short": "甜辣醬拌蕎麥冷麵",
-        "detail": "蕎麥麵拌上甜辣辣椒醬，配小黃瓜、雞蛋和香油，冷著吃。一人一碗。",
-        "how_to_eat": "吃之前把醬和麵充分拌勻。",
-        "tts_text": "拌冷麵。甜辣醬拌蕎麥冷麵。蕎麥麵拌上甜辣辣椒醬，配小黃瓜、雞蛋和香油，冷著吃。一人一碗。",
-        "tts_hash": "2e1705ac"
+        "name": "고등어구이",
+        "short": "소금만 뿌려 구운 고등어",
+        "detail": "고등어에 소금만 뿌려 껍질이 바삭하게 굽습니다. 맵지 않고 밥반찬이나 함께 나눠 먹기 좋습니다.",
+        "how_to_eat": null,
+        "tts_text": "고등어구이. 소금만 뿌려 구운 고등어. 고등어에 소금만 뿌려 껍질이 바삭하게 굽습니다. 맵지 않고 밥반찬이나 함께 나눠 먹기 좋습니다.",
+        "tts_hash": "8a9e47d4"
       },
       "i13": {
         "item_id": "i13",
-        "name": "蒸蛋",
-        "short": "蓬鬆的韓式蒸蛋",
-        "detail": "雞蛋加蔥蒸製，用蝦醬調味，口感鬆軟。溫和的配菜，適合大家分享。",
+        "name": "낙지볶음",
+        "short": "아주 매운 낙지 볶음",
+        "detail": "낙지를 양파, 대파와 함께 고추장과 고춧가루로 볶고 참기름으로 마무리합니다. 아주 매우며 나눠 먹기 좋습니다. 가격은 시가입니다.",
         "how_to_eat": null,
-        "tts_text": "蒸蛋。蓬鬆的韓式蒸蛋。雞蛋加蔥蒸製，用蝦醬調味，口感鬆軟。溫和的配菜，適合大家分享。",
-        "tts_hash": "f3f81204"
+        "tts_text": "낙지볶음. 아주 매운 낙지 볶음. 낙지를 양파, 대파와 함께 고추장과 고춧가루로 볶고 참기름으로 마무리합니다. 아주 매우며 나눠 먹기 좋습니다. 가격은 시가입니다.",
+        "tts_hash": "4cb14dea"
       },
       "i14": {
         "item_id": "i14",
-        "name": "白飯",
-        "short": "一碗白飯",
-        "detail": "一碗白飯。適合和湯鍋、炒菜一起點。",
+        "name": "계란말이",
+        "short": "대파·당근을 넣은 도톰한 계란말이",
+        "detail": "대파와 당근을 넣은 달걀물을 얇게 부쳐 돌돌 말아 썹니다. 맵지 않은 반찬으로 함께 나눠 먹습니다.",
         "how_to_eat": null,
-        "tts_text": "白飯。一碗白飯。一碗白飯。適合和湯鍋、炒菜一起點。",
-        "tts_hash": "71768668"
+        "tts_text": "계란말이. 대파 당근을 넣은 도톰한 계란말이. 대파와 당근을 넣은 달걀물을 얇게 부쳐 돌돌 말아 썹니다. 맵지 않은 반찬으로 함께 나눠 먹습니다.",
+        "tts_hash": "e0a9a275"
       },
       "i15": {
         "item_id": "i15",
-        "name": "燒酒",
-        "short": "韓國透明蒸餾酒",
-        "detail": "酒精度約16到17度的清爽韓國酒。一瓶通常全桌分著喝。",
-        "how_to_eat": "習慣上幫別人倒酒，用小杯喝。",
-        "tts_text": "燒酒。韓國透明蒸餾酒。酒精度約16到17度的清爽韓國酒。一瓶通常全桌分著喝。",
-        "tts_hash": "ed97f325"
+        "name": "소주",
+        "short": "맑은 한국 증류주",
+        "detail": "알코올 도수 16~17도 정도의 깔끔한 한국 술입니다. 초록 병 하나를 보통 함께 나눠 마십니다.",
+        "how_to_eat": "자기 잔보다 상대 잔에 따라 주고, 작은 잔으로 마십니다.",
+        "tts_text": "소주. 맑은 한국 증류주. 알코올 도수 16 17도 정도의 깔끔한 한국 술입니다. 초록 병 하나를 보통 함께 나눠 마십니다.",
+        "tts_hash": "b27e5684"
       },
       "i16": {
         "item_id": "i16",
-        "name": "可樂",
-        "short": "冰可樂",
-        "detail": "一瓶冰鎮可樂。",
+        "name": "맥주",
+        "short": "시원한 한국 라거",
+        "detail": "보리 맥아와 홉으로 만든 가볍고 시원한 한국 라거 한 병입니다. 소주와 섞어 마시기도 합니다.",
         "how_to_eat": null,
-        "tts_text": "可樂。冰可樂。一瓶冰鎮可樂。",
-        "tts_hash": "e592af8e"
-      }
-    },
-    "es": {
-      "i11": {
-        "item_id": "i11",
-        "name": "Mul-naengmyeon (fideos fríos de trigo sarraceno)",
-        "short": "Fideos de trigo sarraceno en caldo de ternera helado",
-        "detail": "Fideos de trigo sarraceno en un caldo frío de ternera ligeramente ácido, con pepino, pera y huevo cocido. Refrescante y sin picante, un bol por persona.",
-        "how_to_eat": "Añada vinagre y mostaza al gusto; el personal puede cortar los fideos con tijeras.",
-        "tts_text": "Mul-naengmyeon, fideos fríos de trigo sarraceno. Fideos de trigo sarraceno en caldo de ternera helado. Fideos de trigo sarraceno en un caldo frío de ternera ligeramente ácido, con pepino, pera y huevo cocido. Refrescante y sin picante, un bol por persona.",
-        "tts_hash": "5fbc0fad"
+        "tts_text": "맥주. 시원한 한국 라거. 보리 맥아와 홉으로 만든 가볍고 시원한 한국 라거 한 병입니다. 소주와 섞어 마시기도 합니다.",
+        "tts_hash": "a0452f21"
       },
-      "i12": {
-        "item_id": "i12",
-        "name": "Bibim-naengmyeon (fideos fríos picantes)",
-        "short": "Fideos fríos de trigo sarraceno en salsa picante",
-        "detail": "Fideos de trigo sarraceno mezclados con salsa de chile dulce y picante, pepino, huevo y aceite de sésamo. Se sirven fríos, un bol por persona.",
-        "how_to_eat": "Mezcle bien la salsa con los fideos antes de comer.",
-        "tts_text": "Bibim-naengmyeon, fideos fríos picantes. Fideos fríos de trigo sarraceno en salsa picante. Fideos de trigo sarraceno mezclados con salsa de chile dulce y picante, pepino, huevo y aceite de sésamo. Se sirven fríos, un bol por persona.",
-        "tts_hash": "b81b966f"
+      "i17": {
+        "item_id": "i17",
+        "name": "막걸리",
+        "short": "쌀로 빚은 뽀얀 막걸리",
+        "detail": "쌀과 누룩으로 빚은 뽀얗고 달짝지근한 술입니다. 해물파전과 잘 어울립니다.",
+        "how_to_eat": "따르기 전에 병을 살살 흔들어 섞어 주세요.",
+        "tts_text": "막걸리. 쌀로 빚은 뽀얀 막걸리. 쌀과 누룩으로 빚은 뽀얗고 달짝지근한 술입니다. 해물파전과 잘 어울립니다.",
+        "tts_hash": "17c9338f"
       },
-      "i13": {
-        "item_id": "i13",
-        "name": "Gyeran-jjim (huevo al vapor)",
-        "short": "Huevo esponjoso al vapor en olla caliente",
-        "detail": "Huevos cocidos al vapor con cebolleta y sazonados con gamba salada hasta quedar suaves. Guarnición suave para compartir.",
+      "i18": {
+        "item_id": "i18",
+        "name": "콜라",
+        "short": "시원한 콜라",
+        "detail": "차갑게 낸 콜라입니다.",
         "how_to_eat": null,
-        "tts_text": "Gyeran-jjim, huevo al vapor. Huevo esponjoso al vapor en olla caliente. Huevos cocidos al vapor con cebolleta y sazonados con gamba salada hasta quedar suaves. Guarnición suave para compartir.",
-        "tts_hash": "f3556115"
-      },
-      "i14": {
-        "item_id": "i14",
-        "name": "Gonggi-bap (bol de arroz)",
-        "short": "Un bol de arroz blanco al vapor",
-        "detail": "Un bol de arroz blanco al vapor. Pídalo con los guisos y salteados.",
-        "how_to_eat": null,
-        "tts_text": "Gonggi-bap, bol de arroz. Un bol de arroz blanco al vapor. Un bol de arroz blanco al vapor. Pídalo con los guisos y salteados.",
-        "tts_hash": "a6ee08ac"
-      },
-      "i15": {
-        "item_id": "i15",
-        "name": "Soju",
-        "short": "Licor destilado coreano transparente",
-        "detail": "Licor coreano transparente y suave de unos 16 a 17 grados. Una botella verde se suele compartir en la mesa.",
-        "how_to_eat": "Sirva a los demás en lugar de a usted mismo y beba en vasitos pequeños.",
-        "tts_text": "Soju. Licor destilado coreano transparente. Licor coreano transparente y suave de unos 16 a 17 grados. Una botella verde se suele compartir en la mesa.",
-        "tts_hash": "c3454ee8"
-      },
-      "i16": {
-        "item_id": "i16",
-        "name": "Cola",
-        "short": "Refresco de cola frío",
-        "detail": "Una botella o lata de refresco de cola fría.",
-        "how_to_eat": null,
-        "tts_text": "Cola. Refresco de cola frío. Una botella o lata de refresco de cola fría.",
-        "tts_hash": "1c8e91bf"
-      },
-      "i01": {
-        "item_id": "i01",
-        "name": "Bibimbap (arroz mezclado)",
-        "short": "Arroz con verduras aliñadas, huevo y pasta de chile",
-        "detail": "Arroz caliente con verduras aliñadas y un huevo frito, servido con pasta de chile gochujang y aceite de sésamo. Un bol es una comida completa para una persona.",
-        "how_to_eat": "Añada la pasta de chile al gusto y mézclelo todo bien antes de comer.",
-        "tts_text": "Bibimbap, arroz mezclado. Arroz con verduras aliñadas, huevo y pasta de chile. Arroz caliente con verduras aliñadas y un huevo frito, servido con pasta de chile gochujang y aceite de sésamo. Un bol es una comida completa para una persona.",
-        "tts_hash": "99e3dda5"
-      },
-      "i02": {
-        "item_id": "i02",
-        "name": "Dolsot bibimbap (en olla de piedra)",
-        "short": "Bibimbap con ternera en olla de piedra caliente",
-        "detail": "Arroz, verduras aliñadas, ternera y huevo servidos en una olla de piedra muy caliente, que tuesta el arroz del fondo. Una ración para una persona.",
-        "how_to_eat": "Mézclelo rápido mientras la olla está caliente y raspe el arroz crujiente del fondo.",
-        "tts_text": "Dolsot bibimbap, en olla de piedra. Bibimbap con ternera en olla de piedra caliente. Arroz, verduras aliñadas, ternera y huevo servidos en una olla de piedra muy caliente, que tuesta el arroz del fondo. Una ración para una persona.",
-        "tts_hash": "1708e315"
-      },
-      "i03": {
-        "item_id": "i03",
-        "name": "Kimchi-jjigae (guiso de kimchi)",
-        "short": "Guiso picante de kimchi, cerdo y tofu",
-        "detail": "Kimchi bien fermentado cocido a fuego lento con cerdo, tofu y cebolleta, con sabor ácido y picante. Una ración para una persona, con arroz.",
-        "how_to_eat": null,
-        "tts_text": "Kimchi-jjigae, guiso de kimchi. Guiso picante de kimchi, cerdo y tofu. Kimchi bien fermentado cocido a fuego lento con cerdo, tofu y cebolleta, con sabor ácido y picante. Una ración para una persona, con arroz.",
-        "tts_hash": "b5ab1a5e"
-      },
-      "i04": {
-        "item_id": "i04",
-        "name": "Doenjang-jjigae (guiso de pasta de soja)",
-        "short": "Guiso de pasta de soja con tofu y calabacín",
-        "detail": "Pasta de soja fermentada cocida en caldo de anchoa con tofu, calabacín y patata. Sabor suave y profundo, una ración para una persona.",
-        "how_to_eat": null,
-        "tts_text": "Doenjang-jjigae, guiso de pasta de soja. Guiso de pasta de soja con tofu y calabacín. Pasta de soja fermentada cocida en caldo de anchoa con tofu, calabacín y patata. Sabor suave y profundo, una ración para una persona.",
-        "tts_hash": "03fff8f6"
-      },
-      "i05": {
-        "item_id": "i05",
-        "name": "Budae-jjigae (guiso del ejército)",
-        "short": "Olla picante con jamón, salchicha, kimchi y fideos",
-        "detail": "Jamón, salchicha, kimchi y fideos instantáneos cocidos en caldo de pasta de chile. Precio por persona; se suele comer con arroz.",
-        "how_to_eat": "Coma primero los fideos, antes de que se ablanden.",
-        "tts_text": "Budae-jjigae, guiso del ejército. Olla picante con jamón, salchicha, kimchi y fideos. Jamón, salchicha, kimchi y fideos instantáneos cocidos en caldo de pasta de chile. Precio por persona; se suele comer con arroz.",
-        "tts_hash": "95942149"
-      },
-      "i06": {
-        "item_id": "i06",
-        "name": "Sundubu-jjigae (guiso de tofu suave)",
-        "short": "Guiso picante de tofu sedoso con almejas y huevo",
-        "detail": "Tofu muy suave y almejas cocidos en caldo rojo de chile; al final se añade un huevo crudo. Una olla para una persona.",
-        "how_to_eat": "Mezcle el huevo en el guiso caliente enseguida para que se cueza.",
-        "tts_text": "Sundubu-jjigae, guiso de tofu suave. Guiso picante de tofu sedoso con almejas y huevo. Tofu muy suave y almejas cocidos en caldo rojo de chile; al final se añade un huevo crudo. Una olla para una persona.",
-        "tts_hash": "c5acdd29"
-      },
-      "i07": {
-        "item_id": "i07",
-        "name": "Jeyuk-bokkeum (cerdo salteado picante)",
-        "short": "Cerdo salteado en salsa de chile dulce y picante",
-        "detail": "Cerdo en lonchas y cebolla salteados en salsa gochujang y terminados con aceite de sésamo. Plato principal para una persona, ideal con arroz.",
-        "how_to_eat": null,
-        "tts_text": "Jeyuk-bokkeum, cerdo salteado picante. Cerdo salteado en salsa de chile dulce y picante. Cerdo en lonchas y cebolla salteados en salsa gochujang y terminados con aceite de sésamo. Plato principal para una persona, ideal con arroz.",
-        "tts_hash": "187629d1"
-      },
-      "i08": {
-        "item_id": "i08",
-        "name": "Bulgogi (ternera marinada)",
-        "short": "Ternera marinada en soja dulce con cebolla",
-        "detail": "Finas lonchas de ternera marinadas en salsa de soja, pera y aceite de sésamo, cocinadas con cebolla. Dulce y sin picante, una ración para una persona.",
-        "how_to_eat": "Si hay lechuga, pruebe a envolverla con un poco de arroz.",
-        "tts_text": "Bulgogi, ternera marinada. Ternera marinada en soja dulce con cebolla. Finas lonchas de ternera marinadas en salsa de soja, pera y aceite de sésamo, cocinadas con cebolla. Dulce y sin picante, una ración para una persona.",
-        "tts_hash": "810fbc97"
-      },
-      "i09": {
-        "item_id": "i09",
-        "name": "Haemul-pajeon (tortita de marisco y cebolleta)",
-        "short": "Tortita crujiente de cebolleta, gambas y calamar",
-        "detail": "Una gran tortita salada de cebolleta, gambas y calamar en masa de harina y huevo, frita hasta quedar crujiente. Para compartir entre dos o tres personas.",
-        "how_to_eat": "Moje cada trozo en la salsa de soja.",
-        "tts_text": "Haemul-pajeon, tortita de marisco y cebolleta. Tortita crujiente de cebolleta, gambas y calamar. Una gran tortita salada de cebolleta, gambas y calamar en masa de harina y huevo, frita hasta quedar crujiente. Para compartir entre dos o tres personas.",
-        "tts_hash": "6ba981f9"
-      },
-      "i10": {
-        "item_id": "i10",
-        "name": "Kimchi-jeon (tortita de kimchi)",
-        "short": "Tortita crujiente de kimchi picado y cerdo",
-        "detail": "Kimchi picado y un poco de cerdo mezclados en masa de harina y fritos en sartén. Ligeramente ácida y algo picante, para compartir.",
-        "how_to_eat": null,
-        "tts_text": "Kimchi-jeon, tortita de kimchi. Tortita crujiente de kimchi picado y cerdo. Kimchi picado y un poco de cerdo mezclados en masa de harina y fritos en sartén. Ligeramente ácida y algo picante, para compartir.",
-        "tts_hash": "77c85e15"
+        "tts_text": "콜라. 시원한 콜라. 차갑게 낸 콜라입니다.",
+        "tts_hash": "0d5f8d2a"
       }
     }
   }

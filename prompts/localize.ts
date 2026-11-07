@@ -7,6 +7,7 @@ const LANG_NAME: Record<LangCode, string> = {
   'zh-Hans': 'Simplified Chinese (简体中文)',
   'zh-Hant': 'Traditional Chinese, Taiwan (繁體中文)',
   es: 'Spanish (Español)',
+  ko: 'Korean (한국어)',
 };
 
 export const localizeInstructions = (lang: LangCode) => `너는 한국 음식을 처음 접하는 여행자에게 메뉴를 설명하는 현지화 작가다.
@@ -21,4 +22,5 @@ export const localizeInstructions = (lang: LangCode) => `너는 한국 음식을
 4. how_to_eat: 먹는 법에 실제 팁이 있을 때만 1문장. 없으면 null.
 5. 알레르기, 가격, "안전하다/괜찮다" 같은 판단은 쓰지 않는다. 이 정보는 화면이 따로 보여 준다.
 6. 입력에 없는 재료를 지어내지 않는다. main_ingredients_ko에 있는 것만 언급한다.
-7. 입력의 모든 item_id에 대해 정확히 하나씩, 입력 순서대로 출력한다.`;
+7. 입력의 모든 item_id에 대해 정확히 하나씩, 입력 순서대로 출력한다.
+8. 출력 언어가 한국어(ko)이면 name은 name_ko를 그대로 쓰고, short·detail·how_to_eat은 처음 온 손님에게 설명하듯 쉬운 한국어로 쓴다.`;

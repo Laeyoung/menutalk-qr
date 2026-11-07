@@ -47,7 +47,7 @@ export async function POST(req: Request, ctx: RouteContext<'/api/menus/[id]/loca
         const original = draft.items.find((d) => d.item_id === it.item_id)?.name_ko ?? '';
         const loc = table[it.name_ko]?.[lang] ?? table[original]?.[lang];
         if (!loc) missing.push(it.item_id);
-        else out.push({ item_id: it.item_id, ...loc });
+        else out.push({ item_id: it.item_id, ...loc, ...(lang === 'ko' ? { name: it.name_ko } : {}) });
       }
       if (missing.length) throw new ApiError(422, 'FIXTURE_MISSING', 'No fixture localization for some items', false, { missing });
       return Response.json({ lang, items: out, meta: { latencyMs: 0, outputTokens: 0, fixture: true } });
@@ -77,7 +77,8 @@ export async function POST(req: Request, ctx: RouteContext<'/api/menus/[id]/loca
     const byId = new Map(r.data.items.map((i) => [i.item_id, i]));
     const missing = items.filter((i) => !byId.has(i.item_id)).map((i) => i.item_id);
     if (missing.length) throw new ApiError(502, 'UPSTREAM_INCOMPLETE', 'Model skipped some items', true, { missing });
-    const out = items.map((i) => byId.get(i.item_id)!);
+    // 한국어는 메뉴명을 번역하지 않는다: 가게가 쓴 이름(name_ko)을 그대로 쓴다
+    const out = items.map((i) => (lang === 'ko' ? { ...byId.get(i.item_id)!, name: i.name_ko } : byId.get(i.item_id)!));
 
     return Response.json({ lang, items: out, meta: { latencyMs: r.latencyMs, outputTokens: r.usage.output_tokens ?? null } });
   } catch (e) {

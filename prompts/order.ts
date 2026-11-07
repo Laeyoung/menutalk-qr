@@ -7,6 +7,7 @@ const LANG_NAME: Record<LangCode, string> = {
   'zh-Hans': 'Simplified Chinese',
   'zh-Hant': 'Traditional Chinese',
   es: 'Spanish',
+  ko: 'Korean',
 };
 
 export const orderInstructions = (lang: LangCode) => `너는 한국 식당에서 외국인 손님의 요청을 직원에게 전달하는 통역사다.

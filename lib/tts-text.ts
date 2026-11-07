@@ -3,7 +3,7 @@
 import { isCjk } from './i18n/strings';
 import type { LangCode, LocalizedItem } from './types';
 
-const LIMIT = { latin: 260, cjk: 130 };
+const LIMIT = { latin: 260, cjk: 130, ko: 150 };
 
 const EMOJI_RE = /[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu;
 const SYMBOL_RE = /[★☆※•·▶►♪♥♡◆◇■□●○→←↑↓~^*#_|<>\[\]{}]/g;
@@ -54,5 +54,5 @@ export function buildTtsText(item: Pick<LocalizedItem, 'name' | 'short' | 'detai
   ]
     .filter(Boolean)
     .join(joiner);
-  return truncate(text, cjk ? LIMIT.cjk : LIMIT.latin, cjk);
+  return truncate(text, cjk ? LIMIT.cjk : lang === 'ko' ? LIMIT.ko : LIMIT.latin, cjk);
 }

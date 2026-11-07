@@ -10,24 +10,30 @@ const base = arg('base', 'http://localhost:3000').replace(/\/$/, '');
 const menuId = arg('menu', process.env.DEMO_MENU_ID);
 if (!menuId) throw new Error('--menu required');
 
-const { cases } = JSON.parse(await readFile(path.resolve(import.meta.dirname, '../fixtures/order-utterances.json'), 'utf8'));
-let matchOk = 0, conflictMiss = 0, under5 = 0;
-for (const [i, c] of cases.entries()) {
+// prep/02-talking-menu-qr/order-utterances.json 형식: { utterances: [{ id, screen_lang, text, expected: { lines_ko, guest_allergens, conflicts, unmatched_note_expected } }] }
+const { utterances } = JSON.parse(await readFile(path.resolve(import.meta.dirname, '../fixtures/order-utterances.json'), 'utf8'));
+const LANG_OK = new Set(['en', 'ja', 'zh-Hans', 'zh-Hant', 'es', 'ko']);
+let matchOk = 0, conflictMiss = 0, under5 = 0, ran = 0;
+for (const u of utterances) {
   const fd = new FormData();
-  fd.set('menuId', menuId); fd.set('lang', c.lang); fd.set('text', c.text);
-  fd.set('cart', JSON.stringify(c.cart)); fd.set('chips', '[]'); fd.set('guestAllergens', '[]');
+  fd.set('menuId', menuId); fd.set('lang', LANG_OK.has(u.screen_lang) ? u.screen_lang : 'en'); fd.set('text', u.text);
+  fd.set('cart', '[]'); fd.set('chips', '[]'); fd.set('guestAllergens', '[]');
   const t0 = Date.now();
   const res = await fetch(base + '/api/order-card', { method: 'POST', body: fd });
   const ms = Date.now() - t0;
   const card = await res.json();
-  if (!res.ok) { console.log(`#${i + 1} ERROR ${res.status} ${JSON.stringify(card.error)}`); continue; }
-  const got = card.lines_ko.filter((l) => l.item_id).map((l) => l.text_ko).sort();
-  const match = JSON.stringify(got) === JSON.stringify([...c.expect_items].sort()) && (!c.expect_unmatched || card.lines_ko.some((l) => !l.item_id) || card.unmatched_note);
-  const gotConf = new Set(card.conflicts.map((x) => `${card.lines_ko.find((l) => l.item_id === x.item_id)?.text_ko}:${x.allergen}`));
-  const missed = c.expect_conflicts.filter((x) => !gotConf.has(x));
+  if (!res.ok) { console.log(`${u.id} ERROR ${res.status} ${JSON.stringify(card.error)}`); continue; }
+  ran++;
+  const key = (l) => `${l.item_id ?? 'null'}x${l.qty ?? '?'}`;
+  const got = card.lines_ko.map(key).sort();
+  const exp = u.expected.lines_ko.map(key).sort();
+  const unmatchedOk = !u.expected.unmatched_note_expected || Boolean(card.unmatched_note);
+  const match = JSON.stringify(got) === JSON.stringify(exp) && unmatchedOk;
+  const gotConf = new Set(card.conflicts.map((x) => `${x.item_id}:${x.allergen}`));
+  const missed = u.expected.conflicts.map((x) => `${x.item_id}:${x.allergen}`).filter((x) => !gotConf.has(x));
   if (match) matchOk++;
   conflictMiss += missed.length;
   if (ms <= 5000) under5++;
-  console.log(`#${i + 1} ${c.lang.padEnd(7)} ${match ? 'OK  ' : 'MISS'} items=${JSON.stringify(got)} conflicts=${[...gotConf].join(',') || '-'}${missed.length ? ' MISSED=' + missed : ''} ${ms}ms`);
+  console.log(`${u.id} ${u.screen_lang.padEnd(7)} ${match ? 'OK  ' : 'MISS'} lines=${got.join(',')} (exp ${exp.join(',')}) conflicts=${[...gotConf].join(',') || '-'}${missed.length ? ' MISSED=' + missed : ''} ${ms}ms`);
 }
-console.log(`\nAC-31 menu match ${matchOk}/${cases.length} (pass ≥9) · AC-32 conflict misses ${conflictMiss} (pass 0) · ≤5s ${under5}/${cases.length}`);
+console.log(`\nAC-31 menu match ${matchOk}/${utterances.length} (pass ≥9) · AC-32 conflict misses ${conflictMiss} (pass 0) · ≤5s ${under5}/${ran}`);

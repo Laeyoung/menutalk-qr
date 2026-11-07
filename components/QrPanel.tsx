@@ -12,10 +12,10 @@ export async function downloadA6Card(url: string, shortUrl: string, storeName: s
   const ctx = c.getContext('2d')!;
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = '#c2410c';
+  ctx.fillStyle = '#ff2d7a';
   ctx.fillRect(0, 0, W, 24);
   ctx.textAlign = 'center';
-  ctx.fillStyle = '#1f1a17';
+  ctx.fillStyle = '#0b0b10';
   const font = 'system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif';
   ctx.font = `bold 84px ${font}`;
   ctx.fillText(storeName || 'Menu', W / 2, 190, W - 120);
@@ -27,7 +27,7 @@ export async function downloadA6Card(url: string, shortUrl: string, storeName: s
   ctx.font = `600 50px ${font}`;
   ctx.fillText('English · 日本語 · 中文 · Español', W / 2, 1320);
   ctx.font = `40px ${font}`;
-  ctx.fillStyle = '#6b625b';
+  ctx.fillStyle = '#5b6080';
   ctx.fillText('Listen to dishes · Tell staff your allergies', W / 2, 1400);
   ctx.font = `36px ui-monospace, monospace`;
   ctx.fillText(shortUrl, W / 2, 1560, W - 120);
@@ -61,10 +61,10 @@ export function QrPanel({ url, shortUrl, size = 512, label, storeName }: { url: 
   }, [url, px]);
 
   return (
-    <div className={full ? 'fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 bg-white p-4' : 'flex flex-col items-center gap-2'}>
+    <div className={full ? 'fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 bg-card-2 p-4' : 'flex flex-col items-center gap-2'}>
       <canvas ref={ref} style={{ width: full ? px : '100%', maxWidth: full ? undefined : size, height: 'auto' }} aria-label={`QR: ${url}`} />
       {label && <div className="text-center text-sm text-muted">{label}</div>}
-      <div className={full ? 'text-3xl font-bold tracking-tight' : 'break-all text-center font-mono text-sm'}>{shortUrl ?? url}</div>
+      <div className={full ? 'font-mono text-3xl font-bold tracking-tight text-ink' : 'break-all text-center font-mono text-sm'}>{shortUrl ?? url}</div>
       <div className="flex flex-wrap justify-center gap-2">
         <button type="button" onClick={() => setFull((f) => !f)} className="rounded-full border border-line bg-card px-4 py-2 text-sm">
           {full ? '닫기' : 'QR 크게'}
