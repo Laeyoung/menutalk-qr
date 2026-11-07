@@ -3,7 +3,7 @@ import { paths, writeJson } from '@/lib/blob-json';
 import { buildPublished, validatePublish } from '@/lib/publish';
 import { zPublishBody } from '@/lib/schemas';
 import { DEMO_MENU_ID, siteOrigin } from '@/lib/server/env';
-import { ApiError, errorResponse } from '@/lib/server/http';
+import { ApiError, errorResponse, readJsonLimited } from '@/lib/server/http';
 import { requireAdmin } from '@/lib/server/menus';
 import type { LangCode, MenuItemBase } from '@/lib/types';
 
@@ -14,7 +14,7 @@ export async function POST(req: Request, ctx: RouteContext<'/api/menus/[id]/publ
   try {
     const { id } = await ctx.params;
     const draft = await requireAdmin(req, id);
-    const parsed = zPublishBody.safeParse(await req.json().catch(() => null));
+    const parsed = zPublishBody.safeParse(await readJsonLimited(req, 1024 * 1024));
     if (!parsed.success) {
       throw new ApiError(400, 'INVALID_PUBLISH', 'Invalid publish body', false, { issues: parsed.error.issues.slice(0, 10).map((i) => ({ path: i.path.join('.'), message: i.message })) });
     }

@@ -2,7 +2,7 @@
 import { callStructured } from '@/lib/openai/structured';
 import { menuLocalizationSchema, zLang, zLocalization, zLocalizeInputItem } from '@/lib/schemas';
 import { EFFORT, flags, MODELS } from '@/lib/server/env';
-import { ApiError, errorResponse, isDemoRequest } from '@/lib/server/http';
+import { ApiError, errorResponse, isDemoRequest, readJsonLimited } from '@/lib/server/http';
 import { requireAdmin } from '@/lib/server/menus';
 import { mapUpstream } from '@/lib/server/upstream';
 import type { LangCode, LocalizedItem } from '@/lib/types';
@@ -25,7 +25,7 @@ export async function POST(req: Request, ctx: RouteContext<'/api/menus/[id]/loca
   try {
     const { id } = await ctx.params;
     const draft = await requireAdmin(req, id);
-    const parsed = zBody.safeParse(await req.json().catch(() => null));
+    const parsed = zBody.safeParse(await readJsonLimited(req, 64 * 1024));
     if (!parsed.success) throw new ApiError(400, 'BAD_REQUEST', 'Invalid body', false, parsed.error.issues.slice(0, 5));
     const langP = zLang.safeParse(parsed.data.lang);
     if (!langP.success) throw new ApiError(400, 'UNSUPPORTED_LANG', 'Unsupported language');

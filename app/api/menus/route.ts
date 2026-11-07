@@ -6,7 +6,7 @@ import { normalizeExtractedItems } from '@/lib/publish';
 import { loadFixtureDraft } from '@/lib/fixture-menu';
 import { menuExtractionSchema, zExtraction } from '@/lib/schemas';
 import { EFFORT, flags, MODELS } from '@/lib/server/env';
-import { ApiError, errorResponse, isDemoRequest, newAdminKey, newMenuId, sha256hex } from '@/lib/server/http';
+import { ApiError, errorResponse, isDemoRequest, newAdminKey, newMenuId, readJsonLimited, sha256hex } from '@/lib/server/http';
 import type { MenuDraft } from '@/lib/types';
 import { EXTRACT_INSTRUCTIONS, extractUserText } from '@/prompts/extract';
 import { z } from 'zod';
@@ -27,9 +27,11 @@ const zBody = z.object({
 
 export async function POST(req: Request) {
   try {
-    const len = Number(req.headers.get('content-length') || 0);
-    if (len > MAX_DATA_URL + 64 * 1024) throw new ApiError(400, 'IMAGE_TOO_LARGE', 'Image must be 4MB or smaller');
-    const parsed = zBody.safeParse(await req.json().catch(() => null));
+    const raw = await readJsonLimited(req, MAX_DATA_URL + 64 * 1024).catch((e) => {
+      if (e instanceof ApiError && e.status === 413) throw new ApiError(400, 'IMAGE_TOO_LARGE', 'Image must be 4MB or smaller');
+      throw e;
+    });
+    const parsed = zBody.safeParse(raw);
     if (!parsed.success) throw new ApiError(400, 'BAD_REQUEST', 'Invalid body');
     const body = parsed.data;
     const demo = isDemoRequest(req);

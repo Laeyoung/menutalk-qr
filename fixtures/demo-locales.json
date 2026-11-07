@@ -1,5 +1,5 @@
 {
-  "_comment": "한끼식당 18개 메뉴의 영어·한국어 현지화(사람 작성). name_ko로 매칭. 일본어·중국어·스페인어는 모델 현지화로 채운다(DECISIONS D-16).",
+  "_comment": "한끼식당 18개 메뉴의 6개 언어(en, ja, zh-Hans, zh-Hant, es, ko) 현지화(사람 작성). name_ko로 매칭한다. 모델 없이 데모 메뉴를 공개할 때 쓴다(DECISIONS D-16).",
   "items": {
     "비빔밥": {
       "en": {
@@ -13,6 +13,30 @@
         "short": "밥 위에 나물·달걀·고추장을 올린 한 그릇",
         "detail": "따뜻한 밥에 콩나물, 시금치, 고사리, 달걀을 올리고 고추장과 참기름을 곁들입니다. 한 그릇이 1인분 식사입니다.",
         "how_to_eat": "고추장을 입맛에 맞게 넣고 골고루 비벼 드세요."
+      },
+      "ja": {
+        "name": "ビビンバ",
+        "short": "ナムルと卵をのせた混ぜご飯",
+        "detail": "ご飯に豆もやし、ほうれん草、ぜんまい、卵をのせ、コチュジャンとごま油を添えます。一人前で一食分です。",
+        "how_to_eat": "コチュジャンをお好みで入れ、よく混ぜてから召し上がってください。"
+      },
+      "zh-Hans": {
+        "name": "拌饭（比宾巴）",
+        "short": "米饭配凉拌蔬菜、鸡蛋和辣酱",
+        "detail": "米饭上铺豆芽、菠菜、蕨菜和鸡蛋，配辣椒酱和香油。一碗是一人份的一餐。",
+        "how_to_eat": "按喜好加入辣椒酱，充分拌匀后再吃。"
+      },
+      "zh-Hant": {
+        "name": "拌飯（比賓巴）",
+        "short": "白飯配涼拌蔬菜、雞蛋和辣醬",
+        "detail": "白飯上鋪豆芽、菠菜、蕨菜和雞蛋，搭配辣椒醬和香油。一碗是一人份的一餐。",
+        "how_to_eat": "依喜好加入辣椒醬，充分拌勻後再吃。"
+      },
+      "es": {
+        "name": "Bibimbap (arroz mezclado)",
+        "short": "Arroz con verduras aliñadas, huevo y pasta de chile",
+        "detail": "Arroz caliente con brotes de soja, espinacas, helecho y huevo, servido con pasta de chile gochujang y aceite de sésamo. Un bol es una comida para una persona.",
+        "how_to_eat": "Añada la pasta de chile al gusto y mézclelo todo bien antes de comer."
       }
     },
     "김치볶음밥": {
@@ -26,6 +50,30 @@
         "name": "김치볶음밥",
         "short": "김치·돼지고기를 넣고 볶은 밥에 달걀",
         "detail": "밥을 김치, 돼지고기, 대파, 간장과 함께 볶고 달걀을 올립니다. 살짝 매운 1인분입니다.",
+        "how_to_eat": null
+      },
+      "ja": {
+        "name": "キムチチャーハン",
+        "short": "キムチと豚肉の炒めご飯、目玉焼きのせ",
+        "detail": "ご飯をキムチ、豚肉、長ねぎ、醤油で炒め、卵をのせます。少し辛い一人前です。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "泡菜炒饭",
+        "short": "泡菜猪肉炒饭配煎蛋",
+        "detail": "米饭和泡菜、猪肉、大葱、酱油一起炒，上面放鸡蛋。微辣，一人份。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "泡菜炒飯",
+        "short": "泡菜豬肉炒飯配荷包蛋",
+        "detail": "白飯和泡菜、豬肉、大蔥、醬油一起炒，上面放雞蛋。微辣，一人份。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Kimchi-bokkeumbap (arroz frito con kimchi)",
+        "short": "Arroz frito con kimchi, cerdo y huevo",
+        "detail": "Arroz salteado con kimchi, cerdo, cebolleta y salsa de soja, con un huevo encima. Algo picante, una ración para una persona.",
         "how_to_eat": null
       }
     },
@@ -41,6 +89,30 @@
         "short": "매콤한 돼지고기 볶음을 올린 덮밥",
         "detail": "돼지고기, 양파, 대파를 고추장 양념에 볶아 밥 위에 올리고 참깨를 뿌립니다. 매콤한 1인분입니다.",
         "how_to_eat": null
+      },
+      "ja": {
+        "name": "チェユク丼（豚肉の辛味炒め丼）",
+        "short": "ピリ辛豚肉炒めのせご飯",
+        "detail": "豚肉、玉ねぎ、長ねぎをコチュジャンだれで炒め、ご飯にのせてごまを振ります。辛めの一人前です。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "辣炒猪肉盖饭",
+        "short": "辣炒猪肉盖在米饭上",
+        "detail": "猪肉、洋葱和大葱用辣椒酱炒好，盖在米饭上，撒上芝麻。偏辣，一人份。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "辣炒豬肉蓋飯",
+        "short": "辣炒豬肉蓋在白飯上",
+        "detail": "豬肉、洋蔥和大蔥用辣椒醬炒好，蓋在白飯上，撒上芝麻。偏辣，一人份。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Jeyuk-deopbap (cerdo picante sobre arroz)",
+        "short": "Cerdo salteado picante sobre arroz",
+        "detail": "Cerdo, cebolla y cebolleta salteados en salsa gochujang, servidos sobre arroz con semillas de sésamo. Picante, una ración para una persona.",
+        "how_to_eat": null
       }
     },
     "냉면": {
@@ -55,6 +127,30 @@
         "short": "차가운 소고기 육수에 말아 낸 메밀면",
         "detail": "메밀면을 차가운 소고기 육수에 말고 편육, 오이, 무절임, 배, 삶은 달걀을 올립니다. 맵지 않고 시원한 한 그릇입니다.",
         "how_to_eat": "식초와 겨자는 입맛대로 넣고, 면은 가위로 잘라 달라고 하세요."
+      },
+      "ja": {
+        "name": "冷麺（ネンミョン）",
+        "short": "冷たい牛肉スープのそば粉冷麺",
+        "detail": "そば粉の麺を冷たい牛肉スープに入れ、牛肉の薄切り、きゅうり、大根の甘酢漬け、梨、ゆで卵をのせます。辛くない一人前です。",
+        "how_to_eat": "お好みで酢とからしを入れてください。麺ははさみで切ってもらえます。"
+      },
+      "zh-Hans": {
+        "name": "冷面",
+        "short": "冰凉牛肉汤荞麦冷面",
+        "detail": "荞麦面放在冰凉的牛肉汤里，配牛肉片、黄瓜、腌萝卜、梨和水煮蛋。清爽不辣，一人一碗。",
+        "how_to_eat": "可按口味加醋和芥末，面条可以请店员用剪刀剪短。"
+      },
+      "zh-Hant": {
+        "name": "冷麵",
+        "short": "冰涼牛肉湯蕎麥冷麵",
+        "detail": "蕎麥麵放在冰涼的牛肉湯裡，配牛肉片、小黃瓜、醃蘿蔔、梨和水煮蛋。清爽不辣，一人一碗。",
+        "how_to_eat": "可依口味加醋和芥末，麵條可以請店員用剪刀剪短。"
+      },
+      "es": {
+        "name": "Naengmyeon (fideos fríos de trigo sarraceno)",
+        "short": "Fideos de trigo sarraceno en caldo de ternera helado",
+        "detail": "Fideos de trigo sarraceno en caldo frío de ternera con lonchas de ternera, pepino, rábano encurtido, pera y huevo cocido. Refrescante y sin picante, un bol por persona.",
+        "how_to_eat": "Añada vinagre y mostaza al gusto; el personal puede cortar los fideos con tijeras."
       }
     },
     "잔치국수": {
@@ -69,6 +165,30 @@
         "short": "멸치 육수에 만 소면 국수",
         "detail": "소면을 담백한 멸치 육수에 말고 애호박, 달걀 지단, 김을 올립니다. 양념간장으로 간을 맞추는 맵지 않은 한 그릇입니다.",
         "how_to_eat": "양념간장은 조금씩 넣어 간을 맞추세요."
+      },
+      "ja": {
+        "name": "チャンチグクス（温かい素麺）",
+        "short": "煮干しだしの温かい細麺",
+        "detail": "細い素麺をあっさりした煮干しスープに入れ、ズッキーニ、錦糸卵、海苔をのせます。たれ醤油で味を調える辛くない一人前です。",
+        "how_to_eat": "たれ醤油は少しずつ加えて味を調えてください。"
+      },
+      "zh-Hans": {
+        "name": "喜面（温面）",
+        "short": "鳀鱼高汤细面",
+        "detail": "细面放在清淡的鳀鱼高汤里，配西葫芦、蛋丝和海苔，用调味酱油调味。不辣，一人一碗。",
+        "how_to_eat": "调味酱油请一点一点加。"
+      },
+      "zh-Hant": {
+        "name": "喜麵（溫麵）",
+        "short": "鯷魚高湯細麵",
+        "detail": "細麵放在清淡的鯷魚高湯裡，配櫛瓜、蛋絲和海苔，用調味醬油調味。不辣，一人一碗。",
+        "how_to_eat": "調味醬油請一點一點加。"
+      },
+      "es": {
+        "name": "Janchi-guksu (sopa de fideos caliente)",
+        "short": "Fideos finos en caldo ligero de anchoa",
+        "detail": "Fideos finos de trigo en un caldo suave de anchoa con calabacín, tiras de huevo y alga, sazonados con salsa de soja. Ligero y sin picante, un bol por persona.",
+        "how_to_eat": "Añada la salsa de soja poco a poco."
       }
     },
     "갈비탕": {
@@ -82,6 +202,30 @@
         "name": "갈비탕",
         "short": "소갈비를 오래 끓인 맑은 국물",
         "detail": "소갈비를 무, 당면과 함께 오래 끓여 맑고 진한 국물을 냅니다. 맵지 않은 1인분이며 밥과 함께 나옵니다.",
+        "how_to_eat": null
+      },
+      "ja": {
+        "name": "カルビタン（牛カルビスープ）",
+        "short": "牛カルビを煮込んだ澄んだスープ",
+        "detail": "牛カルビを大根、春雨と一緒にじっくり煮込んだ、澄んだ旨みのあるスープです。辛くない一人前で、ご飯と一緒に出します。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "排骨汤",
+        "short": "慢炖牛排骨清汤",
+        "detail": "牛排骨和萝卜、粉丝一起长时间炖煮，汤清味浓。不辣，一人份，配米饭。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "排骨湯",
+        "short": "慢燉牛排骨清湯",
+        "detail": "牛排骨和蘿蔔、冬粉一起長時間燉煮，湯清味濃。不辣，一人份，配白飯。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Galbitang (sopa de costilla de ternera)",
+        "short": "Sopa clara con costillas de ternera tiernas",
+        "detail": "Costillas de ternera cocidas a fuego lento con rábano y fideos de cristal en una sopa clara y sabrosa. Sin picante, un bol por persona, con arroz.",
         "how_to_eat": null
       }
     },
@@ -97,6 +241,30 @@
         "short": "묵은지·돼지고기·두부로 끓인 얼큰한 찌개",
         "detail": "잘 익은 김치를 돼지고기, 두부, 대파, 양파와 함께 끓여 새콤하고 얼큰합니다. 1인분이며 밥과 함께 나옵니다.",
         "how_to_eat": null
+      },
+      "ja": {
+        "name": "キムチチゲ",
+        "short": "熟成キムチと豚肉、豆腐の辛い鍋",
+        "detail": "よく漬かったキムチを豚肉、豆腐、長ねぎ、玉ねぎと煮込んだ酸味のある辛い鍋です。一人前でご飯と一緒に出します。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "泡菜汤（泡菜锅）",
+        "short": "老泡菜、猪肉和豆腐的辣汤",
+        "detail": "用发酵充分的泡菜和猪肉、豆腐、大葱、洋葱一起炖煮，味道酸辣。一人份，配米饭。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "泡菜鍋",
+        "short": "老泡菜、豬肉和豆腐的辣鍋",
+        "detail": "用發酵充分的泡菜和豬肉、豆腐、大蔥、洋蔥一起燉煮，味道酸辣。一人份，配白飯。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Kimchi-jjigae (guiso de kimchi)",
+        "short": "Guiso picante de kimchi, cerdo y tofu",
+        "detail": "Kimchi bien fermentado cocido con cerdo, tofu, cebolleta y cebolla, con sabor ácido y picante. Una ración para una persona, con arroz.",
+        "how_to_eat": null
       }
     },
     "된장찌개": {
@@ -110,6 +278,30 @@
         "name": "된장찌개",
         "short": "두부·애호박을 넣은 구수한 된장찌개",
         "detail": "멸치 육수에 된장, 두부, 애호박, 감자, 양파를 넣고 끓입니다. 맵지 않고 구수한 1인분입니다.",
+        "how_to_eat": null
+      },
+      "ja": {
+        "name": "テンジャンチゲ（韓国味噌鍋）",
+        "short": "豆腐とズッキーニの韓国味噌鍋",
+        "detail": "煮干しのだしでテンジャン、豆腐、ズッキーニ、じゃがいも、玉ねぎを煮込みます。まろやかな味の一人前です。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "大酱汤",
+        "short": "豆腐和西葫芦的韩式大酱汤",
+        "detail": "用鳀鱼高汤炖煮大酱、豆腐、西葫芦、土豆和洋葱，味道醇厚温和。一人份。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "大醬湯",
+        "short": "豆腐和櫛瓜的韓式大醬湯",
+        "detail": "用鯷魚高湯燉煮大醬、豆腐、櫛瓜、馬鈴薯和洋蔥，味道醇厚溫和。一人份。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Doenjang-jjigae (guiso de pasta de soja)",
+        "short": "Guiso de pasta de soja con tofu y calabacín",
+        "detail": "Pasta de soja fermentada cocida en caldo de anchoa con tofu, calabacín, patata y cebolla. Sabor suave y profundo, una ración para una persona.",
         "how_to_eat": null
       }
     },
@@ -125,6 +317,30 @@
         "short": "바지락·돼지고기·달걀을 넣은 얼큰한 순두부",
         "detail": "아주 부드러운 순두부와 바지락, 돼지고기를 빨간 국물에 끓이고 마지막에 달걀을 넣습니다. 1인분 뚝배기입니다.",
         "how_to_eat": "뜨거울 때 달걀을 바로 풀어 익혀 드세요."
+      },
+      "ja": {
+        "name": "スンドゥブチゲ",
+        "short": "あさり、豚肉、卵入りの辛いおぼろ豆腐鍋",
+        "detail": "おぼろ豆腐、あさり、豚肉を赤い唐辛子スープで煮て、最後に卵を入れます。一人前の土鍋です。",
+        "how_to_eat": "熱いうちに卵をスープに溶かして火を通してください。"
+      },
+      "zh-Hans": {
+        "name": "嫩豆腐汤",
+        "short": "加蛤蜊、猪肉和鸡蛋的辣嫩豆腐汤",
+        "detail": "嫩豆腐、蛤蜊和猪肉在红辣椒汤里煮，最后加入鸡蛋。一人份砂锅。",
+        "how_to_eat": "趁热把鸡蛋搅进汤里让它煮熟。"
+      },
+      "zh-Hant": {
+        "name": "嫩豆腐鍋",
+        "short": "加蛤蜊、豬肉和雞蛋的辣嫩豆腐鍋",
+        "detail": "嫩豆腐、蛤蜊和豬肉在紅辣椒湯裡煮，最後加入雞蛋。一人份砂鍋。",
+        "how_to_eat": "趁熱把雞蛋攪進湯裡讓它煮熟。"
+      },
+      "es": {
+        "name": "Sundubu-jjigae (guiso de tofu suave)",
+        "short": "Guiso picante de tofu sedoso con almejas, cerdo y huevo",
+        "detail": "Tofu muy suave, almejas y cerdo cocidos en caldo rojo de chile; al final se añade un huevo. Una olla para una persona.",
+        "how_to_eat": "Mezcle el huevo en el guiso caliente enseguida para que se cueza."
       }
     },
     "부대찌개": {
@@ -139,6 +355,30 @@
         "short": "햄·소시지·김치·라면을 넣은 얼큰한 전골",
         "detail": "햄, 소시지, 김치, 두부, 라면사리, 치즈를 고추장 국물에 끓입니다. 1인분 가격이며 보통 밥과 함께 먹습니다.",
         "how_to_eat": "라면이 붇기 전에 면부터 드세요."
+      },
+      "ja": {
+        "name": "プデチゲ（部隊チゲ）",
+        "short": "ハム、ソーセージ、キムチ、ラーメンのピリ辛鍋",
+        "detail": "ハム、ソーセージ、キムチ、豆腐、インスタント麺、スライスチーズをコチュジャンのスープで煮込みます。一人前の価格で、ご飯と一緒に食べるのが定番です。",
+        "how_to_eat": "麺が伸びる前に先に麺から食べてください。"
+      },
+      "zh-Hans": {
+        "name": "部队锅",
+        "short": "火腿、香肠、泡菜和面的辣火锅",
+        "detail": "火腿、香肠、泡菜、豆腐、方便面和芝士片在辣椒酱汤底里煮。按人份计价，通常配米饭吃。",
+        "how_to_eat": "面条容易泡软，请先吃面。"
+      },
+      "zh-Hant": {
+        "name": "部隊鍋",
+        "short": "火腿、香腸、泡菜和麵的辣火鍋",
+        "detail": "火腿、香腸、泡菜、豆腐、泡麵和起司片在辣椒醬湯底裡煮。按人份計價，通常配白飯吃。",
+        "how_to_eat": "麵條容易泡軟，請先吃麵。"
+      },
+      "es": {
+        "name": "Budae-jjigae (guiso del ejército)",
+        "short": "Olla picante con jamón, salchicha, kimchi y fideos",
+        "detail": "Jamón, salchicha, kimchi, tofu, fideos instantáneos y una loncha de queso cocidos en caldo de pasta de chile. Precio por persona; se suele comer con arroz.",
+        "how_to_eat": "Coma primero los fideos, antes de que se ablanden."
       }
     },
     "해물파전": {
@@ -153,6 +393,30 @@
         "short": "쪽파·오징어·새우·홍합을 넣은 바삭한 전",
         "detail": "쪽파, 오징어, 새우, 홍합을 밀가루와 달걀 반죽에 넣어 크게 부치고 초간장을 곁들입니다. 두세 명이 나눠 먹기 좋습니다.",
         "how_to_eat": "한 조각씩 초간장에 찍어 드세요."
+      },
+      "ja": {
+        "name": "海鮮チヂミ（ヘムルパジョン）",
+        "short": "ねぎ、いか、えび、ムール貝のチヂミ",
+        "detail": "わけぎ、いか、えび、ムール貝を小麦粉と卵の生地で大きく焼き、酢醤油を添えます。2〜3人でシェアする量です。",
+        "how_to_eat": "酢醤油につけて召し上がってください。"
+      },
+      "zh-Hans": {
+        "name": "海鲜葱饼",
+        "short": "葱、鱿鱼、虾和贻贝的香脆煎饼",
+        "detail": "细葱、鱿鱼、虾和贻贝裹上面粉鸡蛋糊煎成大饼，配醋酱油。适合两三人分享。",
+        "how_to_eat": "蘸醋酱油吃。"
+      },
+      "zh-Hant": {
+        "name": "海鮮蔥煎餅",
+        "short": "蔥、魷魚、蝦和淡菜的香脆煎餅",
+        "detail": "細蔥、魷魚、蝦和淡菜裹上麵粉雞蛋糊煎成大餅，配醋醬油。適合兩三人分享。",
+        "how_to_eat": "沾醋醬油吃。"
+      },
+      "es": {
+        "name": "Haemul-pajeon (tortita de marisco y cebolleta)",
+        "short": "Tortita crujiente de cebolleta, calamar, gambas y mejillones",
+        "detail": "Una gran tortita salada de cebolleta, calamar, gambas y mejillones en masa de harina y huevo, con salsa de soja y vinagre. Para compartir entre dos o tres.",
+        "how_to_eat": "Moje cada trozo en la salsa de soja y vinagre."
       }
     },
     "고등어구이": {
@@ -166,6 +430,30 @@
         "name": "고등어구이",
         "short": "소금만 뿌려 구운 고등어",
         "detail": "고등어에 소금만 뿌려 껍질이 바삭하게 굽습니다. 맵지 않고 밥반찬이나 함께 나눠 먹기 좋습니다.",
+        "how_to_eat": null
+      },
+      "ja": {
+        "name": "サバの塩焼き",
+        "short": "塩だけで焼いたサバ",
+        "detail": "サバに塩だけを振り、皮がパリッとするまで焼きます。辛くなく、ご飯のおかずやシェアに向いています。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "烤鲭鱼",
+        "short": "只用盐调味的烤鲭鱼",
+        "detail": "鲭鱼只撒盐，烤到鱼皮酥脆。不辣，适合配饭或大家分享。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "烤鯖魚",
+        "short": "只用鹽調味的烤鯖魚",
+        "detail": "鯖魚只撒鹽，烤到魚皮酥脆。不辣，適合配飯或大家分享。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Godeungeo-gui (caballa a la plancha)",
+        "short": "Caballa asada con sal",
+        "detail": "Caballa sazonada solo con sal y asada hasta que la piel queda crujiente. Sin picante, buena con arroz o para compartir.",
         "how_to_eat": null
       }
     },
@@ -181,6 +469,30 @@
         "short": "아주 매운 낙지 볶음",
         "detail": "낙지를 양파, 대파와 함께 고추장과 고춧가루로 볶고 참기름으로 마무리합니다. 아주 매우며 나눠 먹기 좋습니다. 가격은 시가입니다.",
         "how_to_eat": null
+      },
+      "ja": {
+        "name": "ナクチポックム（テナガダコ炒め）",
+        "short": "激辛のテナガダコ炒め",
+        "detail": "テナガダコを玉ねぎ、長ねぎとコチュジャン、唐辛子粉で炒め、ごま油で仕上げます。とても辛く、シェア向きです。価格は時価です。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "辣炒小章鱼",
+        "short": "特辣炒小章鱼",
+        "detail": "小章鱼和洋葱、大葱用辣椒酱和辣椒粉炒，最后淋香油。非常辣，适合分享。价格为时价。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "辣炒小章魚",
+        "short": "特辣炒小章魚",
+        "detail": "小章魚和洋蔥、大蔥用辣椒醬和辣椒粉炒，最後淋香油。非常辣，適合分享。價格為時價。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Nakji-bokkeum (pulpito salteado picante)",
+        "short": "Pulpito salteado muy picante",
+        "detail": "Pulpito salteado con cebolla y cebolleta en gochujang y chile en polvo, terminado con aceite de sésamo. Muy picante, para compartir; precio según temporada.",
+        "how_to_eat": null
       }
     },
     "계란말이": {
@@ -194,6 +506,30 @@
         "name": "계란말이",
         "short": "대파·당근을 넣은 도톰한 계란말이",
         "detail": "대파와 당근을 넣은 달걀물을 얇게 부쳐 돌돌 말아 썹니다. 맵지 않은 반찬으로 함께 나눠 먹습니다.",
+        "how_to_eat": null
+      },
+      "ja": {
+        "name": "ケランマリ（韓国風卵焼き）",
+        "short": "長ねぎとにんじん入りの卵焼き",
+        "detail": "長ねぎとにんじんを混ぜた卵液を薄く焼いて巻き、切り分けます。辛くないおかずで、シェア向きです。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "鸡蛋卷",
+        "short": "加大葱和胡萝卜的厚蛋卷",
+        "detail": "把加了大葱和胡萝卜的蛋液薄薄煎好卷起来切块。不辣的配菜，适合分享。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "雞蛋捲",
+        "short": "加大蔥和紅蘿蔔的厚蛋捲",
+        "detail": "把加了大蔥和紅蘿蔔的蛋液薄薄煎好捲起來切塊。不辣的配菜，適合分享。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Gyeran-mari (tortilla enrollada)",
+        "short": "Tortilla enrollada con cebolleta y zanahoria",
+        "detail": "Huevo batido con cebolleta y zanahoria, cuajado en capas finas, enrollado y cortado. Suave y sin picante, para compartir.",
         "how_to_eat": null
       }
     },
@@ -209,6 +545,30 @@
         "short": "맑은 한국 증류주",
         "detail": "알코올 도수 16~17도 정도의 깔끔한 한국 술입니다. 초록 병 하나를 보통 함께 나눠 마십니다.",
         "how_to_eat": "자기 잔보다 상대 잔에 따라 주고, 작은 잔으로 마십니다."
+      },
+      "ja": {
+        "name": "焼酎（ソジュ）",
+        "short": "韓国の透明な蒸留酒",
+        "detail": "アルコール度数16〜17度ほどの、すっきりした韓国のお酒です。緑の瓶1本をテーブルで分けて飲みます。",
+        "how_to_eat": "自分ではなく相手のグラスに注ぎ、小さなグラスで飲みます。"
+      },
+      "zh-Hans": {
+        "name": "烧酒",
+        "short": "韩国透明蒸馏酒",
+        "detail": "酒精度约16到17度的清爽韩国酒。一瓶通常全桌分着喝。",
+        "how_to_eat": "习惯上给别人倒酒，用小杯喝。"
+      },
+      "zh-Hant": {
+        "name": "燒酒",
+        "short": "韓國透明蒸餾酒",
+        "detail": "酒精度約16到17度的清爽韓國酒。一瓶通常全桌分著喝。",
+        "how_to_eat": "習慣上幫別人倒酒，用小杯喝。"
+      },
+      "es": {
+        "name": "Soju",
+        "short": "Licor destilado coreano transparente",
+        "detail": "Licor coreano transparente y suave de unos 16 a 17 grados. Una botella verde se suele compartir en la mesa.",
+        "how_to_eat": "Sirva a los demás en lugar de a usted mismo y beba en vasitos pequeños."
       }
     },
     "맥주": {
@@ -222,6 +582,30 @@
         "name": "맥주",
         "short": "시원한 한국 라거",
         "detail": "보리 맥아와 홉으로 만든 가볍고 시원한 한국 라거 한 병입니다. 소주와 섞어 마시기도 합니다.",
+        "how_to_eat": null
+      },
+      "ja": {
+        "name": "ビール（メッチュ）",
+        "short": "冷たい韓国ラガー",
+        "detail": "麦芽とホップで造った、軽くすっきりした韓国ラガーの瓶ビールです。焼酎と割って飲むこともあります。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "啤酒",
+        "short": "冰镇韩国拉格啤酒",
+        "detail": "用大麦芽和啤酒花酿造的清爽韩国拉格，一瓶。也常和烧酒混着喝。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "啤酒",
+        "short": "冰鎮韓國拉格啤酒",
+        "detail": "用大麥芽和啤酒花釀造的清爽韓國拉格，一瓶。也常和燒酒混著喝。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Maekju (cerveza coreana)",
+        "short": "Cerveza lager coreana fría",
+        "detail": "Una botella de lager coreana ligera y refrescante, hecha con malta de cebada y lúpulo. A menudo se mezcla con soju.",
         "how_to_eat": null
       }
     },
@@ -237,6 +621,30 @@
         "short": "쌀로 빚은 뽀얀 막걸리",
         "detail": "쌀과 누룩으로 빚은 뽀얗고 달짝지근한 술입니다. 해물파전과 잘 어울립니다.",
         "how_to_eat": "따르기 전에 병을 살살 흔들어 섞어 주세요."
+      },
+      "ja": {
+        "name": "マッコリ",
+        "short": "にごりのある甘めの米のお酒",
+        "detail": "米と麹で造った白くにごったお酒で、ほんのり甘く微炭酸です。チヂミとよく合います。",
+        "how_to_eat": "注ぐ前に瓶をやさしく振って混ぜてください。"
+      },
+      "zh-Hans": {
+        "name": "米酒（马格利）",
+        "short": "乳白微甜的米酒",
+        "detail": "用大米和酒曲酿成的浑浊米酒，微甜带气泡。很适合配煎饼。",
+        "how_to_eat": "倒酒前请轻轻摇匀。"
+      },
+      "zh-Hant": {
+        "name": "米酒（馬格利）",
+        "short": "乳白微甜的米酒",
+        "detail": "用米和酒麴釀成的混濁米酒，微甜帶氣泡。很適合配煎餅。",
+        "how_to_eat": "倒酒前請輕輕搖勻。"
+      },
+      "es": {
+        "name": "Makgeolli (vino de arroz)",
+        "short": "Vino de arroz lechoso y ligeramente dulce",
+        "detail": "Vino de arroz turbio hecho con arroz y fermento nuruk, ligeramente dulce y con burbujas. Va muy bien con las tortitas saladas.",
+        "how_to_eat": "Agite suavemente la botella antes de servir."
       }
     },
     "콜라": {
@@ -250,6 +658,30 @@
         "name": "콜라",
         "short": "시원한 콜라",
         "detail": "차갑게 낸 콜라입니다.",
+        "how_to_eat": null
+      },
+      "ja": {
+        "name": "コーラ",
+        "short": "冷たいコーラ",
+        "detail": "冷えたコーラです。",
+        "how_to_eat": null
+      },
+      "zh-Hans": {
+        "name": "可乐",
+        "short": "冰可乐",
+        "detail": "一瓶冰镇可乐。",
+        "how_to_eat": null
+      },
+      "zh-Hant": {
+        "name": "可樂",
+        "short": "冰可樂",
+        "detail": "一瓶冰鎮可樂。",
+        "how_to_eat": null
+      },
+      "es": {
+        "name": "Cola",
+        "short": "Refresco de cola frío",
+        "detail": "Una botella o lata de refresco de cola fría.",
         "how_to_eat": null
       }
     }

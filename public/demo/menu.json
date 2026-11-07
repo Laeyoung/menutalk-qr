@@ -1,10 +1,14 @@
 {
   "menu_id": "demo",
   "store_name": "한끼식당",
-  "published_at": "2026-11-07T05:13:30.750Z",
-  "rev": 1794028410,
+  "published_at": "2026-11-07T05:39:13.157Z",
+  "rev": 1794029953,
   "langs": [
     "en",
+    "ja",
+    "zh-Hans",
+    "zh-Hant",
+    "es",
     "ko"
   ],
   "items": [
@@ -571,6 +575,662 @@
         "how_to_eat": null,
         "tts_text": "Cola. Chilled cola. A cold bottle or can of cola.",
         "tts_hash": "cc01100c"
+      }
+    },
+    "ja": {
+      "i01": {
+        "item_id": "i01",
+        "name": "ビビンバ",
+        "short": "ナムルと卵をのせた混ぜご飯",
+        "detail": "ご飯に豆もやし、ほうれん草、ぜんまい、卵をのせ、コチュジャンとごま油を添えます。一人前で一食分です。",
+        "how_to_eat": "コチュジャンをお好みで入れ、よく混ぜてから召し上がってください。",
+        "tts_text": "ビビンバ。ナムルと卵をのせた混ぜご飯。ご飯に豆もやし、ほうれん草、ぜんまい、卵をのせ、コチュジャンとごま油を添えます。一人前で一食分です。",
+        "tts_hash": "198f170b"
+      },
+      "i02": {
+        "item_id": "i02",
+        "name": "キムチチャーハン",
+        "short": "キムチと豚肉の炒めご飯、目玉焼きのせ",
+        "detail": "ご飯をキムチ、豚肉、長ねぎ、醤油で炒め、卵をのせます。少し辛い一人前です。",
+        "how_to_eat": null,
+        "tts_text": "キムチチャーハン。キムチと豚肉の炒めご飯、目玉焼きのせ。ご飯をキムチ、豚肉、長ねぎ、醤油で炒め、卵をのせます。少し辛い一人前です。",
+        "tts_hash": "9cf1c916"
+      },
+      "i03": {
+        "item_id": "i03",
+        "name": "チェユク丼（豚肉の辛味炒め丼）",
+        "short": "ピリ辛豚肉炒めのせご飯",
+        "detail": "豚肉、玉ねぎ、長ねぎをコチュジャンだれで炒め、ご飯にのせてごまを振ります。辛めの一人前です。",
+        "how_to_eat": null,
+        "tts_text": "チェユク丼、豚肉の辛味炒め丼。ピリ辛豚肉炒めのせご飯。豚肉、玉ねぎ、長ねぎをコチュジャンだれで炒め、ご飯にのせてごまを振ります。辛めの一人前です。",
+        "tts_hash": "c3eb8790"
+      },
+      "i04": {
+        "item_id": "i04",
+        "name": "冷麺（ネンミョン）",
+        "short": "冷たい牛肉スープのそば粉冷麺",
+        "detail": "そば粉の麺を冷たい牛肉スープに入れ、牛肉の薄切り、きゅうり、大根の甘酢漬け、梨、ゆで卵をのせます。辛くない一人前です。",
+        "how_to_eat": "お好みで酢とからしを入れてください。麺ははさみで切ってもらえます。",
+        "tts_text": "冷麺、ネンミョン。冷たい牛肉スープのそば粉冷麺。そば粉の麺を冷たい牛肉スープに入れ、牛肉の薄切り、きゅうり、大根の甘酢漬け、梨、ゆで卵をのせます。辛くない一人前です。",
+        "tts_hash": "94d0a9f8"
+      },
+      "i05": {
+        "item_id": "i05",
+        "name": "チャンチグクス（温かい素麺）",
+        "short": "煮干しだしの温かい細麺",
+        "detail": "細い素麺をあっさりした煮干しスープに入れ、ズッキーニ、錦糸卵、海苔をのせます。たれ醤油で味を調える辛くない一人前です。",
+        "how_to_eat": "たれ醤油は少しずつ加えて味を調えてください。",
+        "tts_text": "チャンチグクス、温かい素麺。煮干しだしの温かい細麺。細い素麺をあっさりした煮干しスープに入れ、ズッキーニ、錦糸卵、海苔をのせます。たれ醤油で味を調える辛くない一人前です。",
+        "tts_hash": "2bc5070b"
+      },
+      "i06": {
+        "item_id": "i06",
+        "name": "カルビタン（牛カルビスープ）",
+        "short": "牛カルビを煮込んだ澄んだスープ",
+        "detail": "牛カルビを大根、春雨と一緒にじっくり煮込んだ、澄んだ旨みのあるスープです。辛くない一人前で、ご飯と一緒に出します。",
+        "how_to_eat": null,
+        "tts_text": "カルビタン、牛カルビスープ。牛カルビを煮込んだ澄んだスープ。牛カルビを大根、春雨と一緒にじっくり煮込んだ、澄んだ旨みのあるスープです。辛くない一人前で、ご飯と一緒に出します。",
+        "tts_hash": "6bab3e5a"
+      },
+      "i07": {
+        "item_id": "i07",
+        "name": "キムチチゲ",
+        "short": "熟成キムチと豚肉、豆腐の辛い鍋",
+        "detail": "よく漬かったキムチを豚肉、豆腐、長ねぎ、玉ねぎと煮込んだ酸味のある辛い鍋です。一人前でご飯と一緒に出します。",
+        "how_to_eat": null,
+        "tts_text": "キムチチゲ。熟成キムチと豚肉、豆腐の辛い鍋。よく漬かったキムチを豚肉、豆腐、長ねぎ、玉ねぎと煮込んだ酸味のある辛い鍋です。一人前でご飯と一緒に出します。",
+        "tts_hash": "b5bf0950"
+      },
+      "i08": {
+        "item_id": "i08",
+        "name": "テンジャンチゲ（韓国味噌鍋）",
+        "short": "豆腐とズッキーニの韓国味噌鍋",
+        "detail": "煮干しのだしでテンジャン、豆腐、ズッキーニ、じゃがいも、玉ねぎを煮込みます。まろやかな味の一人前です。",
+        "how_to_eat": null,
+        "tts_text": "テンジャンチゲ、韓国味噌鍋。豆腐とズッキーニの韓国味噌鍋。煮干しのだしでテンジャン、豆腐、ズッキーニ、じゃがいも、玉ねぎを煮込みます。まろやかな味の一人前です。",
+        "tts_hash": "38bbfd0c"
+      },
+      "i09": {
+        "item_id": "i09",
+        "name": "スンドゥブチゲ",
+        "short": "あさり、豚肉、卵入りの辛いおぼろ豆腐鍋",
+        "detail": "おぼろ豆腐、あさり、豚肉を赤い唐辛子スープで煮て、最後に卵を入れます。一人前の土鍋です。",
+        "how_to_eat": "熱いうちに卵をスープに溶かして火を通してください。",
+        "tts_text": "スンドゥブチゲ。あさり、豚肉、卵入りの辛いおぼろ豆腐鍋。おぼろ豆腐、あさり、豚肉を赤い唐辛子スープで煮て、最後に卵を入れます。一人前の土鍋です。",
+        "tts_hash": "42065111"
+      },
+      "i10": {
+        "item_id": "i10",
+        "name": "プデチゲ（部隊チゲ）",
+        "short": "ハム、ソーセージ、キムチ、ラーメンのピリ辛鍋",
+        "detail": "ハム、ソーセージ、キムチ、豆腐、インスタント麺、スライスチーズをコチュジャンのスープで煮込みます。一人前の価格で、ご飯と一緒に食べるのが定番です。",
+        "how_to_eat": "麺が伸びる前に先に麺から食べてください。",
+        "tts_text": "プデチゲ、部隊チゲ。ハム、ソーセージ、キムチ、ラーメンのピリ辛鍋。ハム、ソーセージ、キムチ、豆腐、インスタント麺、スライスチーズをコチュジャンのスープで煮込みます。一人前の価格で、ご飯と一緒に食べるのが定番です。",
+        "tts_hash": "196f0163"
+      },
+      "i11": {
+        "item_id": "i11",
+        "name": "海鮮チヂミ（ヘムルパジョン）",
+        "short": "ねぎ、いか、えび、ムール貝のチヂミ",
+        "detail": "わけぎ、いか、えび、ムール貝を小麦粉と卵の生地で大きく焼き、酢醤油を添えます。2〜3人でシェアする量です。",
+        "how_to_eat": "酢醤油につけて召し上がってください。",
+        "tts_text": "海鮮チヂミ、ヘムルパジョン。ねぎ、いか、えび、ムール貝のチヂミ。わけぎ、いか、えび、ムール貝を小麦粉と卵の生地で大きく焼き、酢醤油を添えます。2〜3人でシェアする量です。",
+        "tts_hash": "f67691ef"
+      },
+      "i12": {
+        "item_id": "i12",
+        "name": "サバの塩焼き",
+        "short": "塩だけで焼いたサバ",
+        "detail": "サバに塩だけを振り、皮がパリッとするまで焼きます。辛くなく、ご飯のおかずやシェアに向いています。",
+        "how_to_eat": null,
+        "tts_text": "サバの塩焼き。塩だけで焼いたサバ。サバに塩だけを振り、皮がパリッとするまで焼きます。辛くなく、ご飯のおかずやシェアに向いています。",
+        "tts_hash": "79da859b"
+      },
+      "i13": {
+        "item_id": "i13",
+        "name": "ナクチポックム（テナガダコ炒め）",
+        "short": "激辛のテナガダコ炒め",
+        "detail": "テナガダコを玉ねぎ、長ねぎとコチュジャン、唐辛子粉で炒め、ごま油で仕上げます。とても辛く、シェア向きです。価格は時価です。",
+        "how_to_eat": null,
+        "tts_text": "ナクチポックム、テナガダコ炒め。激辛のテナガダコ炒め。テナガダコを玉ねぎ、長ねぎとコチュジャン、唐辛子粉で炒め、ごま油で仕上げます。とても辛く、シェア向きです。価格は時価です。",
+        "tts_hash": "0bdfa86e"
+      },
+      "i14": {
+        "item_id": "i14",
+        "name": "ケランマリ（韓国風卵焼き）",
+        "short": "長ねぎとにんじん入りの卵焼き",
+        "detail": "長ねぎとにんじんを混ぜた卵液を薄く焼いて巻き、切り分けます。辛くないおかずで、シェア向きです。",
+        "how_to_eat": null,
+        "tts_text": "ケランマリ、韓国風卵焼き。長ねぎとにんじん入りの卵焼き。長ねぎとにんじんを混ぜた卵液を薄く焼いて巻き、切り分けます。辛くないおかずで、シェア向きです。",
+        "tts_hash": "b205e4e6"
+      },
+      "i15": {
+        "item_id": "i15",
+        "name": "焼酎（ソジュ）",
+        "short": "韓国の透明な蒸留酒",
+        "detail": "アルコール度数16〜17度ほどの、すっきりした韓国のお酒です。緑の瓶1本をテーブルで分けて飲みます。",
+        "how_to_eat": "自分ではなく相手のグラスに注ぎ、小さなグラスで飲みます。",
+        "tts_text": "焼酎、ソジュ。韓国の透明な蒸留酒。アルコール度数16〜17度ほどの、すっきりした韓国のお酒です。緑の瓶1本をテーブルで分けて飲みます。",
+        "tts_hash": "bd964abc"
+      },
+      "i16": {
+        "item_id": "i16",
+        "name": "ビール（メッチュ）",
+        "short": "冷たい韓国ラガー",
+        "detail": "麦芽とホップで造った、軽くすっきりした韓国ラガーの瓶ビールです。焼酎と割って飲むこともあります。",
+        "how_to_eat": null,
+        "tts_text": "ビール、メッチュ。冷たい韓国ラガー。麦芽とホップで造った、軽くすっきりした韓国ラガーの瓶ビールです。焼酎と割って飲むこともあります。",
+        "tts_hash": "09ed2f55"
+      },
+      "i17": {
+        "item_id": "i17",
+        "name": "マッコリ",
+        "short": "にごりのある甘めの米のお酒",
+        "detail": "米と麹で造った白くにごったお酒で、ほんのり甘く微炭酸です。チヂミとよく合います。",
+        "how_to_eat": "注ぐ前に瓶をやさしく振って混ぜてください。",
+        "tts_text": "マッコリ。にごりのある甘めの米のお酒。米と麹で造った白くにごったお酒で、ほんのり甘く微炭酸です。チヂミとよく合います。",
+        "tts_hash": "b4faaec6"
+      },
+      "i18": {
+        "item_id": "i18",
+        "name": "コーラ",
+        "short": "冷たいコーラ",
+        "detail": "冷えたコーラです。",
+        "how_to_eat": null,
+        "tts_text": "コーラ。冷たいコーラ。冷えたコーラです。",
+        "tts_hash": "e88ad4d4"
+      }
+    },
+    "zh-Hans": {
+      "i01": {
+        "item_id": "i01",
+        "name": "拌饭（比宾巴）",
+        "short": "米饭配凉拌蔬菜、鸡蛋和辣酱",
+        "detail": "米饭上铺豆芽、菠菜、蕨菜和鸡蛋，配辣椒酱和香油。一碗是一人份的一餐。",
+        "how_to_eat": "按喜好加入辣椒酱，充分拌匀后再吃。",
+        "tts_text": "拌饭、比宾巴。米饭配凉拌蔬菜、鸡蛋和辣酱。米饭上铺豆芽、菠菜、蕨菜和鸡蛋，配辣椒酱和香油。一碗是一人份的一餐。",
+        "tts_hash": "6a8e5f06"
+      },
+      "i02": {
+        "item_id": "i02",
+        "name": "泡菜炒饭",
+        "short": "泡菜猪肉炒饭配煎蛋",
+        "detail": "米饭和泡菜、猪肉、大葱、酱油一起炒，上面放鸡蛋。微辣，一人份。",
+        "how_to_eat": null,
+        "tts_text": "泡菜炒饭。泡菜猪肉炒饭配煎蛋。米饭和泡菜、猪肉、大葱、酱油一起炒，上面放鸡蛋。微辣，一人份。",
+        "tts_hash": "1dcfe657"
+      },
+      "i03": {
+        "item_id": "i03",
+        "name": "辣炒猪肉盖饭",
+        "short": "辣炒猪肉盖在米饭上",
+        "detail": "猪肉、洋葱和大葱用辣椒酱炒好，盖在米饭上，撒上芝麻。偏辣，一人份。",
+        "how_to_eat": null,
+        "tts_text": "辣炒猪肉盖饭。辣炒猪肉盖在米饭上。猪肉、洋葱和大葱用辣椒酱炒好，盖在米饭上，撒上芝麻。偏辣，一人份。",
+        "tts_hash": "a796df9a"
+      },
+      "i04": {
+        "item_id": "i04",
+        "name": "冷面",
+        "short": "冰凉牛肉汤荞麦冷面",
+        "detail": "荞麦面放在冰凉的牛肉汤里，配牛肉片、黄瓜、腌萝卜、梨和水煮蛋。清爽不辣，一人一碗。",
+        "how_to_eat": "可按口味加醋和芥末，面条可以请店员用剪刀剪短。",
+        "tts_text": "冷面。冰凉牛肉汤荞麦冷面。荞麦面放在冰凉的牛肉汤里，配牛肉片、黄瓜、腌萝卜、梨和水煮蛋。清爽不辣，一人一碗。",
+        "tts_hash": "0d5c0087"
+      },
+      "i05": {
+        "item_id": "i05",
+        "name": "喜面（温面）",
+        "short": "鳀鱼高汤细面",
+        "detail": "细面放在清淡的鳀鱼高汤里，配西葫芦、蛋丝和海苔，用调味酱油调味。不辣，一人一碗。",
+        "how_to_eat": "调味酱油请一点一点加。",
+        "tts_text": "喜面、温面。鳀鱼高汤细面。细面放在清淡的鳀鱼高汤里，配西葫芦、蛋丝和海苔，用调味酱油调味。不辣，一人一碗。",
+        "tts_hash": "d2404954"
+      },
+      "i06": {
+        "item_id": "i06",
+        "name": "排骨汤",
+        "short": "慢炖牛排骨清汤",
+        "detail": "牛排骨和萝卜、粉丝一起长时间炖煮，汤清味浓。不辣，一人份，配米饭。",
+        "how_to_eat": null,
+        "tts_text": "排骨汤。慢炖牛排骨清汤。牛排骨和萝卜、粉丝一起长时间炖煮，汤清味浓。不辣，一人份，配米饭。",
+        "tts_hash": "30071ca6"
+      },
+      "i07": {
+        "item_id": "i07",
+        "name": "泡菜汤（泡菜锅）",
+        "short": "老泡菜、猪肉和豆腐的辣汤",
+        "detail": "用发酵充分的泡菜和猪肉、豆腐、大葱、洋葱一起炖煮，味道酸辣。一人份，配米饭。",
+        "how_to_eat": null,
+        "tts_text": "泡菜汤、泡菜锅。老泡菜、猪肉和豆腐的辣汤。用发酵充分的泡菜和猪肉、豆腐、大葱、洋葱一起炖煮，味道酸辣。一人份，配米饭。",
+        "tts_hash": "ca981f49"
+      },
+      "i08": {
+        "item_id": "i08",
+        "name": "大酱汤",
+        "short": "豆腐和西葫芦的韩式大酱汤",
+        "detail": "用鳀鱼高汤炖煮大酱、豆腐、西葫芦、土豆和洋葱，味道醇厚温和。一人份。",
+        "how_to_eat": null,
+        "tts_text": "大酱汤。豆腐和西葫芦的韩式大酱汤。用鳀鱼高汤炖煮大酱、豆腐、西葫芦、土豆和洋葱，味道醇厚温和。一人份。",
+        "tts_hash": "169480ae"
+      },
+      "i09": {
+        "item_id": "i09",
+        "name": "嫩豆腐汤",
+        "short": "加蛤蜊、猪肉和鸡蛋的辣嫩豆腐汤",
+        "detail": "嫩豆腐、蛤蜊和猪肉在红辣椒汤里煮，最后加入鸡蛋。一人份砂锅。",
+        "how_to_eat": "趁热把鸡蛋搅进汤里让它煮熟。",
+        "tts_text": "嫩豆腐汤。加蛤蜊、猪肉和鸡蛋的辣嫩豆腐汤。嫩豆腐、蛤蜊和猪肉在红辣椒汤里煮，最后加入鸡蛋。一人份砂锅。",
+        "tts_hash": "39c95e06"
+      },
+      "i10": {
+        "item_id": "i10",
+        "name": "部队锅",
+        "short": "火腿、香肠、泡菜和面的辣火锅",
+        "detail": "火腿、香肠、泡菜、豆腐、方便面和芝士片在辣椒酱汤底里煮。按人份计价，通常配米饭吃。",
+        "how_to_eat": "面条容易泡软，请先吃面。",
+        "tts_text": "部队锅。火腿、香肠、泡菜和面的辣火锅。火腿、香肠、泡菜、豆腐、方便面和芝士片在辣椒酱汤底里煮。按人份计价，通常配米饭吃。",
+        "tts_hash": "3065e401"
+      },
+      "i11": {
+        "item_id": "i11",
+        "name": "海鲜葱饼",
+        "short": "葱、鱿鱼、虾和贻贝的香脆煎饼",
+        "detail": "细葱、鱿鱼、虾和贻贝裹上面粉鸡蛋糊煎成大饼，配醋酱油。适合两三人分享。",
+        "how_to_eat": "蘸醋酱油吃。",
+        "tts_text": "海鲜葱饼。葱、鱿鱼、虾和贻贝的香脆煎饼。细葱、鱿鱼、虾和贻贝裹上面粉鸡蛋糊煎成大饼，配醋酱油。适合两三人分享。",
+        "tts_hash": "052575dc"
+      },
+      "i12": {
+        "item_id": "i12",
+        "name": "烤鲭鱼",
+        "short": "只用盐调味的烤鲭鱼",
+        "detail": "鲭鱼只撒盐，烤到鱼皮酥脆。不辣，适合配饭或大家分享。",
+        "how_to_eat": null,
+        "tts_text": "烤鲭鱼。只用盐调味的烤鲭鱼。鲭鱼只撒盐，烤到鱼皮酥脆。不辣，适合配饭或大家分享。",
+        "tts_hash": "7284f464"
+      },
+      "i13": {
+        "item_id": "i13",
+        "name": "辣炒小章鱼",
+        "short": "特辣炒小章鱼",
+        "detail": "小章鱼和洋葱、大葱用辣椒酱和辣椒粉炒，最后淋香油。非常辣，适合分享。价格为时价。",
+        "how_to_eat": null,
+        "tts_text": "辣炒小章鱼。特辣炒小章鱼。小章鱼和洋葱、大葱用辣椒酱和辣椒粉炒，最后淋香油。非常辣，适合分享。价格为时价。",
+        "tts_hash": "32e4c957"
+      },
+      "i14": {
+        "item_id": "i14",
+        "name": "鸡蛋卷",
+        "short": "加大葱和胡萝卜的厚蛋卷",
+        "detail": "把加了大葱和胡萝卜的蛋液薄薄煎好卷起来切块。不辣的配菜，适合分享。",
+        "how_to_eat": null,
+        "tts_text": "鸡蛋卷。加大葱和胡萝卜的厚蛋卷。把加了大葱和胡萝卜的蛋液薄薄煎好卷起来切块。不辣的配菜，适合分享。",
+        "tts_hash": "977682cf"
+      },
+      "i15": {
+        "item_id": "i15",
+        "name": "烧酒",
+        "short": "韩国透明蒸馏酒",
+        "detail": "酒精度约16到17度的清爽韩国酒。一瓶通常全桌分着喝。",
+        "how_to_eat": "习惯上给别人倒酒，用小杯喝。",
+        "tts_text": "烧酒。韩国透明蒸馏酒。酒精度约16到17度的清爽韩国酒。一瓶通常全桌分着喝。",
+        "tts_hash": "44c51de6"
+      },
+      "i16": {
+        "item_id": "i16",
+        "name": "啤酒",
+        "short": "冰镇韩国拉格啤酒",
+        "detail": "用大麦芽和啤酒花酿造的清爽韩国拉格，一瓶。也常和烧酒混着喝。",
+        "how_to_eat": null,
+        "tts_text": "啤酒。冰镇韩国拉格啤酒。用大麦芽和啤酒花酿造的清爽韩国拉格，一瓶。也常和烧酒混着喝。",
+        "tts_hash": "f424a885"
+      },
+      "i17": {
+        "item_id": "i17",
+        "name": "米酒（马格利）",
+        "short": "乳白微甜的米酒",
+        "detail": "用大米和酒曲酿成的浑浊米酒，微甜带气泡。很适合配煎饼。",
+        "how_to_eat": "倒酒前请轻轻摇匀。",
+        "tts_text": "米酒、马格利。乳白微甜的米酒。用大米和酒曲酿成的浑浊米酒，微甜带气泡。很适合配煎饼。",
+        "tts_hash": "865dbf52"
+      },
+      "i18": {
+        "item_id": "i18",
+        "name": "可乐",
+        "short": "冰可乐",
+        "detail": "一瓶冰镇可乐。",
+        "how_to_eat": null,
+        "tts_text": "可乐。冰可乐。一瓶冰镇可乐。",
+        "tts_hash": "a995441c"
+      }
+    },
+    "zh-Hant": {
+      "i11": {
+        "item_id": "i11",
+        "name": "海鮮蔥煎餅",
+        "short": "蔥、魷魚、蝦和淡菜的香脆煎餅",
+        "detail": "細蔥、魷魚、蝦和淡菜裹上麵粉雞蛋糊煎成大餅，配醋醬油。適合兩三人分享。",
+        "how_to_eat": "沾醋醬油吃。",
+        "tts_text": "海鮮蔥煎餅。蔥、魷魚、蝦和淡菜的香脆煎餅。細蔥、魷魚、蝦和淡菜裹上麵粉雞蛋糊煎成大餅，配醋醬油。適合兩三人分享。",
+        "tts_hash": "15320e2f"
+      },
+      "i12": {
+        "item_id": "i12",
+        "name": "烤鯖魚",
+        "short": "只用鹽調味的烤鯖魚",
+        "detail": "鯖魚只撒鹽，烤到魚皮酥脆。不辣，適合配飯或大家分享。",
+        "how_to_eat": null,
+        "tts_text": "烤鯖魚。只用鹽調味的烤鯖魚。鯖魚只撒鹽，烤到魚皮酥脆。不辣，適合配飯或大家分享。",
+        "tts_hash": "615f6421"
+      },
+      "i13": {
+        "item_id": "i13",
+        "name": "辣炒小章魚",
+        "short": "特辣炒小章魚",
+        "detail": "小章魚和洋蔥、大蔥用辣椒醬和辣椒粉炒，最後淋香油。非常辣，適合分享。價格為時價。",
+        "how_to_eat": null,
+        "tts_text": "辣炒小章魚。特辣炒小章魚。小章魚和洋蔥、大蔥用辣椒醬和辣椒粉炒，最後淋香油。非常辣，適合分享。價格為時價。",
+        "tts_hash": "de75fcce"
+      },
+      "i14": {
+        "item_id": "i14",
+        "name": "雞蛋捲",
+        "short": "加大蔥和紅蘿蔔的厚蛋捲",
+        "detail": "把加了大蔥和紅蘿蔔的蛋液薄薄煎好捲起來切塊。不辣的配菜，適合分享。",
+        "how_to_eat": null,
+        "tts_text": "雞蛋捲。加大蔥和紅蘿蔔的厚蛋捲。把加了大蔥和紅蘿蔔的蛋液薄薄煎好捲起來切塊。不辣的配菜，適合分享。",
+        "tts_hash": "e2488d79"
+      },
+      "i15": {
+        "item_id": "i15",
+        "name": "燒酒",
+        "short": "韓國透明蒸餾酒",
+        "detail": "酒精度約16到17度的清爽韓國酒。一瓶通常全桌分著喝。",
+        "how_to_eat": "習慣上幫別人倒酒，用小杯喝。",
+        "tts_text": "燒酒。韓國透明蒸餾酒。酒精度約16到17度的清爽韓國酒。一瓶通常全桌分著喝。",
+        "tts_hash": "ed97f325"
+      },
+      "i16": {
+        "item_id": "i16",
+        "name": "啤酒",
+        "short": "冰鎮韓國拉格啤酒",
+        "detail": "用大麥芽和啤酒花釀造的清爽韓國拉格，一瓶。也常和燒酒混著喝。",
+        "how_to_eat": null,
+        "tts_text": "啤酒。冰鎮韓國拉格啤酒。用大麥芽和啤酒花釀造的清爽韓國拉格，一瓶。也常和燒酒混著喝。",
+        "tts_hash": "2ac61193"
+      },
+      "i17": {
+        "item_id": "i17",
+        "name": "米酒（馬格利）",
+        "short": "乳白微甜的米酒",
+        "detail": "用米和酒麴釀成的混濁米酒，微甜帶氣泡。很適合配煎餅。",
+        "how_to_eat": "倒酒前請輕輕搖勻。",
+        "tts_text": "米酒、馬格利。乳白微甜的米酒。用米和酒麴釀成的混濁米酒，微甜帶氣泡。很適合配煎餅。",
+        "tts_hash": "a156a73b"
+      },
+      "i18": {
+        "item_id": "i18",
+        "name": "可樂",
+        "short": "冰可樂",
+        "detail": "一瓶冰鎮可樂。",
+        "how_to_eat": null,
+        "tts_text": "可樂。冰可樂。一瓶冰鎮可樂。",
+        "tts_hash": "e592af8e"
+      },
+      "i01": {
+        "item_id": "i01",
+        "name": "拌飯（比賓巴）",
+        "short": "白飯配涼拌蔬菜、雞蛋和辣醬",
+        "detail": "白飯上鋪豆芽、菠菜、蕨菜和雞蛋，搭配辣椒醬和香油。一碗是一人份的一餐。",
+        "how_to_eat": "依喜好加入辣椒醬，充分拌勻後再吃。",
+        "tts_text": "拌飯、比賓巴。白飯配涼拌蔬菜、雞蛋和辣醬。白飯上鋪豆芽、菠菜、蕨菜和雞蛋，搭配辣椒醬和香油。一碗是一人份的一餐。",
+        "tts_hash": "6b2d80e6"
+      },
+      "i02": {
+        "item_id": "i02",
+        "name": "泡菜炒飯",
+        "short": "泡菜豬肉炒飯配荷包蛋",
+        "detail": "白飯和泡菜、豬肉、大蔥、醬油一起炒，上面放雞蛋。微辣，一人份。",
+        "how_to_eat": null,
+        "tts_text": "泡菜炒飯。泡菜豬肉炒飯配荷包蛋。白飯和泡菜、豬肉、大蔥、醬油一起炒，上面放雞蛋。微辣，一人份。",
+        "tts_hash": "308e03a7"
+      },
+      "i03": {
+        "item_id": "i03",
+        "name": "辣炒豬肉蓋飯",
+        "short": "辣炒豬肉蓋在白飯上",
+        "detail": "豬肉、洋蔥和大蔥用辣椒醬炒好，蓋在白飯上，撒上芝麻。偏辣，一人份。",
+        "how_to_eat": null,
+        "tts_text": "辣炒豬肉蓋飯。辣炒豬肉蓋在白飯上。豬肉、洋蔥和大蔥用辣椒醬炒好，蓋在白飯上，撒上芝麻。偏辣，一人份。",
+        "tts_hash": "3ebf1311"
+      },
+      "i04": {
+        "item_id": "i04",
+        "name": "冷麵",
+        "short": "冰涼牛肉湯蕎麥冷麵",
+        "detail": "蕎麥麵放在冰涼的牛肉湯裡，配牛肉片、小黃瓜、醃蘿蔔、梨和水煮蛋。清爽不辣，一人一碗。",
+        "how_to_eat": "可依口味加醋和芥末，麵條可以請店員用剪刀剪短。",
+        "tts_text": "冷麵。冰涼牛肉湯蕎麥冷麵。蕎麥麵放在冰涼的牛肉湯裡，配牛肉片、小黃瓜、醃蘿蔔、梨和水煮蛋。清爽不辣，一人一碗。",
+        "tts_hash": "d55beda5"
+      },
+      "i05": {
+        "item_id": "i05",
+        "name": "喜麵（溫麵）",
+        "short": "鯷魚高湯細麵",
+        "detail": "細麵放在清淡的鯷魚高湯裡，配櫛瓜、蛋絲和海苔，用調味醬油調味。不辣，一人一碗。",
+        "how_to_eat": "調味醬油請一點一點加。",
+        "tts_text": "喜麵、溫麵。鯷魚高湯細麵。細麵放在清淡的鯷魚高湯裡，配櫛瓜、蛋絲和海苔，用調味醬油調味。不辣，一人一碗。",
+        "tts_hash": "77e1f481"
+      },
+      "i06": {
+        "item_id": "i06",
+        "name": "排骨湯",
+        "short": "慢燉牛排骨清湯",
+        "detail": "牛排骨和蘿蔔、冬粉一起長時間燉煮，湯清味濃。不辣，一人份，配白飯。",
+        "how_to_eat": null,
+        "tts_text": "排骨湯。慢燉牛排骨清湯。牛排骨和蘿蔔、冬粉一起長時間燉煮，湯清味濃。不辣，一人份，配白飯。",
+        "tts_hash": "1bff2e5b"
+      },
+      "i07": {
+        "item_id": "i07",
+        "name": "泡菜鍋",
+        "short": "老泡菜、豬肉和豆腐的辣鍋",
+        "detail": "用發酵充分的泡菜和豬肉、豆腐、大蔥、洋蔥一起燉煮，味道酸辣。一人份，配白飯。",
+        "how_to_eat": null,
+        "tts_text": "泡菜鍋。老泡菜、豬肉和豆腐的辣鍋。用發酵充分的泡菜和豬肉、豆腐、大蔥、洋蔥一起燉煮，味道酸辣。一人份，配白飯。",
+        "tts_hash": "6d1c8971"
+      },
+      "i08": {
+        "item_id": "i08",
+        "name": "大醬湯",
+        "short": "豆腐和櫛瓜的韓式大醬湯",
+        "detail": "用鯷魚高湯燉煮大醬、豆腐、櫛瓜、馬鈴薯和洋蔥，味道醇厚溫和。一人份。",
+        "how_to_eat": null,
+        "tts_text": "大醬湯。豆腐和櫛瓜的韓式大醬湯。用鯷魚高湯燉煮大醬、豆腐、櫛瓜、馬鈴薯和洋蔥，味道醇厚溫和。一人份。",
+        "tts_hash": "d0289b13"
+      },
+      "i09": {
+        "item_id": "i09",
+        "name": "嫩豆腐鍋",
+        "short": "加蛤蜊、豬肉和雞蛋的辣嫩豆腐鍋",
+        "detail": "嫩豆腐、蛤蜊和豬肉在紅辣椒湯裡煮，最後加入雞蛋。一人份砂鍋。",
+        "how_to_eat": "趁熱把雞蛋攪進湯裡讓它煮熟。",
+        "tts_text": "嫩豆腐鍋。加蛤蜊、豬肉和雞蛋的辣嫩豆腐鍋。嫩豆腐、蛤蜊和豬肉在紅辣椒湯裡煮，最後加入雞蛋。一人份砂鍋。",
+        "tts_hash": "8b0c1128"
+      },
+      "i10": {
+        "item_id": "i10",
+        "name": "部隊鍋",
+        "short": "火腿、香腸、泡菜和麵的辣火鍋",
+        "detail": "火腿、香腸、泡菜、豆腐、泡麵和起司片在辣椒醬湯底裡煮。按人份計價，通常配白飯吃。",
+        "how_to_eat": "麵條容易泡軟，請先吃麵。",
+        "tts_text": "部隊鍋。火腿、香腸、泡菜和麵的辣火鍋。火腿、香腸、泡菜、豆腐、泡麵和起司片在辣椒醬湯底裡煮。按人份計價，通常配白飯吃。",
+        "tts_hash": "c833bc99"
+      }
+    },
+    "es": {
+      "i01": {
+        "item_id": "i01",
+        "name": "Bibimbap (arroz mezclado)",
+        "short": "Arroz con verduras aliñadas, huevo y pasta de chile",
+        "detail": "Arroz caliente con brotes de soja, espinacas, helecho y huevo, servido con pasta de chile gochujang y aceite de sésamo. Un bol es una comida para una persona.",
+        "how_to_eat": "Añada la pasta de chile al gusto y mézclelo todo bien antes de comer.",
+        "tts_text": "Bibimbap, arroz mezclado. Arroz con verduras aliñadas, huevo y pasta de chile. Arroz caliente con brotes de soja, espinacas, helecho y huevo, servido con pasta de chile gochujang y aceite de sésamo. Un bol es una comida para una persona.",
+        "tts_hash": "991feed2"
+      },
+      "i02": {
+        "item_id": "i02",
+        "name": "Kimchi-bokkeumbap (arroz frito con kimchi)",
+        "short": "Arroz frito con kimchi, cerdo y huevo",
+        "detail": "Arroz salteado con kimchi, cerdo, cebolleta y salsa de soja, con un huevo encima. Algo picante, una ración para una persona.",
+        "how_to_eat": null,
+        "tts_text": "Kimchi-bokkeumbap, arroz frito con kimchi. Arroz frito con kimchi, cerdo y huevo. Arroz salteado con kimchi, cerdo, cebolleta y salsa de soja, con un huevo encima. Algo picante, una ración para una persona.",
+        "tts_hash": "b7711863"
+      },
+      "i03": {
+        "item_id": "i03",
+        "name": "Jeyuk-deopbap (cerdo picante sobre arroz)",
+        "short": "Cerdo salteado picante sobre arroz",
+        "detail": "Cerdo, cebolla y cebolleta salteados en salsa gochujang, servidos sobre arroz con semillas de sésamo. Picante, una ración para una persona.",
+        "how_to_eat": null,
+        "tts_text": "Jeyuk-deopbap, cerdo picante sobre arroz. Cerdo salteado picante sobre arroz. Cerdo, cebolla y cebolleta salteados en salsa gochujang, servidos sobre arroz con semillas de sésamo. Picante, una ración para una persona.",
+        "tts_hash": "7643b1f9"
+      },
+      "i04": {
+        "item_id": "i04",
+        "name": "Naengmyeon (fideos fríos de trigo sarraceno)",
+        "short": "Fideos de trigo sarraceno en caldo de ternera helado",
+        "detail": "Fideos de trigo sarraceno en caldo frío de ternera con lonchas de ternera, pepino, rábano encurtido, pera y huevo cocido. Refrescante y sin picante, un bol por persona.",
+        "how_to_eat": "Añada vinagre y mostaza al gusto; el personal puede cortar los fideos con tijeras.",
+        "tts_text": "Naengmyeon, fideos fríos de trigo sarraceno. Fideos de trigo sarraceno en caldo de ternera helado. Fideos de trigo sarraceno en caldo frío de ternera con lonchas de ternera, pepino, rábano encurtido, pera y huevo cocido.",
+        "tts_hash": "b601924d"
+      },
+      "i05": {
+        "item_id": "i05",
+        "name": "Janchi-guksu (sopa de fideos caliente)",
+        "short": "Fideos finos en caldo ligero de anchoa",
+        "detail": "Fideos finos de trigo en un caldo suave de anchoa con calabacín, tiras de huevo y alga, sazonados con salsa de soja. Ligero y sin picante, un bol por persona.",
+        "how_to_eat": "Añada la salsa de soja poco a poco.",
+        "tts_text": "Janchi-guksu, sopa de fideos caliente. Fideos finos en caldo ligero de anchoa. Fideos finos de trigo en un caldo suave de anchoa con calabacín, tiras de huevo y alga, sazonados con salsa de soja. Ligero y sin picante, un bol por persona.",
+        "tts_hash": "d1a4b39a"
+      },
+      "i06": {
+        "item_id": "i06",
+        "name": "Galbitang (sopa de costilla de ternera)",
+        "short": "Sopa clara con costillas de ternera tiernas",
+        "detail": "Costillas de ternera cocidas a fuego lento con rábano y fideos de cristal en una sopa clara y sabrosa. Sin picante, un bol por persona, con arroz.",
+        "how_to_eat": null,
+        "tts_text": "Galbitang, sopa de costilla de ternera. Sopa clara con costillas de ternera tiernas. Costillas de ternera cocidas a fuego lento con rábano y fideos de cristal en una sopa clara y sabrosa. Sin picante, un bol por persona, con arroz.",
+        "tts_hash": "af8280f9"
+      },
+      "i07": {
+        "item_id": "i07",
+        "name": "Kimchi-jjigae (guiso de kimchi)",
+        "short": "Guiso picante de kimchi, cerdo y tofu",
+        "detail": "Kimchi bien fermentado cocido con cerdo, tofu, cebolleta y cebolla, con sabor ácido y picante. Una ración para una persona, con arroz.",
+        "how_to_eat": null,
+        "tts_text": "Kimchi-jjigae, guiso de kimchi. Guiso picante de kimchi, cerdo y tofu. Kimchi bien fermentado cocido con cerdo, tofu, cebolleta y cebolla, con sabor ácido y picante. Una ración para una persona, con arroz.",
+        "tts_hash": "aee6ed29"
+      },
+      "i08": {
+        "item_id": "i08",
+        "name": "Doenjang-jjigae (guiso de pasta de soja)",
+        "short": "Guiso de pasta de soja con tofu y calabacín",
+        "detail": "Pasta de soja fermentada cocida en caldo de anchoa con tofu, calabacín, patata y cebolla. Sabor suave y profundo, una ración para una persona.",
+        "how_to_eat": null,
+        "tts_text": "Doenjang-jjigae, guiso de pasta de soja. Guiso de pasta de soja con tofu y calabacín. Pasta de soja fermentada cocida en caldo de anchoa con tofu, calabacín, patata y cebolla. Sabor suave y profundo, una ración para una persona.",
+        "tts_hash": "d89c6c7d"
+      },
+      "i09": {
+        "item_id": "i09",
+        "name": "Sundubu-jjigae (guiso de tofu suave)",
+        "short": "Guiso picante de tofu sedoso con almejas, cerdo y huevo",
+        "detail": "Tofu muy suave, almejas y cerdo cocidos en caldo rojo de chile; al final se añade un huevo. Una olla para una persona.",
+        "how_to_eat": "Mezcle el huevo en el guiso caliente enseguida para que se cueza.",
+        "tts_text": "Sundubu-jjigae, guiso de tofu suave. Guiso picante de tofu sedoso con almejas, cerdo y huevo. Tofu muy suave, almejas y cerdo cocidos en caldo rojo de chile; al final se añade un huevo. Una olla para una persona.",
+        "tts_hash": "7d387c8d"
+      },
+      "i10": {
+        "item_id": "i10",
+        "name": "Budae-jjigae (guiso del ejército)",
+        "short": "Olla picante con jamón, salchicha, kimchi y fideos",
+        "detail": "Jamón, salchicha, kimchi, tofu, fideos instantáneos y una loncha de queso cocidos en caldo de pasta de chile. Precio por persona; se suele comer con arroz.",
+        "how_to_eat": "Coma primero los fideos, antes de que se ablanden.",
+        "tts_text": "Budae-jjigae, guiso del ejército. Olla picante con jamón, salchicha, kimchi y fideos. Jamón, salchicha, kimchi, tofu, fideos instantáneos y una loncha de queso cocidos en caldo de pasta de chile. Precio por persona; se suele comer con arroz.",
+        "tts_hash": "e3c64cd7"
+      },
+      "i11": {
+        "item_id": "i11",
+        "name": "Haemul-pajeon (tortita de marisco y cebolleta)",
+        "short": "Tortita crujiente de cebolleta, calamar, gambas y mejillones",
+        "detail": "Una gran tortita salada de cebolleta, calamar, gambas y mejillones en masa de harina y huevo, con salsa de soja y vinagre. Para compartir entre dos o tres.",
+        "how_to_eat": "Moje cada trozo en la salsa de soja y vinagre.",
+        "tts_text": "Haemul-pajeon, tortita de marisco y cebolleta. Tortita crujiente de cebolleta, calamar, gambas y mejillones. Una gran tortita salada de cebolleta, calamar, gambas y mejillones en masa de harina y huevo, con salsa de soja y vinagre.",
+        "tts_hash": "d9bd2043"
+      },
+      "i12": {
+        "item_id": "i12",
+        "name": "Godeungeo-gui (caballa a la plancha)",
+        "short": "Caballa asada con sal",
+        "detail": "Caballa sazonada solo con sal y asada hasta que la piel queda crujiente. Sin picante, buena con arroz o para compartir.",
+        "how_to_eat": null,
+        "tts_text": "Godeungeo-gui, caballa a la plancha. Caballa asada con sal. Caballa sazonada solo con sal y asada hasta que la piel queda crujiente. Sin picante, buena con arroz o para compartir.",
+        "tts_hash": "68ae09b2"
+      },
+      "i13": {
+        "item_id": "i13",
+        "name": "Nakji-bokkeum (pulpito salteado picante)",
+        "short": "Pulpito salteado muy picante",
+        "detail": "Pulpito salteado con cebolla y cebolleta en gochujang y chile en polvo, terminado con aceite de sésamo. Muy picante, para compartir; precio según temporada.",
+        "how_to_eat": null,
+        "tts_text": "Nakji-bokkeum, pulpito salteado picante. Pulpito salteado muy picante. Pulpito salteado con cebolla y cebolleta en gochujang y chile en polvo, terminado con aceite de sésamo. Muy picante, para compartir; precio según temporada.",
+        "tts_hash": "6676b5d0"
+      },
+      "i14": {
+        "item_id": "i14",
+        "name": "Gyeran-mari (tortilla enrollada)",
+        "short": "Tortilla enrollada con cebolleta y zanahoria",
+        "detail": "Huevo batido con cebolleta y zanahoria, cuajado en capas finas, enrollado y cortado. Suave y sin picante, para compartir.",
+        "how_to_eat": null,
+        "tts_text": "Gyeran-mari, tortilla enrollada. Tortilla enrollada con cebolleta y zanahoria. Huevo batido con cebolleta y zanahoria, cuajado en capas finas, enrollado y cortado. Suave y sin picante, para compartir.",
+        "tts_hash": "34d15d96"
+      },
+      "i15": {
+        "item_id": "i15",
+        "name": "Soju",
+        "short": "Licor destilado coreano transparente",
+        "detail": "Licor coreano transparente y suave de unos 16 a 17 grados. Una botella verde se suele compartir en la mesa.",
+        "how_to_eat": "Sirva a los demás en lugar de a usted mismo y beba en vasitos pequeños.",
+        "tts_text": "Soju. Licor destilado coreano transparente. Licor coreano transparente y suave de unos 16 a 17 grados. Una botella verde se suele compartir en la mesa.",
+        "tts_hash": "c3454ee8"
+      },
+      "i16": {
+        "item_id": "i16",
+        "name": "Maekju (cerveza coreana)",
+        "short": "Cerveza lager coreana fría",
+        "detail": "Una botella de lager coreana ligera y refrescante, hecha con malta de cebada y lúpulo. A menudo se mezcla con soju.",
+        "how_to_eat": null,
+        "tts_text": "Maekju, cerveza coreana. Cerveza lager coreana fría. Una botella de lager coreana ligera y refrescante, hecha con malta de cebada y lúpulo. A menudo se mezcla con soju.",
+        "tts_hash": "e972a010"
+      },
+      "i17": {
+        "item_id": "i17",
+        "name": "Makgeolli (vino de arroz)",
+        "short": "Vino de arroz lechoso y ligeramente dulce",
+        "detail": "Vino de arroz turbio hecho con arroz y fermento nuruk, ligeramente dulce y con burbujas. Va muy bien con las tortitas saladas.",
+        "how_to_eat": "Agite suavemente la botella antes de servir.",
+        "tts_text": "Makgeolli, vino de arroz. Vino de arroz lechoso y ligeramente dulce. Vino de arroz turbio hecho con arroz y fermento nuruk, ligeramente dulce y con burbujas. Va muy bien con las tortitas saladas.",
+        "tts_hash": "66e2bea8"
+      },
+      "i18": {
+        "item_id": "i18",
+        "name": "Cola",
+        "short": "Refresco de cola frío",
+        "detail": "Una botella o lata de refresco de cola fría.",
+        "how_to_eat": null,
+        "tts_text": "Cola. Refresco de cola frío. Una botella o lata de refresco de cola fría.",
+        "tts_hash": "1c8e91bf"
       }
     },
     "ko": {

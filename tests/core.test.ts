@@ -8,7 +8,7 @@ import { buildPublished, validatePublish } from '../lib/publish';
 import { buildTtsText, normalizeName } from '../lib/tts-text';
 import { LANGS, type LangCode, type LocalizedItem, type MenuItemBase } from '../lib/types';
 
-const FIXTURE_LANGS: LangCode[] = ['en', 'ko'];
+const FIXTURE_LANGS: LangCode[] = [...LANGS];
 
 function demoMenu(langs: LangCode[] = FIXTURE_LANGS) {
   const items: MenuItemBase[] = applyOverrides(loadFixtureDraft().items);
@@ -19,7 +19,7 @@ function demoMenu(langs: LangCode[] = FIXTURE_LANGS) {
 }
 
 describe('fixtures', () => {
-  it('every fixture item has en and ko localizations', () => {
+  it('every fixture item has all 6 localizations', () => {
     const table = demoLocales.items as Record<string, Record<string, unknown>>;
     for (const it of loadFixtureDraft().items) for (const l of FIXTURE_LANGS) expect(table[it.name_ko]?.[l], `${it.name_ko}/${l}`).toBeTruthy();
   });
