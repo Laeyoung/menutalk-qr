@@ -1,5 +1,7 @@
 # 메뉴톡 QR × Guuey 에이전트 (한끼식당 메뉴 상담)
 
+> **상태: 진행하지 않음.** 해커톤에서는 Guuey 연동을 하지 않기로 했다(`docs/DECISIONS.md` D-18). 아래는 다시 시작할 때를 위한 참고 자료다.
+
 [`docs/07-Guuey-작업지시서.md`](../docs/07-Guuey-작업지시서.md) 구현용 폴더다. Guuey CLI 설치·scaffold·로그인·배포는 이 세션에서 실행하지 못했다(권한 정책, `docs/DECISIONS.md` D-17). 아래 순서대로 진행하면 된다.
 
 ## 이미 준비된 것

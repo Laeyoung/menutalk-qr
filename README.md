@@ -12,7 +12,7 @@
 ## 문서
 
 - 개발 중 결정과 검증 결과: [`docs/DECISIONS.md`](docs/DECISIONS.md)
-- Guuey 작업지시서: [`docs/07-Guuey-작업지시서.md`](docs/07-Guuey-작업지시서.md), 에이전트 준비물: [`guuey-agent/`](guuey-agent/)
+- Guuey 연동: 작업지시서([`docs/07-Guuey-작업지시서.md`](docs/07-Guuey-작업지시서.md))와 준비물([`guuey-agent/`](guuey-agent/))만 남아 있고 **연동은 진행하지 않았다**(`docs/DECISIONS.md` D-18)
 - 원 설계 문서(Spec·Plan)는 해커톤 기획 저장소에 있다. 본문의 "Spec x.y", "Plan x.y"는 그 문서의 절 번호다.
 
 ## 화면

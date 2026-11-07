@@ -120,3 +120,11 @@ localStorage·`navigator.languages`는 하이드레이션 뒤에만 읽어야 �
 
 ## D-17 Guuey CLI 설치·scaffold·배포는 이 세션에서 실행하지 못함 — [사용자 확인 필요]
 `npm install -g @guuey/cli`와 `npx @guuey/create-agentic-app`가 권한 정책에서 거부됐다. 우회하지 않았다. 남은 순서는 `guuey-agent/README.md`에 적었다: 사용자가 CLI 설치·`guuey login` → scaffold → `guuey apps create --for customers` → 도구 연결(`runTool`) → `guuey deploy` → `guuey test`/`guuey logs` → `GUUEY_SHARE_URL` 설정. 데모 영상은 이 흐름이 동작한 뒤 만든다(사용자 선택).
+
+## D-18 해커톤 마무리 상태 (2026-11-07 제출 후) — [기록]
+- **별도 공개 저장소:** 앱을 `git subtree split`으로 히스토리째 옮겼다 → https://github.com/Laeyoung/menutalk-qr (Public). 공개 전 gitleaks·trufflehog로 전체 히스토리를 검사해 비밀값 0건을 확인했다. 기획 저장소에는 `02-말하는메뉴판` 브랜치로 개발 이력이 남아 있다.
+- **배포:** Vercel 개인 계정 `laeyoungs-projects/menutalk-qr` → https://menutalk-qr-beta.vercel.app (`menutalk-qr.vercel.app`은 이미 쓰이는 이름이라 `-beta`가 붙었다). Blob 스토어(공개)와 `OPENAI_API_KEY`·`DEMO_KEY`가 연결돼 있다. `DEMO_MENU_ID`는 설정하지 않아 `/d`는 정적 사본(`/m/demo`, 한끼식당 6개 언어)을 연다.
+- **데모 영상:** 가로 1920×1080·모바일 1080×1920(각 37초), YouTube Shorts https://youtube.com/shorts/qfo1u67eSEE . 로컬 프로덕션 빌드에서 녹화했다(데모 정답표 등록·사람이 쓴 번역·규칙 카드 경로라 API 키 없이 동작). 사진 추출·AI 번역·AI 음성·자유 입력 AI 카드는 영상에 없다.
+- **Guuey 연동은 하지 않기로 했다.** CLI 설치·scaffold·로컬 MCP 검증까지 했다가 사용자 결정으로 브랜치와 설치물을 지웠다. 제출 시 GGUI 트랙은 선택하지 않았다. 남은 `guuey-agent/` 문서와 `/api/tools`·`lib/menu-tools.ts`는 참고용이며, 손님 화면의 "메뉴 상담하기"는 `GUUEY_SHARE_URL`이 비어 있어 보이지 않는다.
+- **실제 키로 검증하지 못한 것:** 배포본의 사진 → AI 추출, AI 번역, AI 음성, 자유 입력·음성 AI 카드. 키 만료·크레딧 소진 시 손님 흐름(메뉴·알레르기 경고·규칙 카드)은 동작하고 AI 기능만 대체 경로로 넘어간다. `/api/health`의 `openaiKey`는 키 존재만 보고 유효성은 보지 않는다.
+- **운영 후속(사용자):** 사이트를 열어 둘 거면 `CREATE_ENABLED=false`·`ORDER_MODEL_ENABLED=false`로 비용 노출을 막거나 OpenAI 키를 폐기한다. 회사 팀(`laeyoung-comcom`)에 잘못 만든 빈 Vercel 프로젝트 `menutalk-qr`을 삭제한다.
