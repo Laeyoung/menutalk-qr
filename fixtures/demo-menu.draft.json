@@ -1,0 +1,22 @@
+{
+  "store_name": "을지로 영순식당",
+  "warnings": ["원산지 표시 있음", "손글씨 메뉴판: 콜라 가격 숫자 일부가 번져 있음"],
+  "items": [
+    { "name_ko": "비빔밥", "price_krw": 9000, "price_note": null, "category": "main", "section_ko": "식사", "spice_level": "1", "main_ingredients_ko": ["밥", "나물", "달걀", "고추장", "참기름"], "allergens": ["sesame", "egg", "soy", "wheat"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "돌솥비빔밥", "price_krw": 10000, "price_note": null, "category": "main", "section_ko": "식사", "spice_level": "1", "main_ingredients_ko": ["밥", "나물", "소고기", "달걀", "고추장", "참기름"], "allergens": ["sesame", "egg", "soy", "wheat", "beef"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "김치찌개", "price_krw": 9000, "price_note": null, "category": "main", "section_ko": "찌개", "spice_level": "2", "main_ingredients_ko": ["김치", "돼지고기", "두부", "파"], "allergens": ["pork", "soy", "shrimp", "fish"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "된장찌개", "price_krw": 8000, "price_note": null, "category": "main", "section_ko": "찌개", "spice_level": "1", "main_ingredients_ko": ["된장", "두부", "애호박", "감자", "멸치 육수"], "allergens": ["soy", "wheat", "fish"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "부대찌개", "price_krw": 11000, "price_note": "1인", "category": "main", "section_ko": "찌개", "spice_level": "2", "main_ingredients_ko": ["햄", "소시지", "김치", "라면사리", "고추장"], "allergens": ["pork", "wheat", "soy", "milk"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "순두부찌개", "price_krw": 9000, "price_note": null, "category": "main", "section_ko": "찌개", "spice_level": "2", "main_ingredients_ko": ["순두부", "바지락", "달걀", "고춧가루"], "allergens": ["soy", "shellfish", "egg"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "제육볶음", "price_krw": 11000, "price_note": null, "category": "main", "section_ko": "볶음", "spice_level": "2", "main_ingredients_ko": ["돼지고기", "양파", "고추장", "참기름"], "allergens": ["pork", "soy", "wheat", "sesame"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "불고기", "price_krw": 13000, "price_note": null, "category": "main", "section_ko": "볶음", "spice_level": "0", "main_ingredients_ko": ["소고기", "양파", "간장", "배", "참기름"], "allergens": ["beef", "soy", "wheat", "sesame"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "해물파전", "price_krw": 15000, "price_note": null, "category": "side", "section_ko": "전", "spice_level": "0", "main_ingredients_ko": ["파", "새우", "오징어", "부침가루", "달걀"], "allergens": ["shrimp", "squid", "wheat", "egg"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "김치전", "price_krw": 12000, "price_note": null, "category": "side", "section_ko": "전", "spice_level": "1", "main_ingredients_ko": ["김치", "부침가루", "돼지고기"], "allergens": ["wheat", "pork", "shrimp", "fish"], "confidence": "medium", "unreadable_note": null },
+    { "name_ko": "물냉면", "price_krw": 10000, "price_note": null, "category": "main", "section_ko": "면", "spice_level": "0", "main_ingredients_ko": ["메밀면", "소고기 육수", "오이", "배", "삶은 달걀"], "allergens": ["buckwheat", "wheat", "beef", "egg"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "비빔냉면", "price_krw": 10000, "price_note": null, "category": "main", "section_ko": "면", "spice_level": "2", "main_ingredients_ko": ["메밀면", "고추장 양념", "오이", "삶은 달걀", "참기름"], "allergens": ["buckwheat", "wheat", "egg", "soy", "sesame"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "계란찜", "price_krw": 5000, "price_note": null, "category": "side", "section_ko": "사이드", "spice_level": "0", "main_ingredients_ko": ["달걀", "파", "새우젓"], "allergens": ["egg", "shrimp"], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "공기밥", "price_krw": 1000, "price_note": null, "category": "side", "section_ko": "사이드", "spice_level": "0", "main_ingredients_ko": ["쌀밥"], "allergens": [], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "소주", "price_krw": 5000, "price_note": null, "category": "alcohol", "section_ko": "주류", "spice_level": "0", "main_ingredients_ko": [], "allergens": [], "confidence": "high", "unreadable_note": null },
+    { "name_ko": "콜라", "price_krw": 2000, "price_note": null, "category": "drink", "section_ko": "음료", "spice_level": "0", "main_ingredients_ko": [], "allergens": [], "confidence": "low", "unreadable_note": "가격 숫자 일부가 번져 있어 2,000원으로 추정" }
+  ]
+}

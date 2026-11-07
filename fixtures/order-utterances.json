@@ -1,0 +1,15 @@
+{
+  "_comment": "AC-31/32/34: 데모 메뉴(demo-menu.draft.json) 기준 테스트 발화 10건(언어 3개 + 화면 언어와 다른 언어 1건). expect_items는 name_ko, expect_conflicts는 '메뉴명:알레르기'(가게 확인/추정 무관).",
+  "cases": [
+    { "lang": "zh-Hans", "text": "我要一份拌饭，不要太辣，我对芝麻过敏。", "cart": [], "expect_items": ["비빔밥"], "expect_allergens": ["sesame"], "expect_conflicts": ["비빔밥:sesame"] },
+    { "lang": "zh-Hans", "text": "两份部队锅，再来一碗米饭。", "cart": [], "expect_items": ["부대찌개", "공기밥"], "expect_allergens": [], "expect_conflicts": [] },
+    { "lang": "zh-Hans", "text": "海鲜葱饼一个，我对虾过敏，可以吗？", "cart": [], "expect_items": ["해물파전"], "expect_allergens": ["shrimp"], "expect_conflicts": ["해물파전:shrimp"] },
+    { "lang": "ja", "text": "ビビンバを一つ、辛さ控えめで。ごまアレルギーがあります。", "cart": [], "expect_items": ["비빔밥"], "expect_allergens": ["sesame"], "expect_conflicts": ["비빔밥:sesame"] },
+    { "lang": "ja", "text": "水冷麺を二つと、焼酎を一本ください。", "cart": [], "expect_items": ["물냉면", "소주"], "expect_allergens": [], "expect_conflicts": [] },
+    { "lang": "ja", "text": "卵アレルギーです。スンドゥブチゲを一つ。", "cart": [], "expect_items": ["순두부찌개"], "expect_allergens": ["egg"], "expect_conflicts": ["순두부찌개:egg"] },
+    { "lang": "en", "text": "One bibimbap, less spicy please. I'm allergic to sesame.", "cart": [], "expect_items": ["비빔밥"], "expect_allergens": ["sesame"], "expect_conflicts": ["비빔밥:sesame"] },
+    { "lang": "en", "text": "Can I get the army stew and a coke? No cilantro.", "cart": [], "expect_items": ["부대찌개", "콜라"], "expect_allergens": [], "expect_conflicts": [] },
+    { "lang": "en", "text": "I'd like a margherita pizza.", "cart": [], "expect_items": [], "expect_unmatched": true, "expect_allergens": [], "expect_conflicts": [] },
+    { "lang": "en", "text": "我对花生过敏，要一份泡菜汤。", "cart": [], "expect_items": ["김치찌개"], "expect_allergens": ["peanut"], "expect_conflicts": [], "_note": "화면 언어(en)와 다른 언어(중국어) 발화" }
+  ]
+}
