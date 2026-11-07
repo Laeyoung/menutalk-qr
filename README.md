@@ -2,6 +2,15 @@
 
 사장님이 한국어 메뉴판 사진 한 장을 올리면 외국인용 5개 언어와 한국어(6개) 음성 메뉴와 QR이 생깁니다. 손님이 자기 언어로 말하거나 고른 요청은 **가게가 확인한 알레르기 데이터와 코드로 대조**된 뒤, 직원이 바로 읽는 큰 한국어 주문 카드로 바뀝니다.
 
+## 데모
+
+- **서비스:** https://menutalk-qr-beta.vercel.app (`/d` → 데모 메뉴 "한끼식당", 6개 언어)
+- **데모 영상(YouTube Shorts):** https://youtube.com/shorts/qfo1u67eSEE?feature=share
+- 영상 파일(각 37초): [가로 1920×1080](docs/demo/menutalk-demo-landscape-1920x1080.mp4) · [모바일 1080×1920](docs/demo/menutalk-demo-mobile-1080x1920.mp4)
+  - 흐름: 사장님 등록 → 알레르기 "확인함" 체크 → 6개 언어 공개·QR → 손님 참깨 알레르기 경고(가게 확인/AI 추정) → 언어 전환 → 직원용 한국어 주문 카드(합계·직원 확인 필요)
+
+## 문서
+
 - 개발 중 결정과 검증 결과: [`docs/DECISIONS.md`](docs/DECISIONS.md)
 - Guuey 작업지시서: [`docs/07-Guuey-작업지시서.md`](docs/07-Guuey-작업지시서.md), 에이전트 준비물: [`guuey-agent/`](guuey-agent/)
 - 원 설계 문서(Spec·Plan)는 해커톤 기획 저장소에 있다. 본문의 "Spec x.y", "Plan x.y"는 그 문서의 절 번호다.
