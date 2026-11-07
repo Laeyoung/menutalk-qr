@@ -28,7 +28,12 @@ export async function POST(req: Request, ctx: RouteContext<'/api/menus/[id]/publ
     if (!check.ok) throw new ApiError(400, 'INVALID_PUBLISH', 'Missing items or localizations', false, check.details);
 
     const published = buildPublished(id, draft, body);
-    await writeJson(paths.published(id), published, { overwrite: true, maxAge: 60 });
+    try {
+      await writeJson(paths.published(id), published, { overwrite: true, maxAge: 60 });
+    } catch (e) {
+      console.error('published write failed', e instanceof Error ? e.message : e);
+      throw new ApiError(503, 'STORAGE_FAILED', '저장하지 못했습니다. 다시 공개해 주세요', true);
+    }
 
     const origin = siteOrigin(req);
     const publicUrl = `${origin}/m/${id}`;

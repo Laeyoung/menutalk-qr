@@ -8,7 +8,7 @@ import { CHIP_LOCAL, t } from '@/lib/i18n/strings';
 import { buildRuleCard } from '@/lib/order/rule-card';
 import { SAMPLES, type Sample } from '@/lib/samples';
 import { CHIP_CODES, type CartLine, type ChipCode, type LangCode, type OrderCard, type PublishedMenu } from '@/lib/types';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Sheet } from './ui';
 
 type Phase = 'composing' | 'uploading' | 'error';
@@ -27,6 +27,10 @@ export function RequestSheet({
   const [notice, setNotice] = useState<string | null>(null);
   const rec = useRecorder(15_000);
   const [micSupported, setMicSupported] = useState(true);
+  const noticeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => {
+    if (noticeTimer.current) clearTimeout(noticeTimer.current);
+  }, []);
 
   useEffect(() => setMicSupported(Boolean(pickMime()) && Boolean(navigator.mediaDevices?.getUserMedia)), []);
 
@@ -58,9 +62,10 @@ export function RequestSheet({
       }
       if (json?.error?.code === 'EMPTY_TRANSCRIPT') {
         // AC-46: 3초 안에 "칩으로 골라 주세요" + 규칙 카드
+        // 안내를 잠깐 보여 주는 동안 phase는 uploading으로 둬서 중복 생성·닫기를 막는다. 언마운트 시 타이머 해제.
         setNotice(t('notHeard', l));
-        setPhase('composing');
-        setTimeout(() => onCard(ruleCard(true, l)), 1200);
+        const card = ruleCard(true, l);
+        noticeTimer.current = setTimeout(() => onCard(card), 1200);
         return;
       }
       onCard(ruleCard(true, l));

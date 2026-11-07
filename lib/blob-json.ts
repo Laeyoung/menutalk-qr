@@ -24,6 +24,18 @@ function localPath(p: string) {
 
 export class BlobExistsError extends Error {}
 
+/** Spec 10.1: Blob 쓰기 실패는 1회 재시도. 이미 있음(BlobExistsError)은 재시도하지 않는다. */
+async function withWriteRetry<T>(fn: () => Promise<T>): Promise<T> {
+  try {
+    return await fn();
+  } catch (e) {
+    if (e instanceof BlobExistsError || (e instanceof Error && /already exists/i.test(e.message))) throw e;
+    console.error('blob write failed, retrying once', e instanceof Error ? e.message : e);
+    await new Promise((r) => setTimeout(r, 500));
+    return fn();
+  }
+}
+
 export async function readJson<T>(p: string, opts: { fresh?: boolean } = {}): Promise<T | null> {
   const target = readPrefix() + p;
   if (blobMode() === 'local') {
@@ -56,13 +68,20 @@ export async function writeJson(
     });
     return;
   }
-  await put(p, body, {
-    access: 'public',
-    contentType: 'application/json; charset=utf-8',
-    addRandomSuffix: false,
-    allowOverwrite: opts.overwrite,
-    cacheControlMaxAge: opts.maxAge ?? 60,
-  });
+  try {
+    await withWriteRetry(() =>
+      put(p, body, {
+        access: 'public',
+        contentType: 'application/json; charset=utf-8',
+        addRandomSuffix: false,
+        allowOverwrite: opts.overwrite,
+        cacheControlMaxAge: opts.maxAge ?? 60,
+      }),
+    );
+  } catch (e) {
+    if (e instanceof Error && /already exists/i.test(e.message)) throw new BlobExistsError(p);
+    throw e;
+  }
 }
 
 /** 바이너리(mp3) 저장. 이미 있으면 BlobExistsError */
@@ -79,7 +98,7 @@ export async function putBinary(p: string, data: Buffer, contentType: string): P
     return `/api/local-blob/${p}`;
   }
   try {
-    const r = await put(p, data, { access: 'public', contentType, addRandomSuffix: false });
+    const r = await withWriteRetry(() => put(p, data, { access: 'public', contentType, addRandomSuffix: false }));
     return r.url;
   } catch (e) {
     if (e instanceof Error && /already exists/i.test(e.message)) throw new BlobExistsError(p);

@@ -49,12 +49,20 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export async function callStructured<T>(args: CallStructuredArgs<T>): Promise<StructuredResult<T>> {
   const backoff = [1000, 3000];
+  let current = args;
+  let incompleteRetried = false;
   for (let attempt = 0; ; attempt++) {
     try {
-      return await callOnce(args);
+      return await callOnce(current);
     } catch (e) {
       if (e instanceof StructuredError && e.code === 'RATE_LIMITED' && attempt < backoff.length) {
         await sleep(backoff[attempt]);
+        continue;
+      }
+      // Spec 10.1: status incomplete → max_output_tokens 상향 후 1회 재시도
+      if (e instanceof StructuredError && e.code === 'INCOMPLETE' && !incompleteRetried) {
+        incompleteRetried = true;
+        current = { ...current, maxOutputTokens: Math.min(64_000, Math.max(25_000, Math.round(current.maxOutputTokens * 1.6))) };
         continue;
       }
       throw e;

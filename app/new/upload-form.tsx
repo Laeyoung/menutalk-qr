@@ -90,6 +90,8 @@ export function UploadForm() {
               ? '사진이 너무 커요. 다시 찍어 주세요'
               : code === 'UNSUPPORTED_IMAGE'
                 ? 'JPEG로 다시 올려 주세요'
+                : code === 'STORAGE_FAILED'
+                  ? '저장하지 못했습니다. 다시 읽기를 눌러 주세요'
                 : code === 'CREATE_DISABLED'
                   ? '지금은 새 메뉴를 만들 수 없어요(행사 종료)'
                   : code === 'MODEL_UNAVAILABLE'

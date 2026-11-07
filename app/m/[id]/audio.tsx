@@ -42,7 +42,11 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     a.src = src;
     const p = a.play();
     if (p && typeof p.catch === 'function') {
-      p.catch((err: DOMException) => setState(err?.name === 'NotAllowedError' ? 'blocked' : 'error'));
+      p.catch((err: DOMException) => {
+        // 두 번째 탭이나 stop()이 대기 중인 play()를 끊으면 AbortError — 실패가 아니다
+        if (err?.name === 'AbortError') return;
+        setState(err?.name === 'NotAllowedError' ? 'blocked' : 'error');
+      });
     }
   }, []);
 

@@ -180,7 +180,7 @@ export function AdminEditor({ menuId }: { menuId: string }) {
   const running = allJobs.filter((j) => j.s === 'running' || j.s === 'pending').length;
   const failedLangs = activeLangs.filter((l) => progress(l).err);
   const doneCount = allJobs.filter((j) => j.s === 'done' || j.s === 'stale').length;
-  const canPublish = status === 'editing' && running === 0 && failedLangs.length === 0 && activeLangs.length > 0;
+  const canPublish = (status === 'editing' || status === 'published') && running === 0 && failedLangs.length === 0 && activeLangs.length > 0;
 
   // ---------- 편집 ----------
   const update = (id: string, patch: Partial<MenuItemBase>) => setItems((prev) => prev.map((i) => (i.item_id === id ? { ...i, ...patch } : i)));

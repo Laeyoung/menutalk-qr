@@ -102,7 +102,12 @@ export async function POST(req: Request) {
         ...draftCore,
       };
       // draft.json은 불변: allowOverwrite 없이 1회만 쓴다
-      await writeJson(paths.draft(menuId), draft, { overwrite: false, maxAge: 60 });
+      try {
+        await writeJson(paths.draft(menuId), draft, { overwrite: false, maxAge: 60 });
+      } catch (e) {
+        console.error('draft write failed', e instanceof Error ? e.message : e);
+        throw new ApiError(503, 'STORAGE_FAILED', '저장하지 못했습니다', true);
+      }
     }
 
     return Response.json(
