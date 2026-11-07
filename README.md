@@ -2,8 +2,9 @@
 
 사장님이 한국어 메뉴판 사진 한 장을 올리면 외국인용 5개 언어와 한국어(6개) 음성 메뉴와 QR이 생깁니다. 손님이 자기 언어로 말하거나 고른 요청은 **가게가 확인한 알레르기 데이터와 코드로 대조**된 뒤, 직원이 바로 읽는 큰 한국어 주문 카드로 바뀝니다.
 
-- 설계 문서: `../10x/02-talking-menu-qr/03-개발Spec.md`(Spec), `05-개발Plan.md`(Plan)
-- 개발 중 결정: `../DECISIONS.md`
+- 개발 중 결정과 검증 결과: [`docs/DECISIONS.md`](docs/DECISIONS.md)
+- Guuey 작업지시서: [`docs/07-Guuey-작업지시서.md`](docs/07-Guuey-작업지시서.md), 에이전트 준비물: [`guuey-agent/`](guuey-agent/)
+- 원 설계 문서(Spec·Plan)는 해커톤 기획 저장소에 있다. 본문의 "Spec x.y", "Plan x.y"는 그 문서의 절 번호다.
 
 ## 화면
 
@@ -60,7 +61,7 @@ node scripts/eval-orders.mjs --base <URL> --menu <id>   # AC-31/32/33/34: 발화
 
 아래는 외부에 공개되는 작업이라 아직 실행하지 않았습니다(DECISIONS D-08).
 
-1. `gh repo create oba02-menutalk --private --source . --push` (이 `menutalk/` 폴더를 새 레포 루트로)
+1. 저장소: 이 레포(`menutalk-qr`)
 2. `vercel link` → 프로젝트 이름 `oba02-menutalk` → `vercel --prod`
 3. Vercel 대시보드에서 Blob 스토어(공개) 생성 → 프로젝트 연결 → `vercel env pull .env.local`
 4. `vercel env add OPENAI_API_KEY` / `DEMO_KEY` / `CREATE_ENABLED=true` / `ORDER_MODEL_ENABLED=true` (production, development) → `vercel --prod`

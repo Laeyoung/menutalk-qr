@@ -44,3 +44,6 @@ next-env.d.ts
 .local-blob/
 !.env.example
 .playwright-mcp/
+
+# guuey scaffold build outputs
+guuey-agent/**/node_modules/
